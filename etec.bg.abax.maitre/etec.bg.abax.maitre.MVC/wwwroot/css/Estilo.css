@@ -1,0 +1,217 @@
+﻿
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffe6cc;
+    background-repeat: no-repeat;
+    background-attachment: fixd;
+    background-size: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.bg-img {
+    z-index: 0;
+    background-image: url('../images/login.jpg');
+    min-height: 700px;
+    height:100%;
+    Center and scale the image nicely background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Add styles to the form container */
+.container {
+   
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    max-width: 300px;
+    padding: 16px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+    input[type=text]:focus, input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+/* Set a style for the submit button */
+.btn {
+    background-color: #800000;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+    .btn:hover {
+        opacity: 1;
+    }
+
+#grad1 {
+    height: 200px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(red, yellow); /* Standard syntax (must be last) */
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+
+#centro img {
+    height: 65 %;
+    width: 100%;
+    top: 5;
+    margin-top: 5 %;
+}
+
+#espaco {
+    height: 10%;
+    width: 10%
+}
+
+#centro {
+    top: 5;
+    margin-top: 0%;
+    position: absolute;
+    margin-left: 2.5%;
+    height: 75%;
+    width: 75%;
+    display: inline-block;
+}
+/*abelas tela inicial*/
+
+table, th, td {
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 0px;
+    height: 55%;
+    margin-top: 10%;
+    text-align: center:
+}
+
+th {
+    text-align: left;
+}
+
+#esquerda {
+    z-index: 0;
+    opacity: 0.2;
+    filter: alpha(opacity=50);
+    height: 900px;
+    width: 100px;
+    display: inline-block;
+    background-image: url('barrado.jpeg');
+    background-size: 100%;
+}
+
+#direita {
+    opacity: 0.2;
+    filter: alpha(opacity=50);
+    margin-left: 84%;
+    height: 900px;
+    width: 100px;
+    display: inline-block;
+    background-image: url('barrado.jpeg');
+    background-size: 100%;
+}
+
+#botoes {
+    margin-left: 45%;
+}
+
+#barra {
+    top: 0%;
+    margin-top: 0%;
+    margin-left: 0%;
+    left: 0%;
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    background-color: #333;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+
+#fundo img {
+    z-index: 0;
+    opacity: 0.1;
+    filter: alpha(opacity=50);
+    height: 1000%;
+    width: 100%;
+    background-image: url('po.jpg');
+    background-size: 100%;
+}
+
+div {
+    border: 1px solid gray;
+    padding: 8px;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #ff0000;
+    font-family: Arial;
+}
+
+p {
+    text-indent: 50px;
+    text-align: justify;
+    letter-spacing: 3px;
+}
+
+a {
+    text-decoration: none;
+    color: #008CBA;
+}
+
+function myFunction() {
+    alert("Hello! I am an alert box!");
+}
