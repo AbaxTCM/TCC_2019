@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace etec.bg.abax.maitre.MVC.Models.Cliente
+namespace etec.bg.abax.maitre.MVC.Models.Reserva
 {
-    public class Cliente
+    public class Finalidade
     {
-        public int id { get; set; }
+        public int id_fin { get; set; }
         public string nome { get; set; }
     }
 }
