@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace etec.bg.abax.maitre.MVC.Models.Cardapio
 {
-    public class Prato : ACardapio
+    public class Prato : Models.ClasseAbstrata.ACardapio
     {
-        public int id_prato { get; set; }
+        public int idPrato { get; set; }
         public Dia diaSemana { get; set; }
     }
 }

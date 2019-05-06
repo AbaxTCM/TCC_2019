@@ -38,7 +38,6 @@ C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.
 C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\bin\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.pdb
 C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\bin\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.Views.dll
 C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\bin\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.Views.pdb
-C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.csprojAssemblyReference.cache
 C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.csproj.CoreCompileInputs.cache
 C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.RazorAssemblyInfo.cache
 C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.RazorAssemblyInfo.cs
@@ -64,4 +63,3 @@ C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.
 C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.dll
 C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.pdb
 C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.csproj.CopyComplete
-C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Funcionario\Lista.g.cshtml.cs

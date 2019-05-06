@@ -7,8 +7,8 @@ namespace etec.bg.abax.maitre.MVC.Models.Fidelidade
 {
     public class Carimbo
     {
-        public int id_carimbo { get; set; }
+        public int idCarimbo { get; set; }
         public int numero { get; set; }
-        public Cliente cliente { get; set; }
+        public Models.Pessoa.Cliente cliente { get; set; }
     }
 }

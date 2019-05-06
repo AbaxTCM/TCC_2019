@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace etec.bg.abax.maitre.MVC.Models
+namespace etec.bg.abax.maitre.MVC.Models.ClasseAbstrata
 {
     public abstract class AUsuarioRestaurante
     {

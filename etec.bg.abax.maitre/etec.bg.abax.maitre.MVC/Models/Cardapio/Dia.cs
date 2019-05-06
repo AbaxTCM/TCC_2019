@@ -7,7 +7,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio
 {
     public class Dia
     {
-        public int id_dia { get; set; }
+        public int idDia { get; set; }
         public string nome { get; set; }
     }
 }

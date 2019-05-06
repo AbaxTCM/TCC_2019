@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace etec.bg.abax.maitre.MVC.Models.Cardapio
 {
-    public class Bebida : ACardapio
+    public class Bebida : Models.ClasseAbstrata.ACardapio
     {
-        public int id_bebida { get; set; }
+        public int idBebida { get; set; }
         public string tipo { get; set; }
     }
 }

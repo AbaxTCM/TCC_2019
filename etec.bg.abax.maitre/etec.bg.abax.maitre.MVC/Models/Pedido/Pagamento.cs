@@ -7,7 +7,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Pedido
 {
     public class Pagamento
     {
-        public int id_pgto { get; set; }
+        public int idPagamento { get; set; }
         public string tipo { get; set; }
     }
 }

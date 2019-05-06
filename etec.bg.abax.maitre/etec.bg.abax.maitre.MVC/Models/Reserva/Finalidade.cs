@@ -7,7 +7,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Reserva
 {
     public class Finalidade
     {
-        public int id_fin { get; set; }
+        public int idFinalidade { get; set; }
         public string nome { get; set; }
     }
 }
