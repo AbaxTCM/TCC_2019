@@ -15,6 +15,11 @@ namespace etec.bg.abax.maitre.MVC.Controllers
             return View();
         }
 
+        public IActionResult Pessoa()
+        {
+            return View();
+        }
+
         public IActionResult Login()
         {
             return View();
