@@ -25,7 +25,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 Bebida bebida = new Bebida();
-                bebida.idBebida = int.Parse(dr["id_cliente"].ToString());
+                bebida.idBebida = int.Parse(dr["id_bebida"].ToString());
                 bebida.nome = dr["nome"].ToString();
                 bebida.tipo = dr["tipo"].ToString();
                 //bebida.imagem = byte.Parse(dr["imagem"].ToString());
@@ -46,16 +46,16 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
             da.Fill(ds);
             conn.Desconectar();
 
-            Bebida cliente = new Bebida();
+            Bebida bebida = new Bebida();
             if (ds.Tables[0].Rows.Count > 0)
             {
-                cliente.idBebida = int.Parse(ds.Tables[0].Rows[0]["id_bebida"].ToString());
-                cliente.nome = ds.Tables[0].Rows[0]["nome"].ToString();
-                cliente.tipo = ds.Tables[0].Rows[0]["tipo"].ToString();
+                bebida.idBebida = int.Parse(ds.Tables[0].Rows[0]["id_bebida"].ToString());
+                bebida.nome = ds.Tables[0].Rows[0]["nome"].ToString();
+                bebida.tipo = ds.Tables[0].Rows[0]["tipo"].ToString();
                 //cliente.imagem = ds.Tables[0].Rows[0]["imagem"].ToString();
-                cliente.valor = decimal.Parse(ds.Tables[0].Rows[0]["valor"].ToString());
+                bebida.valor = decimal.Parse(ds.Tables[0].Rows[0]["valor"].ToString());
             }
-            return cliente;
+            return bebida;
         }
 
         public void PostBebida(Bebida bebida)

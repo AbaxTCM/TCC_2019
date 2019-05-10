@@ -9,6 +9,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
 {
     public class SobremesaController : Controller
     {
+        Models.Cardapio.CardapioData.SobremesaData data = new Models.Cardapio.CardapioData.SobremesaData();
         // GET: Sobremesa
         public ActionResult Index()
         {
@@ -17,13 +18,13 @@ namespace etec.bg.abax.maitre.MVC.Controllers
 
         public ActionResult Listar()
         {
-            return View();
+            return View(data.GetLista());
         }
 
         // GET: Sobremesa/Details/5
         public ActionResult Detalhar(int id)
         {
-            return View();
+            return View(data.GetSobremesa(id));
         }
 
         // GET: Sobremesa/Create
@@ -39,7 +40,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         {
             try
             {
-                // TODO: Add insert logic here
+                data.PostSobremesa(collection);
 
                 return RedirectToAction(nameof(Index));
             }
@@ -52,7 +53,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         // GET: Sobremesa/Edit/5
         public ActionResult Editar(int id)
         {
-            return View();
+            return View(data.GetSobremesa(id));
         }
 
         // POST: Sobremesa/Edit/5
@@ -62,7 +63,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         {
             try
             {
-                // TODO: Add update logic here
+                data.EditSobremesa(collection, id);
 
                 return RedirectToAction(nameof(Index));
             }
@@ -75,7 +76,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         // GET: Sobremesa/Delete/5
         public ActionResult Deletar(int id)
         {
-            return View();
+            return View(data.GetSobremesa(id));
         }
 
         // POST: Sobremesa/Delete/5
@@ -85,7 +86,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         {
             try
             {
-                // TODO: Add delete logic here
+                data.DeleteSobremesa(collection, id);
 
                 return RedirectToAction(nameof(Index));
             }

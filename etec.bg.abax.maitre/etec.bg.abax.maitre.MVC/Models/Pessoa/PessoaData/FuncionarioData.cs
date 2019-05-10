@@ -11,7 +11,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
     {
         Conexao.Conexao conn = new Conexao.Conexao();
 
-        public List<Cliente> GetLista()
+        public List<Funcionario> GetLista()
         {
             conn.Conectar();
 
@@ -21,10 +21,10 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
 
             conn.Desconectar();
 
-            List<Cliente> lista = new List<Cliente>();
+            List<Funcionario> lista = new List<Funcionario>();
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
-                Cliente funcionario = new Cliente();
+                Funcionario funcionario = new Funcionario();
                 funcionario.idFunc = int.Parse(dr["id_func"].ToString());
                 funcionario.nome = dr["nome_func"].ToString();
                 funcionario.cargo = dr["cargo"].ToString();
@@ -36,7 +36,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
             return lista;
         }
 
-        public Cliente GetFuncionario(int id)
+        public Funcionario GetFuncionario(int id)
         {
             conn.Conectar();
 
@@ -46,7 +46,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
             da.Fill(ds);
             conn.Desconectar();
 
-            Cliente funcionario = new Cliente();
+            Funcionario funcionario = new Funcionario();
             if (ds.Tables[0].Rows.Count > 0)
             {
                 funcionario.idFunc = int.Parse(ds.Tables[0].Rows[0]["id_func"].ToString());
@@ -58,17 +58,17 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
             return funcionario;
         }
 
-        public void PostFuncionario(Cliente funcionario)
+        public void PostFuncionario(Funcionario funcionario)
         {
             
         }
 
-        public void DeleteFuncionario(Cliente funcionario, int id)
+        public void DeleteFuncionario(Funcionario funcionario, int id)
         {
 
         }
 
-        public void EditFuncionario(Cliente funcionario, int id)
+        public void EditFuncionario(Funcionario funcionario, int id)
         {
 
         }

@@ -36,7 +36,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         // POST: Funcionario/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Cadastrar(Models.Pessoa.Cliente collection)
+        public ActionResult Cadastrar(Models.Pessoa.Funcionario collection)
         {
             try
             {
@@ -59,7 +59,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         // POST: Funcionario/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Editar(int id, Models.Pessoa.Cliente collection)
+        public ActionResult Editar(int id, Models.Pessoa.Funcionario collection)
         {
             try
             {
@@ -82,7 +82,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         // POST: Funcionario/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Deletar(int id, Models.Pessoa.Cliente collection)
+        public ActionResult Deletar(int id, Models.Pessoa.Funcionario collection)
         {
             try
             {

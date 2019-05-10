@@ -9,6 +9,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
 {
     public class PorcaoController : Controller
     {
+        Models.Cardapio.CardapioData.PorcaoData data = new Models.Cardapio.CardapioData.PorcaoData();
         // GET: Porcao
         public ActionResult Index()
         {
@@ -18,7 +19,12 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         // GET: Porcao/Details/5
         public ActionResult Detalhar(int id)
         {
-            return View();
+            return View(data.GetPorcao(id));
+        }
+
+        public ActionResult Listar()
+        {
+            return View(data.GetLista());
         }
 
         // GET: Porcao/Create
@@ -34,7 +40,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         {
             try
             {
-                // TODO: Add insert logic here
+                data.PostPorcao(collection);
 
                 return RedirectToAction(nameof(Index));
             }
@@ -47,7 +53,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         // GET: Porcao/Edit/5
         public ActionResult Editar(int id)
         {
-            return View();
+            return View(data.GetPorcao(id));
         }
 
         // POST: Porcao/Edit/5
@@ -57,7 +63,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         {
             try
             {
-                // TODO: Add update logic here
+                data.EditPorcao(collection, id);
 
                 return RedirectToAction(nameof(Index));
             }
@@ -70,7 +76,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         // GET: Porcao/Delete/5
         public ActionResult Deletar(int id)
         {
-            return View();
+            return View(data.GetPorcao(id));
         }
 
         // POST: Porcao/Delete/5
@@ -80,7 +86,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         {
             try
             {
-                // TODO: Add delete logic here
+                data.DeletePorcao(collection, id);
 
                 return RedirectToAction(nameof(Index));
             }
