@@ -159,3 +159,5 @@ C:\Users\3binfo\Documents\Rafael\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitr
 C:\Users\3binfo\Documents\Rafael\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Pessoa.g.cshtml.cs
 C:\Users\3binfo\Documents\Rafael\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.csprojAssemblyReference.cache
 C:\Users\3binfo\Documents\Rafael\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Cardapio.g.cshtml.cs
+C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Cardapio.g.cshtml.cs
+C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Pessoa.g.cshtml.cs

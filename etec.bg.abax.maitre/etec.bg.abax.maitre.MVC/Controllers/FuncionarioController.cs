@@ -9,6 +9,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
 {
     public class FuncionarioController : Controller
     {
+        Models.Pessoa.PessoaData.FuncionarioData data = new Models.Pessoa.PessoaData.FuncionarioData();
         // GET: Funcionario
         public ActionResult Index()
         {
@@ -17,13 +18,13 @@ namespace etec.bg.abax.maitre.MVC.Controllers
 
         public ActionResult Listar()
         {
-            return View();
+            return View(data.GetLista());
         }
 
         // GET: Funcionario/Details/5
         public ActionResult Detalhar(int id)
         {
-            return View();
+            return View(data.GetFuncionario(id));
         }
 
         // GET: Funcionario/Create
@@ -35,11 +36,11 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         // POST: Funcionario/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Cadastrar(Models.Pessoa.Funcionario collection)
+        public ActionResult Cadastrar(Models.Pessoa.Cliente collection)
         {
             try
             {
-                // TODO: Add insert logic here
+                data.PostFuncionario(collection);
 
                 return RedirectToAction(nameof(Index));
             }
@@ -52,17 +53,17 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         // GET: Funcionario/Edit/5
         public ActionResult Editar(int id)
         {
-            return View();
+            return View(data.GetFuncionario(id));
         }
 
         // POST: Funcionario/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Editar(int id, Models.Pessoa.Funcionario collection)
+        public ActionResult Editar(int id, Models.Pessoa.Cliente collection)
         {
             try
             {
-                // TODO: Add update logic here
+                data.EditFuncionario(collection, id);
 
                 return RedirectToAction(nameof(Index));
             }
@@ -75,17 +76,17 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         // GET: Funcionario/Delete/5
         public ActionResult Deletar(int id)
         {
-            return View();
+            return View(data.GetFuncionario(id));
         }
 
         // POST: Funcionario/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Deletar(int id, Models.Pessoa.Funcionario collection)
+        public ActionResult Deletar(int id, Models.Pessoa.Cliente collection)
         {
             try
             {
-                // TODO: Add delete logic here
+                data.DeleteFuncionario(collection, id);
 
                 return RedirectToAction(nameof(Index));
             }

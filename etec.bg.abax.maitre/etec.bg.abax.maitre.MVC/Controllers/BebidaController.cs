@@ -9,6 +9,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
 {
     public class BebidaController : Controller
     {
+        Models.Cardapio.CardapioData.BebidaData data = new Models.Cardapio.CardapioData.BebidaData();
         // GET: Bebida
         public ActionResult Index()
         {
@@ -18,12 +19,12 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         // GET: Bebida/Details/5
         public ActionResult Detalhar(int id)
         {
-            return View();
+            return View(data.GetBebida(id));
         }
 
         public ActionResult Listar()
         {
-            return View();
+            return View(data.GetLista());
         }
 
         // GET: Bebida/Create
@@ -39,7 +40,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         {
             try
             {
-                // TODO: Add insert logic here
+                data.PostBebida(collection);
 
                 return RedirectToAction(nameof(Index));
             }
@@ -52,7 +53,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         // GET: Bebida/Edit/5
         public ActionResult Editar(int id)
         {
-            return View();
+            return View(data.GetBebida(id));
         }
 
         // POST: Bebida/Edit/5
@@ -62,7 +63,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         {
             try
             {
-                // TODO: Add update logic here
+                data.EditBebida(collection, id);
 
                 return RedirectToAction(nameof(Index));
             }
@@ -75,7 +76,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         // GET: Bebida/Delete/5
         public ActionResult Deletar(int id)
         {
-            return View();
+            return View(data.GetBebida(id));
         }
 
         // POST: Bebida/Delete/5
@@ -85,7 +86,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         {
             try
             {
-                // TODO: Add delete logic here
+                data.DeleteBebida(collection, id);
 
                 return RedirectToAction(nameof(Index));
             }
