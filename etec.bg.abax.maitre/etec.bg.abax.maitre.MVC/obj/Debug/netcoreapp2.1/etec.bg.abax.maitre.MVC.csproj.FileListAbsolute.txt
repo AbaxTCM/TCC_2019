@@ -63,7 +63,6 @@ C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.
 C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.dll
 C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.pdb
 C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.csproj.CopyComplete
-C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.csprojAssemblyReference.cache
 C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Funcionario\Cadastrar.g.cshtml.cs
 C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Funcionario\Listar.g.cshtml.cs
 C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Funcionario\Detalhar.g.cshtml.cs
@@ -227,3 +226,4 @@ C:\Users\gialm\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\ob
 C:\Users\gialm\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.pdb
 C:\Users\gialm\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.csproj.CopyComplete
 C:\Users\gialm\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Teste.g.cshtml.cs
+C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Menu.g.cshtml.cs

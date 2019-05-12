@@ -53,7 +53,7 @@ namespace etec.bg.abax.maitre.MVC
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Teste}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
