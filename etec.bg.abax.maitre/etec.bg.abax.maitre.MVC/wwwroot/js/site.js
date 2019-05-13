@@ -17,3 +17,16 @@ function validar() {
 
 }
 
+$(function () {
+    $("#btn-registro").on('click', function () {
+        var email = document.getElementById("email").value;
+        var senha = document.getElementById("senha").value;
+        if (email == "" || senha == "") {
+            
+        }
+        else {
+            $("#btn-registro").attr("data-dismiss", "modal");
+        }
+    });
+});
+

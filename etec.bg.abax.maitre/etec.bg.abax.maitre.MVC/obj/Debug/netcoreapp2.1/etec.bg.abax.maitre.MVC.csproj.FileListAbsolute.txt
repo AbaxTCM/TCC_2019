@@ -293,3 +293,4 @@ C:\Users\gialm\Documents\Nova pasta\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.ma
 C:\Users\gialm\Documents\Nova pasta\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.dll
 C:\Users\gialm\Documents\Nova pasta\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.pdb
 C:\Users\gialm\Documents\Nova pasta\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.csproj.CopyComplete
+C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.csprojAssemblyReference.cache

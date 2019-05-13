@@ -274,17 +274,19 @@
                         <h4 class="modal-title">Login</h4>
                     </div>
                     <div class="modal-body">
-                        <form action="/action_page.php" id="form" method="post">
+                        <form id="form">
                             <p>E-mail</p>
-                            <input type="text" name="email" iid="email" required />
+                            <input type="text" name="email" id="email" required />
                             <p>Senha</p>
-                            <input type="password" name="senha" id="senha" required/>
+                            <input type="password" name="senha" id="senha" required />
+
+                            <div class="modal-footer">
+                                <input type="submit" id="btn-registro" class="btn btn-primary" value="Registrar" />
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                            </div>
                         </form>
                     </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary" data-dismiss="modal" onclick="validar" >Registrar</button>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                    </div>
+
                 </div>
         </div>
 
