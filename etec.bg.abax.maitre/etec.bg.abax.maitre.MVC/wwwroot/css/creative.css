@@ -6909,13 +6909,13 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #f4623a !important;
+    background: url(../images/login1.jpg);
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
-  background-color: #ee3e0d !important;
+  background: url(../images/login1.jpg);
 }
 
 .bg-secondary {
@@ -10587,7 +10587,7 @@ hr.light {
   border-radius: 10rem;
 }
 
-.page-section {
+.lf{
   padding: 8rem 0;
 }
 
