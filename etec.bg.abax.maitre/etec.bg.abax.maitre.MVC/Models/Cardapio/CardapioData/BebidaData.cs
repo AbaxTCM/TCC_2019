@@ -40,8 +40,9 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
         {
             conn.Conectar();
 
-            MySqlDataAdapter da = new MySqlDataAdapter("select * from bebidas where id_bebida = @id", conn.RetornarConexao());
-            da.SelectCommand.Parameters.AddWithValue("@id", id);
+            MySqlDataAdapter da = new MySqlDataAdapter("sp_select_bebidas", conn.RetornarConexao());
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.AddWithValue("@p_id_bebida", id);
             DataSet ds = new DataSet();
             da.Fill(ds);
             conn.Desconectar();
@@ -60,17 +61,45 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
 
         public void PostBebida(Bebida bebida)
         {
+            conn.Conectar();
 
+            MySqlCommand cmd = new MySqlCommand("sp_insert_bebidas", conn.RetornarConexao());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@p_nome", bebida.nome);
+            cmd.Parameters.AddWithValue("@p_tipo", bebida.tipo);
+            cmd.Parameters.AddWithValue("@p_imagem", bebida.imagem);
+            cmd.Parameters.AddWithValue("@p_valor", bebida.valor);
+            cmd.ExecuteNonQuery();
+
+            conn.Desconectar();
         }
 
         public void DeleteBebida(Bebida bebida, int id)
         {
+            conn.Conectar();
 
+            MySqlCommand cmd = new MySqlCommand("sp_delete_bebidas", conn.RetornarConexao());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@p_id_bebida", id);
+            cmd.ExecuteNonQuery();
+
+            conn.Desconectar();
         }
 
         public void EditBebida(Bebida bebida, int id)
         {
+            conn.Conectar();
 
+            MySqlCommand cmd = new MySqlCommand("sp_update_bebidas", conn.RetornarConexao());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@p_id_bebida", id);
+            cmd.Parameters.AddWithValue("@p_nome", bebida.nome);
+            cmd.Parameters.AddWithValue("@p_tipo", bebida.tipo);
+            cmd.Parameters.AddWithValue("@p_imagem", bebida.imagem);
+            cmd.Parameters.AddWithValue("@p_valor", bebida.valor);
+            cmd.ExecuteNonQuery();
+
+            conn.Desconectar();
         }
     }
 }

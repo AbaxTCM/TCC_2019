@@ -7,22 +7,12 @@
 $(document).ready(function () {
 
 });
-function validar() {
-    var email, senha;
-    email = document.form.email.value;
-    senha = document.form.senha.value;
-    if ((email == "") && (senha == "")) {
-        alert("Por favor preencher este campo");
-    }
-
-}
 
 $(function () {
     $("#btn-registro").on('click', function () {
         var email = document.getElementById("email").value;
         var senha = document.getElementById("senha").value;
         if (email == "" || senha == "") {
-            
         }
         else {
             $("#btn-registro").attr("data-dismiss", "modal");
