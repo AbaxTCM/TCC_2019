@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewData["Title"] = "Reserva";
+}
+
+<h2>Reserva</h2>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="~/images/logo-user-png-6.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Lista</h5>
+                <p class="card-text">Lista de reservas</p>
+                <a asp-controller="Reserva" asp-action="Listar" class="btn btn-primary">Acessar</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="~/images/logo-user-png-6.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Cadastro</h5>
+                <p class="card-text">Cadastrar uma reserva</p>
+                <a asp-controller="Reserva" asp-action="Cadastrar" class="btn btn-primary">Acessar</a>
+            </div>
+        </div>
+    </div>
+</div>
+

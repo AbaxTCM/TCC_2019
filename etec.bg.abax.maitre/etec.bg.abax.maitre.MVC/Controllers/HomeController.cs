@@ -25,6 +25,11 @@ namespace etec.bg.abax.maitre.MVC.Controllers
             return View();
         }
 
+        public IActionResult Reserva()
+        {
+            return View();
+        }
+
         public IActionResult Login()
         {
             return View();
