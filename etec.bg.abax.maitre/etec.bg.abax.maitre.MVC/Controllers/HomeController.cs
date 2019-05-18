@@ -40,6 +40,11 @@ namespace etec.bg.abax.maitre.MVC.Controllers
             return View();
         }
 
+        public IActionResult Senha()
+        {
+            return View();
+        }
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";

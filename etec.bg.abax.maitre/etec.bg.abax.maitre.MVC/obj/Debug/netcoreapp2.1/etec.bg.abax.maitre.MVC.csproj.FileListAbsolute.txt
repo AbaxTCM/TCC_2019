@@ -225,7 +225,6 @@ C:\Users\gialm\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\ob
 C:\Users\gialm\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.dll
 C:\Users\gialm\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.pdb
 C:\Users\gialm\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.csproj.CopyComplete
-C:\Users\gialm\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Teste.g.cshtml.cs
 C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Menu.g.cshtml.cs
 C:\Users\gialm\Documents\Nova pasta\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\bin\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.deps.json
 C:\Users\gialm\Documents\Nova pasta\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\bin\Debug\netcoreapp2.1\etec.bg.abax.maitre.MVC.runtimeconfig.json
@@ -366,3 +365,11 @@ C:\Users\3binfo\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\o
 C:\Users\3binfo\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Reserva\Listar.g.cshtml.cs
 C:\Users\3binfo\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Reserva\Editar.g.cshtml.cs
 C:\Users\3binfo\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Reserva.g.cshtml.cs
+C:\Users\gialm\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Menu.g.cshtml.cs
+C:\Users\gialm\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Reserva.g.cshtml.cs
+C:\Users\gialm\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Reserva\Cadastrar.g.cshtml.cs
+C:\Users\gialm\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Reserva\Deletar.g.cshtml.cs
+C:\Users\gialm\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Reserva\Detalhar.g.cshtml.cs
+C:\Users\gialm\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Reserva\Editar.g.cshtml.cs
+C:\Users\gialm\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Reserva\Listar.g.cshtml.cs
+C:\Users\gialm\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Senha.g.cshtml.cs
