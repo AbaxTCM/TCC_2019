@@ -4,11 +4,8 @@
 // Write your JavaScript code.
 
 
-$(document).ready(function () {
+$(function (form) {
 
-});
-
-$(function () {
     $("#btn-registro").on('click', function () {
         var email = document.getElementById("email").value;
         var senha = document.getElementById("senha").value;
@@ -16,7 +13,26 @@ $(function () {
         }
         else {
             $("#btn-registro").attr("data-dismiss", "modal");
+            document.getElementById("email").value = "";
+            document.getElementById("nome").value = "";
+            document.getElementById("telefone").value = "";
+            document.getElementById("endereco").value = "";
+            document.getElementById("senha").value = "";
+            document.getElementById("confirmarsenha").value = "";
         }
     });
 });
+
+function cancelar() {
+    $("#btn-cancelar").attr("data-dismiss", "modal");
+
+
+    document.getElementById("email").value = "";
+    document.getElementById("nome").value = "";
+    document.getElementById("telefone").value = "";
+    document.getElementById("endereco").value = "";
+    document.getElementById("senha").value = "";
+    document.getElementById("confirmarsenha").value = "";
+
+};
 

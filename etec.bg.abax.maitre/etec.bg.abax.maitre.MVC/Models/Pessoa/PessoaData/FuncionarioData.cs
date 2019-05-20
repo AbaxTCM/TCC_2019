@@ -25,11 +25,11 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 Funcionario funcionario = new Funcionario();
-                funcionario.idFunc = int.Parse(dr["id_func"].ToString());
-                funcionario.nome = dr["nome_func"].ToString();
+                funcionario.idFunc = int.Parse(dr["id"].ToString());
+                funcionario.nome = dr["nome"].ToString();
                 funcionario.cargo = dr["cargo"].ToString();
-                funcionario.fone = dr["fone_func"].ToString();
-                funcionario.eMail = dr["email_func"].ToString();
+                funcionario.fone = dr["fone"].ToString();
+                funcionario.eMail = dr["email"].ToString();
 
                 lista.Add(funcionario);
             }
@@ -40,8 +40,9 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
         {
             conn.Conectar();
 
-            MySqlDataAdapter da = new MySqlDataAdapter("select * from funcionario where id_func = @id",conn.RetornarConexao());
-            da.SelectCommand.Parameters.AddWithValue("@id", id);
+            MySqlDataAdapter da = new MySqlDataAdapter("sp_select_funcionario",conn.RetornarConexao());
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.AddWithValue("@p_id", id);
             DataSet ds = new DataSet();
             da.Fill(ds);
             conn.Desconectar();
@@ -49,28 +50,50 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
             Funcionario funcionario = new Funcionario();
             if (ds.Tables[0].Rows.Count > 0)
             {
-                funcionario.idFunc = int.Parse(ds.Tables[0].Rows[0]["id_func"].ToString());
-                funcionario.nome = ds.Tables[0].Rows[0]["nome_func"].ToString();
+                funcionario.idFunc = int.Parse(ds.Tables[0].Rows[0]["id"].ToString());
+                funcionario.nome = ds.Tables[0].Rows[0]["nome"].ToString();
                 funcionario.cargo = ds.Tables[0].Rows[0]["cargo"].ToString();
-                funcionario.fone = ds.Tables[0].Rows[0]["fone_func"].ToString();
-                funcionario.eMail = ds.Tables[0].Rows[0]["email_func"].ToString();
+                funcionario.fone = ds.Tables[0].Rows[0]["fone"].ToString();
+                funcionario.eMail = ds.Tables[0].Rows[0]["email"].ToString();
             }
             return funcionario;
         }
 
         public void PostFuncionario(Funcionario funcionario)
         {
-            
+            conn.Conectar();
+            MySqlCommand cmd = new MySqlCommand("sp_insert_funcionario",conn.RetornarConexao());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@p_nome", funcionario.nome);
+            cmd.Parameters.AddWithValue("@p_cargo", funcionario.cargo);
+            cmd.Parameters.AddWithValue("@p_fone", funcionario.fone);
+            cmd.Parameters.AddWithValue("@p_email", funcionario.eMail);
+            cmd.ExecuteNonQuery();
+            conn.Desconectar();
         }
 
         public void DeleteFuncionario(Funcionario funcionario, int id)
         {
-
+            conn.Conectar();
+            MySqlCommand cmd = new MySqlCommand("sp_delete_funcionario", conn.RetornarConexao());
+            cmd.CommandType=CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@p_id", id);
+            cmd.ExecuteNonQuery();
+            conn.Desconectar();
         }
 
         public void EditFuncionario(Funcionario funcionario, int id)
         {
-
+            conn.Conectar();
+            MySqlCommand cmd = new MySqlCommand("sp_update_funcionario", conn.RetornarConexao());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@p_nome", funcionario.nome);
+            cmd.Parameters.AddWithValue("@p_cargo", funcionario.cargo);
+            cmd.Parameters.AddWithValue("@p_fone", funcionario.fone);
+            cmd.Parameters.AddWithValue("@p_email", funcionario.eMail);
+            cmd.Parameters.AddWithValue("@p_id", funcionario.idFunc);
+            cmd.ExecuteNonQuery();
+            conn.Desconectar();
         }
     }
 }

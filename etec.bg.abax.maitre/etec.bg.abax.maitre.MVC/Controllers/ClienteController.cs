@@ -42,7 +42,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
             {
                 data.PostCliente(collection);
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Listar));
             }
             catch
             {
@@ -88,7 +88,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
             {
                 data.DeleteCliente(collection, id);
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Listar));
             }
             catch
             {

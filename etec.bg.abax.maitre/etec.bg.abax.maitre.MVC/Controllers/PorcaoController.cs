@@ -42,7 +42,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
             {
                 data.PostPorcao(collection);
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Listar));
             }
             catch
             {
@@ -65,7 +65,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
             {
                 data.EditPorcao(collection, id);
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Listar));
             }
             catch
             {
@@ -88,7 +88,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
             {
                 data.DeletePorcao(collection, id);
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Listar));
             }
             catch
             {

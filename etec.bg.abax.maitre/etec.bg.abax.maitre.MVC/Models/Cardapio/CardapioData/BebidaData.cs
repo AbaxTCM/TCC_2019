@@ -25,7 +25,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 Bebida bebida = new Bebida();
-                bebida.idBebida = int.Parse(dr["id_bebida"].ToString());
+                bebida.idBebida = int.Parse(dr["id"].ToString());
                 bebida.nome = dr["nome"].ToString();
                 bebida.tipo = dr["tipo"].ToString();
                 //bebida.imagem = byte.Parse(dr["imagem"].ToString());
@@ -42,7 +42,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
 
             MySqlDataAdapter da = new MySqlDataAdapter("sp_select_bebidas", conn.RetornarConexao());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
-            da.SelectCommand.Parameters.AddWithValue("@p_id_bebida", id);
+            da.SelectCommand.Parameters.AddWithValue("@p_id", id);
             DataSet ds = new DataSet();
             da.Fill(ds);
             conn.Desconectar();
@@ -80,7 +80,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
 
             MySqlCommand cmd = new MySqlCommand("sp_delete_bebidas", conn.RetornarConexao());
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@p_id_bebida", id);
+            cmd.Parameters.AddWithValue("@p_id", id);
             cmd.ExecuteNonQuery();
 
             conn.Desconectar();
@@ -92,7 +92,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
 
             MySqlCommand cmd = new MySqlCommand("sp_update_bebidas", conn.RetornarConexao());
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@p_id_bebida", id);
+            cmd.Parameters.AddWithValue("@p_id", id);
             cmd.Parameters.AddWithValue("@p_nome", bebida.nome);
             cmd.Parameters.AddWithValue("@p_tipo", bebida.tipo);
             cmd.Parameters.AddWithValue("@p_imagem", bebida.imagem);
