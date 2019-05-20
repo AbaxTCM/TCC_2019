@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace etec.bg.abax.maitre.MVC.Controllers
 {
@@ -30,6 +31,9 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         // GET: Prato/Create
         public ActionResult Cadastrar()
         {
+            Models.Cardapio.CardapioData.DiaData data = new Models.Cardapio.CardapioData.DiaData();
+            ViewBag.Dias = data.GetLista().Select(c => new SelectListItem()
+            { Text = c.nome, Value = c.idDia.ToString() }).ToList();
             return View();
         }
 

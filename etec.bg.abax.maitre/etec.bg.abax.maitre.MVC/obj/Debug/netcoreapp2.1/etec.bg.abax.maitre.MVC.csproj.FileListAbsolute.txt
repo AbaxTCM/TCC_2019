@@ -372,3 +372,4 @@ C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.
 C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Reserva\Detalhar.g.cshtml.cs
 C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Reserva\Editar.g.cshtml.cs
 C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Reserva\Listar.g.cshtml.cs
+C:\Users\Rafael.Rios\Documents\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\Senha.g.cshtml.cs

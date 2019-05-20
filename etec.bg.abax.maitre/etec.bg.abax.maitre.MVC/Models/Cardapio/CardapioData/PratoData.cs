@@ -40,8 +40,9 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
         {
             conn.Conectar();
 
-            MySqlDataAdapter da = new MySqlDataAdapter("select * from pratos where id_prato = @id", conn.RetornarConexao());
-            da.SelectCommand.Parameters.AddWithValue("@id", id);
+            MySqlDataAdapter da = new MySqlDataAdapter("sp_select_pratos", conn.RetornarConexao());
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.AddWithValue("@p_id", id);
             DataSet ds = new DataSet();
             da.Fill(ds);
             conn.Desconectar();
@@ -60,17 +61,45 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
 
         public void PostPrato(Prato prato)
         {
+            conn.Conectar();
 
+            MySqlCommand cmd = new MySqlCommand("sp_insert_Pratos", conn.RetornarConexao());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@p_dia", prato.diaSemana.idDia);
+            cmd.Parameters.AddWithValue("@p_nome", prato.nome);
+            cmd.Parameters.AddWithValue("@p_imagem", prato.imagem);
+            cmd.Parameters.AddWithValue("@p_valor", prato.valor);
+            cmd.ExecuteNonQuery();
+
+            conn.Desconectar();
         }
 
         public void DeletePrato(Prato prato, int id)
         {
+            conn.Conectar();
 
+            MySqlCommand cmd = new MySqlCommand("sp_delete_pratos", conn.RetornarConexao());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@p_id", id);
+            cmd.ExecuteNonQuery();
+
+            conn.Desconectar();
         }
 
         public void EditPrato(Prato prato, int id)
         {
+            conn.Conectar();
 
+            MySqlCommand cmd = new MySqlCommand("sp_update_pratos", conn.RetornarConexao());
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@p_id", id);
+            cmd.Parameters.AddWithValue("@p_nome", prato.nome);
+            cmd.Parameters.AddWithValue("@p_imagem", prato.imagem);
+            cmd.Parameters.AddWithValue("@p_valor", prato.valor);
+            cmd.Parameters.AddWithValue("@p_dia", prato.diaSemana.idDia);
+            cmd.ExecuteNonQuery();
+
+            conn.Desconectar();
         }
     }
 }
