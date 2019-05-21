@@ -46,7 +46,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
             {
                 data.PostPrato(collection);
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Listar));
             }
             catch
             {

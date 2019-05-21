@@ -25,9 +25,9 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
             foreach (DataRow dr in ds.Tables[0].Rows)
             {
                 Prato prato = new Prato();
-                prato.idPrato = int.Parse(dr["id"].ToString());
+                prato.idPrato = int.Parse(dr["id_prato"].ToString());
+                //prato.diaSemana.idDia = int.Parse(dr["id_dia"].ToString());
                 prato.nome = dr["nome"].ToString();
-                prato.diaSemana.idDia = int.Parse(dr["id"].ToString());
                 //prato.imagem = byte.Parse(dr["imagem"].ToString());
                 prato.valor = decimal.Parse(dr["valor"].ToString());
 
