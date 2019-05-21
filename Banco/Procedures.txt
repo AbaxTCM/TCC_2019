@@ -1,0 +1,159 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_delete_bebidas`(in p_id int)
+begin
+delete from bebidas 
+where id_bebida = p_id;
+end
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_delete_cliente`(in p_id int)
+BEGIN
+delete from cliente
+where id = p_id;
+END
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_delete_funcionario`(in p_id int)
+BEGIN
+delete from funcionario
+where id = p_id;
+END
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_delete_porcao`(in p_id int)
+BEGIN
+delete from porcao
+where id = p_id;
+END
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_delete_pratos`(in p_id int)
+begin
+delete from prato 
+where id_prato = p_id;
+end
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_delete_sobremesa`(in p_id int)
+BEGIN
+delete from sobremesa
+where id = p_id;
+END
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_bebidas`(in p_nome varchar(80), in p_tipo varchar (45),in p_imagem mediumblob, in p_valor decimal(10,2))
+begin
+insert into bebidas (nome, tipo, imagem, valor) values(p_nome, p_tipo,p_imagem, p_valor);
+end
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_cliente`(in p_nome varchar(100), in p_fone varchar (20), in p_email varchar(70), in p_cpf varchar(12))
+BEGIN
+insert into cliente(NOME,FONE,EMAIL,CPF) values(P_NOME,P_FONE,P_EMAIL,P_CPF);
+END
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_funcionario`(in p_nome varchar (100),in p_cargo varchar (45),in p_fone varchar(20), in p_email varchar (70))
+BEGIN
+insert into funcionario (nome,cargo,fone,email) values(p_nome,p_cargo,p_fone,p_email);
+END
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_porcao`(in p_nome varchar (80),in p_descricao varchar(200), in p_imagem mediumblob, in p_valor decimal (10,5))
+BEGIN
+insert into porcao (nome,descricao,imagem,valor) values (p_nome,p_descricao,p_imagem,p_valor);
+END
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_pratos`(in p_dia_semana varchar(45) ,in p_nome varchar(80), in p_imagem mediumblob, in p_valor decimal(10,2))
+begin
+insert into prato (dia_semana,nome,imagem,valor) values(p_dia_semana, p_nome,p_imagem, p_valor);
+end
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_insert_sobremesa`(in p_nome varchar(80), in p_imagem mediumblob, in p_valor decimal(10,2))
+BEGIN
+insert into sobremesa (nome,imagem,valor) values (p_nome,p_imagem,p_valor);
+END
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_select_bebidas`(in p_id int)
+begin
+select * from bebidas
+where id_bebida = p_id;
+end
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_select_cliente`(p_id int)
+BEGIN
+select * from cliente
+where id= p_id;
+END
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_select_funcionario`(in p_id int)
+BEGIN
+select * from funcionario
+where id = p_id;
+END
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_select_porcao`(in p_id int)
+BEGIN
+select * from porcao 
+where id = p_id;
+END
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_select_pratos`(in p_id int)
+begin
+select * from prato
+where id_prato = p_id;
+end
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_select_sobremesa`(in p_id int)
+BEGIN
+select * from sobremesa
+where id = p_id;
+END
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_bebidas`(in p_id int, in p_nome varchar(80), in p_imagem mediumblob, in p_valor decimal(10,2))
+begin
+update bebidas set
+nome = p_nome,
+imagem = p_imagem,
+valor = p_valor
+where id = p_id;
+end
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_cliente`(in p_nome varchar(100),in p_fone varchar(20), in p_email varchar(70), in p_cpf varchar(12), in p_id int)
+BEGIN
+update cliente set
+nome=p_nome,
+fone=p_fone,
+email=p_email,
+cpf=p_cpf
+where id = p_id;
+END
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_funcionario`(in p_nome varchar(100),in p_cargo varchar(45),in p_fone varchar(20),in p_email varchar(70),in p_id int)
+BEGIN
+update funcionario set 
+nome = p_nome,
+cargo = p_cargo,
+fone = p_fone,
+email = p_email
+where id = p_id;
+END
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_porcao`(in p_nome varchar (80),in p_descricao varchar (200), in p_imagem mediumblob, in p_valor decimal(10,5), in p_id int)
+BEGIN
+update porcao set 
+nome = p_nome,
+descricao = p_descricao,
+imagem = p_imagem,
+valor = p_valor
+where id = p_id;
+END
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_pratos`(in p_id int, in p_nome varchar(80), in p_imagem mediumblob, in p_valor decimal(10,2), in p_dia_semana varchar(45))
+begin
+update prato set
+nome = p_nome,
+imagem = p_imagem,
+valor = p_valor,
+dia_semana = p_dia_semana
+where id = p_id;
+end
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_update_sobremesa`(in p_nome varchar (80), in p_imagem mediumblob, in valor decimal(10,2), in p_id int)
+BEGIN
+update sobremesa set
+nome = p_nome,
+imagem = p_imagem,
+valor = p_valor 
+where id = p_id;
+END
