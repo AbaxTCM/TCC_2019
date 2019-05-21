@@ -67,7 +67,7 @@ using etec.bg.abax.maitre.MVC.Models;
             WriteLiteral("\r\n<h2>Pessoa</h2>\r\n\r\n<div class=\"row\">\r\n    <div class=\"col-md-3\">\r\n        <div class=\"card\" style=\"width: 18rem;\">\r\n            ");
             EndContext();
             BeginContext(190, 82, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "bd2c4d954f104571a527cc854e790bf3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "7c8f4ad89cd44bc8a2e6c00db30e9a17", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -87,7 +87,7 @@ using etec.bg.abax.maitre.MVC.Models;
             WriteLiteral("\r\n            <div class=\"card-body\">\r\n                <h5 class=\"card-title\">Funcionário</h5>\r\n                <p class=\"card-text\">Lista de Funcionários</p>\r\n                ");
             EndContext();
             BeginContext(448, 87, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "55030a0321064506a44fd04688d2d465", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "15fe70a7ef0649618a463a4994f678ff", async() => {
                 BeginContext(524, 7, true);
                 WriteLiteral("Acessar");
                 EndContext();
@@ -112,7 +112,7 @@ using etec.bg.abax.maitre.MVC.Models;
             WriteLiteral("\r\n            </div>\r\n        </div>\r\n    </div>\r\n\r\n    <div class=\"col-md-3\">\r\n        <div class=\"card\" style=\"width: 18rem;\">\r\n            ");
             EndContext();
             BeginContext(677, 82, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "cf8cf93b3ae947579e92c59e2ec7a92d", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "4c9c59dddb8d42e79a424ce31939494e", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -132,7 +132,7 @@ using etec.bg.abax.maitre.MVC.Models;
             WriteLiteral("\r\n            <div class=\"card-body\">\r\n                <h5 class=\"card-title\">Cliente</h5>\r\n                <p class=\"card-text\">Lista de Clientes</p>\r\n                ");
             EndContext();
             BeginContext(927, 83, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5c790c74ecb44196baf37ebaf0b22e3e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1a87a1674995406a9ec41d1eb6b4e2ad", async() => {
                 BeginContext(999, 7, true);
                 WriteLiteral("Acessar");
                 EndContext();
