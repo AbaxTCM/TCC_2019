@@ -63,7 +63,7 @@ using etec.bg.abax.maitre.MVC.Models;
             WriteLiteral("\r\n<h2>Listar</h2>\r\n\r\n<p>\r\n    ");
             EndContext();
             BeginContext(142, 37, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "632ca3c3fa5948058610fd8c51bfc479", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8fdc9d29dc4c4c179f8b7e2234698795", async() => {
                 BeginContext(165, 10, true);
                 WriteLiteral("Create New");
                 EndContext();

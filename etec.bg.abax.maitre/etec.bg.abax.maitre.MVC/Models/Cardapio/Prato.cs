@@ -8,7 +8,9 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio
 {
     public class Prato : Models.ClasseAbstrata.ACardapio
     {
+        [DisplayName("ID Prato")]
         public int idPrato { get; set; }
-        public Dia diaSemana { get; set; }
+        [DisplayName("Dia da Semana")]
+        public string diaSemana { get; set; }
     }
 }
