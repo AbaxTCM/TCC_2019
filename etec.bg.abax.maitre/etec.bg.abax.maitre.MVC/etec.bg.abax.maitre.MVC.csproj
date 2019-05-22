@@ -19,10 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Estabelecimento\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="wwwroot\lib\fontawesome-free\js\all.js" />
     <None Include="wwwroot\lib\fontawesome-free\js\all.min.js" />
     <None Include="wwwroot\lib\fontawesome-free\js\brands.js" />
