@@ -12,9 +12,9 @@
     <title>Listar</title>
 </head>
 <body>
-<p>
-    <a asp-action="Cadastrar">Create New</a>
-</p>
+    <p>
+        <input type="button" class="btn btn-primary" value="Cadastrar" onclick="location.href='@Url.Action("Cadastrar","Prato")'"/>
+    </p>
 <table class="table">
     <thead>
         <tr>
@@ -55,9 +55,9 @@
                 @Html.DisplayFor(modelItem => item.diaSemana)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Editar", new { id = item.idPrato }) |
-                @Html.ActionLink("Details", "Detalhar", new { id = item.idPrato }) |
-                @Html.ActionLink("Delete", "Deletar", new { id = item.idPrato })
+                <input type="button" class="btn btn-primary" value="Editar" onclick="location.href='@Url.Action("Editar","Prato",new { id = item.idPrato })'" />
+                <input type="button" class="btn btn-primary" value="Detalhar" onclick="location.href='@Url.Action("Detalhar","Prato",new { id = item.idPrato })'" />
+                <input type="button" class="btn btn-danger" value="Deletar" onclick="location.href='@Url.Action("Deletar","Prato",new { id = item.idPrato })'" />
             </td>
         </tr>
 }
