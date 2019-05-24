@@ -45,8 +45,8 @@
     </dl>
     
     <form asp-action="Deletar">
-        <input type="submit" value="Delete" class="btn btn-default" /> |
-        <a asp-action="Listar">Back to List</a>
+        <button asp-action="Listar" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i></button>
+        <button class="btn btn-danger" type="submit"><i class="glyphicon glyphicon-remove"></i></button>
     </form>
 </div>
 </body>

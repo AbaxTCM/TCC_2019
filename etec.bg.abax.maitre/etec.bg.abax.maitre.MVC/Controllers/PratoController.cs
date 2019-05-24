@@ -89,7 +89,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
             {
                 data.DeletePrato(collection, id);
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Listar));
             }
             catch
             {
