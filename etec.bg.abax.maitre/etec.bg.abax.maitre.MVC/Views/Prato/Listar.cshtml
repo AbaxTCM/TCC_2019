@@ -13,7 +13,7 @@
 </head>
 <body>
     <p>
-        <input type="button" class="btn btn-primary" value="Cadastrar" onclick="location.href='@Url.Action("Cadastrar","Prato")'"/>
+        <button class="btn btn-primary" onclick="location.href='@Url.Action("Cadastrar","Prato")'"><b>+</b></button>
     </p>
 <table class="table">
     <thead>
@@ -57,7 +57,7 @@
             <td>
                 <input type="button" class="btn btn-primary" value="Editar" onclick="location.href='@Url.Action("Editar","Prato",new { id = item.idPrato })'" />
                 <input type="button" class="btn btn-primary" value="Detalhar" onclick="location.href='@Url.Action("Detalhar","Prato",new { id = item.idPrato })'" />
-                <input type="button" class="btn btn-danger" value="Deletar" onclick="location.href='@Url.Action("Deletar","Prato",new { id = item.idPrato })'" />
+                <button class="btn btn-danger" onclick="location.href='@Url.Action("Deletar","Prato",new { id = item.idPrato })'"><b>x</b></button>
             </td>
         </tr>
 }
