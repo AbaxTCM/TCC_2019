@@ -122,7 +122,7 @@
     </section>
     <!-- Portfolio Section -->
     <section id="portfolio">
-        <div class="container-fluid p-0">
+        <!--<div class="container-fluid p-0">
             <div class="row no-gutters">
                 <div class="col-lg-4 col-sm-6">
                     <a class="portfolio-box" href="img/portfolio/fullsize/1.jpg">
@@ -203,7 +203,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div>-->
     </section>
     <!-- Call to Action Section -->
     <section class="page-section bg-dark text-white">
@@ -225,7 +225,7 @@
             <div class="row">
                 <div class="col-lg-4 ml-auto text-center">
                     <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-                    <div>(11) 2555-0149</div>
+                    <div>(011) 2555-0149</div>
                 </div>
                 <div class="col-lg-4 mr-auto text-center">
                     <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
@@ -252,22 +252,25 @@
                     <h4 class="modal-title">Login</h4>
                 </div>
                 <div class="modal-body">
-                    <form id="form">
+                    <form>
 
                         <p>E-mail</p>
                         <input type="email" name="email" id="email" required />
                         <p>Senha</p>
                         <input type="password" name="senha" id="senha" required />
                         <h6><a asp-action="Senha">Esqueci a senha</a></h6>
+
+
+                        <div class="modal-footer">
+                            <input type="submit" id="btn-registro" class="btn btn-primary" value="Logar" />
+                            <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="cancelar()">Cancelar</button>
+                        </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <input type="submit" id="btn-registro" class="btn btn-primary" data-dismiss="modal" value="Logar" />
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                 </div>
             </div>
         </div>
     </div>
+
     <div id="registrarUsuario" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
@@ -300,13 +303,8 @@
                         </div>
                     </form>
                 </div>
-
-
             </div>
         </div>
-
-    </div>
-
     </div>
 
     <!-- Bootstrap core JavaScript -->

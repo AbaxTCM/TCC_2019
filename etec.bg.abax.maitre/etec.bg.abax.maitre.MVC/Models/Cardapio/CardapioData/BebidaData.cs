@@ -50,7 +50,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
             Bebida bebida = new Bebida();
             if (ds.Tables[0].Rows.Count > 0)
             {
-                bebida.idBebida = int.Parse(ds.Tables[0].Rows[0]["id_bebida"].ToString());
+                bebida.idBebida = int.Parse(ds.Tables[0].Rows[0]["id"].ToString());
                 bebida.nome = ds.Tables[0].Rows[0]["nome"].ToString();
                 bebida.tipo = ds.Tables[0].Rows[0]["tipo"].ToString();
                 //cliente.imagem = ds.Tables[0].Rows[0]["imagem"].ToString();
