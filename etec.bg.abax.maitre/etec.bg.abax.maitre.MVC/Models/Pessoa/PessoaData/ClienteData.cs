@@ -93,6 +93,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
             cmd.Parameters.AddWithValue("@p_email", cliente.eMail);
             cmd.Parameters.AddWithValue("@p_cpf", cliente.cpf);
             cmd.Parameters.AddWithValue("@p_id", cliente.idCliente);
+            cmd.Parameters.AddWithValue("@p_senha", cliente.senha);
             cmd.ExecuteNonQuery();
             conn.Desconectar();
         }

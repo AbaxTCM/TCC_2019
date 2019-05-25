@@ -12,5 +12,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa
         public int idCliente { get; set; }
         [DisplayName("CPF")]
         public string cpf { get; set; }
+        [DisplayName("Senha")]
+        public string senha { get; set; }
     }
 }

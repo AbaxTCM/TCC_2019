@@ -12,56 +12,69 @@
     <title>Listar</title>
 </head>
 <body>
-<p>
-    <a asp-action="Cadastrar">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.idBebida)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.tipo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.imagem)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.valor)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.idBebida)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.tipo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.imagem)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.valor)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Editar", new { id = item.idBebida }) |
-                @Html.ActionLink("Details", "Detalhar", new { id = item.idBebida }) |
-                @Html.ActionLink("Delete", "Deletar", new { id = item.idBebida })
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <!--
+    <p>
+        <a asp-action="Cadastrar">Create New</a>
+    </p>-->
+    <p>
+        <h3>Cadastrar bebida <button title="" class="btn btn-primary" onclick="location.href='@Url.Action("Cadastrar","Bebida")'"><i class="glyphicon glyphicon-plus"></i></h3> </button>
+    </p>
+    <br />
+    <br />
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.idBebida)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.tipo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.imagem)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.valor)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.idBebida)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.tipo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.imagem)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.valor)
+                    </td>
+                    <!--<td>
+                        @Html.ActionLink("Edit", "Editar", new { id = item.idBebida }) |
+                        @Html.ActionLink("Details", "Detalhar", new { id = item.idBebida }) |
+                        @Html.ActionLink("Delete", "Deletar", new { id = item.idBebida })
+                    </td>-->
+                    <td>
+                        <button title="Detalhar" class="btn btn-primary" onclick="location.href='@Url.Action("Detalhar","Bebida",new { id = item.idBebida })'"><i class="glyphicon glyphicon-search"></i></button>
+                        <button title="Editar"class="btn btn-default" onclick="location.href='@Url.Action("Editar","Bebida",new { id = item.idBebida })'"><i class="glyphicon glyphicon-pencil"></i></button>
+                        <button title="Deletar"class="btn btn-danger" onclick="location.href='@Url.Action("Deletar","Bebida",new { id = item.idBebida })'"><i class="glyphicon glyphicon-remove"></i></button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </body>
 </html>

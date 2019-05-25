@@ -12,9 +12,9 @@
     <title>Listar</title>
 </head>
 <body>
-<p>
-    <a asp-action="Cadastrar">Create New</a>
-</p>
+    <p>
+        <h3>Cadastrar cliente <button title="" class="btn btn-primary" onclick="location.href='@Url.Action("Cadastrar","Bebida")'"><i class="glyphicon glyphicon-plus"></i></h3> </button>
+    </p>
 <table class="table">
     <thead>
         <tr>
@@ -55,9 +55,9 @@
                 @Html.DisplayFor(modelItem => item.eMail)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Editar", new { id = item.idCliente }) |
-                @Html.ActionLink("Details", "Detalhar", new { id = item.idCliente }) |
-                @Html.ActionLink("Delete", "Deletar", new { id = item.idCliente })
+                <button title="Detalhar" class="btn btn-primary" onclick="location.href='@Url.Action("Detalhar","Cliente",new { id = item.idCliente })'"><i class="glyphicon glyphicon-search"></i></button>
+                <button title="Editar" class="btn btn-default" onclick="location.href='@Url.Action("Editar","Cliente",new { id = item.idCliente })'"><i class="glyphicon glyphicon-pencil"></i></button>
+                <button title="Deletar" class="btn btn-danger" onclick="location.href='@Url.Action("Deletar","Cliente",new { id = item.idCliente })'"><i class="glyphicon glyphicon-remove"></i></button>
             </td>
         </tr>
 }

@@ -13,45 +13,45 @@
 </head>
 <body>
 
-<div>
-    <h4>Cliente</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.idCliente)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.idCliente)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.cpf)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.cpf)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.nome)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.nome)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.fone)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.fone)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.eMail)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.eMail)
-        </dd>
-    </dl>
-</div>
-<div>
-    @Html.ActionLink("Edit", "Editar", new { id = Model.idCliente }) |
-    <a asp-action="Listar">Back to List</a>
-</div>
+    <div>
+        <h4>Detalhes cliente</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.idCliente)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.idCliente)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.cpf)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.cpf)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.nome)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.nome)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.fone)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.fone)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.eMail)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.eMail)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <button class="btn btn-default" title="Voltar" onclick="location.href='@Url.Action("Listar","Cliente")'"><i class="glyphicon glyphicon-chevron-left"></i></button>
+        <button class="btn btn-default" title="Editar" onclick="location.href='@Url.Action("Editar","Cliente",new { id = Model.idCliente })'"><i class="glyphicon glyphicon-pencil"></i></button>
+    </div>
 </body>
 </html>

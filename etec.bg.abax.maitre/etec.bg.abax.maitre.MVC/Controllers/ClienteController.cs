@@ -65,7 +65,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
             {
                 data.EditCliente(collection, id);
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Listar));
             }
             catch
             {

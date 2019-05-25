@@ -54,13 +54,14 @@
             <td>
                 @Html.DisplayFor(modelItem => item.valor)
             </td>
-            <td>
+           <!--- <td>
                 @Html.ActionLink("Edit", "Editar", new { id = item.idPorcao }) |
                 @Html.ActionLink("Details", "Detalhar", new { id = item.idPorcao }) |
                 @Html.ActionLink("Delete", "Deletar", new { id = item.idPorcao })
-            </td>
+            </td>-->
         </tr>
-}
+        <div>      <button class="btn btn-default" onclick="location.href='@Url.Action("Listar","Porcao")'"><i class="glyphicon glyphicon-chevron-left"></i></button></div>
+}               
     </tbody>
 </table>
 </body>

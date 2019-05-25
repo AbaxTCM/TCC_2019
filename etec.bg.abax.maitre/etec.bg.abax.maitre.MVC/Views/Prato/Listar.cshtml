@@ -13,55 +13,63 @@
 </head>
 <body>
     <p>
-        <button class="btn btn-primary" onclick="location.href='@Url.Action("Cadastrar","Prato")'"><i class="glyphicon glyphicon-plus"></i></button>
+        <h3>Cadastrar produto <button title="" class="btn btn-primary" onclick="location.href='@Url.Action("Cadastrar","Prato")'"><i class="glyphicon glyphicon-plus"></i></h3> </button>
     </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.idPrato)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.imagem)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.valor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.diaSemana)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.idPrato)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.imagem)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.valor)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.diaSemana)
-            </td>
-            <td>
-                <button class="btn btn-primary" onclick="location.href='@Url.Action("Detalhar","Prato",new { id = item.idPrato })'"><i class="glyphicon glyphicon-search"></i></button>
-                <button class="btn btn-default" onclick="location.href='@Url.Action("Editar","Prato",new { id = item.idPrato })'"><i class="glyphicon glyphicon-pencil"></i></button>
-                <button class="btn btn-danger" onclick="location.href='@Url.Action("Deletar","Prato",new { id = item.idPrato })'"><i class="glyphicon glyphicon-remove"></i></button>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <br />
+    <br />
+    <!---
+    <p>
+        <b><a asp-action="Cadastrar">Novo cadastro</a></b>
+    </p>
+    <br />-->
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.idPrato)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.imagem)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.valor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.diaSemana)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.idPrato)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.imagem)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.valor)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.diaSemana)
+                    </td>
+                    <td>
+                        <button title="Detalhes" class="btn btn-primary" onclick="location.href='@Url.Action("Detalhar","Prato",new { id = item.idPrato })'"><i class="glyphicon glyphicon-search"></i></button>
+                        <button title="Editar" class="btn btn-default" onclick="location.href='@Url.Action("Editar","Prato",new { id = item.idPrato })'"><i class="glyphicon glyphicon-pencil"></i></button>
+                        <button title="Deletar" class="btn btn-danger" onclick="location.href='@Url.Action("Deletar","Prato",new { id = item.idPrato })'"><i class="glyphicon glyphicon-remove"></i></button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </body>
 </html>
