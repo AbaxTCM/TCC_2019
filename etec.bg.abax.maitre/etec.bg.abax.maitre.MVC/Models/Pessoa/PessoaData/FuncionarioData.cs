@@ -55,6 +55,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
                 funcionario.cargo = ds.Tables[0].Rows[0]["cargo"].ToString();
                 funcionario.fone = ds.Tables[0].Rows[0]["fone"].ToString();
                 funcionario.eMail = ds.Tables[0].Rows[0]["email"].ToString();
+                funcionario.senha = ds.Tables[0].Rows[0]["senha"].ToString();
             }
             return funcionario;
         }
@@ -68,6 +69,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
             cmd.Parameters.AddWithValue("@p_cargo", funcionario.cargo);
             cmd.Parameters.AddWithValue("@p_fone", funcionario.fone);
             cmd.Parameters.AddWithValue("@p_email", funcionario.eMail);
+            cmd.Parameters.AddWithValue("@p_senha", funcionario.senha);
             cmd.ExecuteNonQuery();
             conn.Desconectar();
         }
@@ -92,6 +94,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
             cmd.Parameters.AddWithValue("@p_fone", funcionario.fone);
             cmd.Parameters.AddWithValue("@p_email", funcionario.eMail);
             cmd.Parameters.AddWithValue("@p_id", funcionario.idFunc);
+            cmd.Parameters.AddWithValue("@p_senha", funcionario.senha);
             cmd.ExecuteNonQuery();
             conn.Desconectar();
         }

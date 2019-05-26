@@ -55,6 +55,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
                 cliente.fone = ds.Tables[0].Rows[0]["fone"].ToString();
                 cliente.eMail = ds.Tables[0].Rows[0]["email"].ToString();
                 cliente.cpf = ds.Tables[0].Rows[0]["cpf"].ToString();
+                cliente.senha = ds.Tables[0].Rows[0]["senha"].ToString();
             }
             return cliente;
         }
@@ -68,6 +69,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
             cmd.Parameters.AddWithValue("@p_fone", cliente.fone);
             cmd.Parameters.AddWithValue("@p_email", cliente.eMail);
             cmd.Parameters.AddWithValue("@p_cpf", cliente.cpf);
+            cmd.Parameters.AddWithValue("@p_senha", cliente.senha);
             cmd.ExecuteNonQuery();
             conn.Desconectar();
 
@@ -92,7 +94,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
             cmd.Parameters.AddWithValue("@p_fone", cliente.fone);
             cmd.Parameters.AddWithValue("@p_email", cliente.eMail);
             cmd.Parameters.AddWithValue("@p_cpf", cliente.cpf);
-            cmd.Parameters.AddWithValue("@p_id", cliente.idCliente);
+            cmd.Parameters.AddWithValue("@p_id", id);
             cmd.Parameters.AddWithValue("@p_senha", cliente.senha);
             cmd.ExecuteNonQuery();
             conn.Desconectar();

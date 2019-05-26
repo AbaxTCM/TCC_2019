@@ -8,7 +8,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Conexao
 {
     public class Conexao
     {
-        MySqlConnection conn = new MySqlConnection("server=172.17.1.161; uid=abax; pwd=abax1234567@; database=tcc");
+        MySqlConnection conn = new MySqlConnection("server=localhost; uid=root; pwd=1234567; database=tcc");
 
         public MySqlConnection Conectar()
         {

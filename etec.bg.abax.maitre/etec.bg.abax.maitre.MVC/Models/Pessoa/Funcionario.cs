@@ -12,5 +12,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa
         public int idFunc { get; set; }
         [DisplayName("Cargo")]
         public string cargo { get; set; }
+        [DisplayName("Senha")]
+        public string senha { get; set; }
     }
 }
