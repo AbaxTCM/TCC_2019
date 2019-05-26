@@ -34,7 +34,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         {
             return View();
         }
-
+        
         public IActionResult Menu()
         {
             return View();
