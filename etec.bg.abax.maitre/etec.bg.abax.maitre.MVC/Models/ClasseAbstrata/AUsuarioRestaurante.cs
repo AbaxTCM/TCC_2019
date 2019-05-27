@@ -14,5 +14,7 @@ namespace etec.bg.abax.maitre.MVC.Models.ClasseAbstrata
         public string fone { get; set; }
         [DisplayName("E-mail")]
         public string eMail { get; set; }
+        [DisplayName("Função")]
+        public string funcao { get; set; }
     }
 }

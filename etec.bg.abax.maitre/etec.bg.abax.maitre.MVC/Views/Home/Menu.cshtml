@@ -2,6 +2,14 @@
     ViewData["Title"] = "Home Page";
 }
 
+@if (etec.bg.abax.maitre.MVC.Startup.Session.Instance.UserID < 1 && etec.bg.abax.maitre.MVC.Startup.Session.Instance.Funcao == null)
+{
+}
+else
+{
+    <p>Valor: @etec.bg.abax.maitre.MVC.Startup.Session.Instance.UserID.ToString() e @etec.bg.abax.maitre.MVC.Startup.Session.Instance.Funcao.ToString()</p>
+}
+
 <h2>Menu</h2>
 
 <div class="row">

@@ -14,5 +14,6 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa
         public string cargo { get; set; }
         [DisplayName("Senha")]
         public string senha { get; set; }
+        public string telefone { get; set; }
     }
 }

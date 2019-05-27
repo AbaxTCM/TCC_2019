@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using static etec.bg.abax.maitre.MVC.Startup;
 
 namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
 {
@@ -57,6 +58,34 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
                 cliente.cpf = ds.Tables[0].Rows[0]["cpf"].ToString();
                 cliente.senha = ds.Tables[0].Rows[0]["senha"].ToString();
             }
+            return cliente;
+        }
+
+        public Cliente GetCliente(string email, string senha)
+        {
+            conn.Conectar();
+
+            MySqlDataAdapter da = new MySqlDataAdapter("select * from cliente where email = @email and senha = @senha", conn.RetornarConexao());
+            //da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.AddWithValue("@email", email);
+            da.SelectCommand.Parameters.AddWithValue("@senha", senha);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            conn.Desconectar();
+
+            Cliente cliente = new Cliente();
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                cliente.idCliente = int.Parse(ds.Tables[0].Rows[0]["id"].ToString());
+                cliente.nome = ds.Tables[0].Rows[0]["nome"].ToString();
+                cliente.fone = ds.Tables[0].Rows[0]["fone"].ToString();
+                cliente.eMail = ds.Tables[0].Rows[0]["email"].ToString();
+                cliente.cpf = ds.Tables[0].Rows[0]["cpf"].ToString();
+                cliente.senha = ds.Tables[0].Rows[0]["senha"].ToString();
+                cliente.funcao = ds.Tables[0].Rows[0]["funcao"].ToString();
+            }
+            Session.Instance.UserID = cliente.idCliente;
+            Session.Instance.Funcao = cliente.funcao;
             return cliente;
         }
 

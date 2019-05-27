@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using etec.bg.abax.maitre.MVC.Models;
+using static etec.bg.abax.maitre.MVC.Startup;
 
 namespace etec.bg.abax.maitre.MVC.Controllers
 {
@@ -37,13 +38,32 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         
         public IActionResult Menu()
         {
-            return View();
+            return View(Session.Instance.Funcao);
         }
 
         public IActionResult Validar(Models.Pessoa.LoginRegistro collection)
         {
             string email = collection.eMail, senha = collection.senha;
-            return View();
+            Models.Pessoa.PessoaData.ClienteData data = new Models.Pessoa.PessoaData.ClienteData();
+            data.GetCliente(email, senha);
+
+            return View(nameof(Menu));
+        }
+
+        public IActionResult Cadastrar(Models.Pessoa.LoginRegistro collection)
+        {
+            Models.Pessoa.Cliente cliente = new Models.Pessoa.Cliente();
+            Models.Pessoa.PessoaData.ClienteData data = new Models.Pessoa.PessoaData.ClienteData();
+            cliente.nome = collection.nome;
+            cliente.eMail = collection.eMail;
+            cliente.cpf = collection.cpf;
+            cliente.fone = collection.telefone;
+            cliente.senha = collection.senha;
+            cliente.funcao = "cli";
+
+            data.PostCliente(cliente);
+
+            return View(nameof(Index));
         }
 
         public IActionResult Senha()
