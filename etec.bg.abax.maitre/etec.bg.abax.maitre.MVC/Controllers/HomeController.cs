@@ -40,6 +40,12 @@ namespace etec.bg.abax.maitre.MVC.Controllers
             return View();
         }
 
+        public IActionResult Validar(Models.Pessoa.LoginRegistro collection)
+        {
+            string email = collection.eMail, senha = collection.senha;
+            return View();
+        }
+
         public IActionResult Senha()
         {
             return View();
