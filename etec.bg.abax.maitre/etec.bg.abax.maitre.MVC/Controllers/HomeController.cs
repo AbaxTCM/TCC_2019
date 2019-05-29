@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using etec.bg.abax.maitre.MVC.Models;
-using static etec.bg.abax.maitre.MVC.Startup;
+using static etec.bg.abax.maitre.MVC.Program;
 
 namespace etec.bg.abax.maitre.MVC.Controllers
 {
@@ -38,7 +38,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         
         public IActionResult Menu()
         {
-            return View(Session.Instance.Funcao);
+            return View();
         }
 
         public IActionResult Validar(Models.Pessoa.LoginRegistro collection)
@@ -62,6 +62,14 @@ namespace etec.bg.abax.maitre.MVC.Controllers
             cliente.funcao = "cli";
 
             data.PostCliente(cliente);
+
+            return View(nameof(Index));
+        }
+
+        public IActionResult Sair()
+        {
+            Session.Instance.Funcao = null;
+            Session.Instance.UserID = 0;
 
             return View(nameof(Index));
         }

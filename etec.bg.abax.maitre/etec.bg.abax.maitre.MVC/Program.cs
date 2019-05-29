@@ -20,5 +20,37 @@ namespace etec.bg.abax.maitre.MVC
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
+
+        public sealed class Session
+        {
+
+            private static volatile Session instance;
+            private static object sync = new Object();
+
+            private Session() { }
+
+            public static Session Instance
+            {
+                get
+                {
+                    if (instance == null)
+                    {
+                        lock (sync)
+                        {
+                            if (instance == null)
+                            {
+                                instance = new Session();
+                            }
+                        }
+                    }
+                    return instance;
+                }
+
+            }
+            public int UserID { get; set; }
+            public string Funcao { get; set; }
+            public string Nome { get; set; }
+
+        }
     }
 }

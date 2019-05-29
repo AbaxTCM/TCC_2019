@@ -2,47 +2,53 @@
     ViewData["Title"] = "Home Page";
 }
 
-@if (etec.bg.abax.maitre.MVC.Startup.Session.Instance.UserID < 1 && etec.bg.abax.maitre.MVC.Startup.Session.Instance.Funcao == null)
+@if (etec.bg.abax.maitre.MVC.Program.Session.Instance.UserID < 1 && etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == null)
 {
+    <h1 class="text-danger">Por favor efetue o Login para poder acessar esta página</h1>
 }
 else
 {
-    <p>Valor: @etec.bg.abax.maitre.MVC.Startup.Session.Instance.UserID.ToString() e @etec.bg.abax.maitre.MVC.Startup.Session.Instance.Funcao.ToString()</p>
+
+    <h2>Menu</h2>
+
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
+            <div class="hovereffect">
+                <img class="img-responsive" src="http://placehold.it/350x250" alt="">
+                <div class="overlay">
+                    <h2>Pessoas</h2>
+                    <p>
+                        <a asp-action="Pessoa" class="text-decoration-none"><i class="glyphicon glyphicon-user"></i></a><br />
+                        <i>Gerenciar clientes e funcionários</i>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
+            <div class="hovereffect">
+                <img class="img-responsive" src="http://placehold.it/350x250" alt="">
+                <div class="overlay">
+                    <h2>Cardápio</h2>
+                    <p>
+                        <a asp-action="Cardapio" class="text-decoration-none"><i class="glyphicon glyphicon-th-large"></i></a><br />
+                        <i>Cardápio do restaurante</i>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
+            <div class="hovereffect">
+                <img class="img-responsive" src="http://placehold.it/350x250" alt="">
+                <div class="overlay">
+                    <h2>Reserva</h2>
+                    <p>
+                        <a asp-action="Reserva" class="text-decoration-none"><i class="glyphicon glyphicon-book"></i></a><br />
+                        <i>Gerenciamento das reservas</i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 }
-
-<h2>Menu</h2>
-
-<div class="row">
-    <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="~/images/logo-user-png-6.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Pessoas</h5>
-                <p class="card-text">Gerenciar Clientes e Funcionários</p>
-                <a asp-action="Pessoa" class="btn btn-primary">Acessar</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="~/images/logo-user-png-6.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Cardápio</h5>
-                <p class="card-text">Gerenciamento do cardápio do restaurante</p>
-                <a asp-action="Cardapio" class="btn btn-primary">Acessar</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-3">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="~/images/logo-user-png-6.png" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Reserva</h5>
-                <p class="card-text">Gerenciamento das reservas</p>
-                <a asp-action="Reserva" class="btn btn-primary">Acessar</a>
-            </div>
-        </div>
-    </div>
-</div>

@@ -26,13 +26,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Teste</a>
+                <a asp-area="" asp-controller="Home" asp-action="Menu" class="navbar-brand">Home</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.UserID > 0 && etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao != null)
+                    {
+                    <li><a asp-area="" asp-controller="Home" asp-action="Sair">Sair</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Menu">Bem-Vindo <b>@etec.bg.abax.maitre.MVC.Program.Session.Instance.Nome</b></a></li>
+                    }
                 </ul>
             </div>
         </div>

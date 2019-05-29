@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
-using static etec.bg.abax.maitre.MVC.Startup;
+using static etec.bg.abax.maitre.MVC.Program;
 
 namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
 {
@@ -86,6 +86,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
             }
             Session.Instance.UserID = cliente.idCliente;
             Session.Instance.Funcao = cliente.funcao;
+            Session.Instance.Nome = cliente.nome.Split(" ").FirstOrDefault();
             return cliente;
         }
 
@@ -99,6 +100,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
             cmd.Parameters.AddWithValue("@p_email", cliente.eMail);
             cmd.Parameters.AddWithValue("@p_cpf", cliente.cpf);
             cmd.Parameters.AddWithValue("@p_senha", cliente.senha);
+            cmd.Parameters.AddWithValue("@p_funcao", cliente.funcao);
             cmd.ExecuteNonQuery();
             conn.Desconectar();
 
