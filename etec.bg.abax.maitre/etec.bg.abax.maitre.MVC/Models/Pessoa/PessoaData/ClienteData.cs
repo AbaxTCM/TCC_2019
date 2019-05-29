@@ -103,7 +103,6 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
             cmd.Parameters.AddWithValue("@p_funcao", cliente.funcao);
             cmd.ExecuteNonQuery();
             conn.Desconectar();
-
         }
 
         public void DeleteCliente(Cliente cliente, int id)
