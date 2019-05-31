@@ -59,17 +59,27 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         [HttpPost]
         public JsonResult ValidLogin(string email, string senha)
         {
+            Session.Instance.Nome = null;
+            Session.Instance.Funcao = null;
+            Session.Instance.UserID = 0;
+
             string erro = "";
+            bool sucesso;
+            object resposta = null;
             Models.Pessoa.PessoaData.ClienteData data = new Models.Pessoa.PessoaData.ClienteData();
             data.GetCliente(email, senha);
             if (Session.Instance.UserID >= 1)
             {
-                return Json("'Success':'true'");
+                sucesso = true;
+                resposta = new { sucesso };
+                return Json(resposta);
             }
             else
             {
+                sucesso = false;
                 erro = "Login inválido";
-                return Json(String.Format("'Success':'false','Error':'{0}'", erro));
+                resposta = new { sucesso, erro };
+                return Json(resposta);
             }
         }
 

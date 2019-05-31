@@ -253,20 +253,16 @@
                     <h4 class="modal-title">Login</h4>
                 </div>
                 <div class="modal-body">
-                    <form asp-action="Validar">
-
                         <p>E-mail</p>
-                        <input asp-for="eMail" type="email" name="email" id="email" required />
+                        <input type="email" name="email" id="email" required />
                         <p>Senha</p>
-                        <input asp-for="senha" type="password" name="senha" id="senha" required />
+                        <input type="password" name="senha" id="senha" required />
                         <h6><a asp-action="Senha">Esqueci a senha</a></h6>
 
                         <div class="modal-footer">
-                            <input type="submit" id="btn-login" class="btn btn-primary" value="Logar" />
+                            <input type="button" id="btn-login" class="btn btn-primary" onclick="validarLogin()" value="Logar" />
                             <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="cancelar()">Cancelar</button>
                         </div>
-                    </form>
-                    <input type="button" id="loginBtn" value="Teste" onclick="validarLogin()"/>
                 </div>
             </div>
         </div>

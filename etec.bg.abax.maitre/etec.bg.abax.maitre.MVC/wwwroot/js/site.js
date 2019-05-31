@@ -44,7 +44,15 @@ function validarLogin() {
         type: "POST",
         url: "../Home/ValidLogin",
         data: { "email": email, "senha": senha }
-    }).then(function (response) { console.log(response) });
+    }).then(function (response) {
+
+        if (response.sucesso == true) {
+            window.location.href = 'Home/Menu';
+        }
+        else {
+            alert(response.erro);
+        }
+    });
     console.log(data);
 
     email = "";
