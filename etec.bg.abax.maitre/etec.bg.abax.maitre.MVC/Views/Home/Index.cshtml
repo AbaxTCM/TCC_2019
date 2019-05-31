@@ -261,12 +261,12 @@
                         <input asp-for="senha" type="password" name="senha" id="senha" required />
                         <h6><a asp-action="Senha">Esqueci a senha</a></h6>
 
-
                         <div class="modal-footer">
                             <input type="submit" id="btn-login" class="btn btn-primary" value="Logar" />
                             <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="cancelar()">Cancelar</button>
                         </div>
                     </form>
+                    <input type="button" id="loginBtn" value="Teste" onclick="validarLogin()"/>
                 </div>
             </div>
         </div>
@@ -296,8 +296,6 @@
                         <input asp-for="senha" type="password" name="senha" id="senha" required /><br />
                         <p>Confirmar a senha</p>
                         <input type="password" name="confirmarsenha" id="confirmarsenha" required /><br />
-
-
                         <div class="modal-footer">
                             <input type="submit" id="btn-registro" class="btn btn-primary" value="Registrar" />
                             <button type="button" id="btn-cancelar" onclick="cancelar()" class="btn btn-danger">Cancelar</button>

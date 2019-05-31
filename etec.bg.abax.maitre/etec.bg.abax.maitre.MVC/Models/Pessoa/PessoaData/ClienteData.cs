@@ -83,10 +83,11 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
                 cliente.cpf = ds.Tables[0].Rows[0]["cpf"].ToString();
                 cliente.senha = ds.Tables[0].Rows[0]["senha"].ToString();
                 cliente.funcao = ds.Tables[0].Rows[0]["funcao"].ToString();
+
+                Session.Instance.UserID = cliente.idCliente;
+                Session.Instance.Funcao = cliente.funcao;
+                Session.Instance.Nome = cliente.nome.Split(" ").FirstOrDefault();
             }
-            Session.Instance.UserID = cliente.idCliente;
-            Session.Instance.Funcao = cliente.funcao;
-            Session.Instance.Nome = cliente.nome.Split(" ").FirstOrDefault();
             return cliente;
         }
 

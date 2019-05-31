@@ -36,3 +36,18 @@ function cancelar() {
 
 };
 
+function validarLogin() {
+    var email = document.getElementById("email").value;
+    var senha = document.getElementById("senha").value;
+    var data = {};
+    $.ajax({
+        type: "POST",
+        url: "../Home/ValidLogin",
+        data: { "email": email, "senha": senha }
+    }).then(function (response) { console.log(response) });
+    console.log(data);
+
+    email = "";
+    senha = "";
+};
+

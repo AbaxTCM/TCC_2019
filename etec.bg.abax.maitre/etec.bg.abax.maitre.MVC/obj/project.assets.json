@@ -12728,11 +12728,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rafael.Rios\\Desktop\\TCC\\TCC_2019\\etec.bg.abax.maitre\\etec.bg.abax.maitre.MVC\\etec.bg.abax.maitre.MVC.csproj",
+      "projectUniqueName": "C:\\Users\\Rafael.Rios\\Desktop\\Icones\\TCC\\TCC_2019\\etec.bg.abax.maitre\\etec.bg.abax.maitre.MVC\\etec.bg.abax.maitre.MVC.csproj",
       "projectName": "etec.bg.abax.maitre.MVC",
-      "projectPath": "C:\\Users\\Rafael.Rios\\Desktop\\TCC\\TCC_2019\\etec.bg.abax.maitre\\etec.bg.abax.maitre.MVC\\etec.bg.abax.maitre.MVC.csproj",
+      "projectPath": "C:\\Users\\Rafael.Rios\\Desktop\\Icones\\TCC\\TCC_2019\\etec.bg.abax.maitre\\etec.bg.abax.maitre.MVC\\etec.bg.abax.maitre.MVC.csproj",
       "packagesPath": "C:\\Users\\Rafael.Rios\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rafael.Rios\\Desktop\\TCC\\TCC_2019\\etec.bg.abax.maitre\\etec.bg.abax.maitre.MVC\\obj\\",
+      "outputPath": "C:\\Users\\Rafael.Rios\\Desktop\\Icones\\TCC\\TCC_2019\\etec.bg.abax.maitre\\etec.bg.abax.maitre.MVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

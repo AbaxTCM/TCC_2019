@@ -46,8 +46,31 @@ namespace etec.bg.abax.maitre.MVC.Controllers
             string email = collection.eMail, senha = collection.senha;
             Models.Pessoa.PessoaData.ClienteData data = new Models.Pessoa.PessoaData.ClienteData();
             data.GetCliente(email, senha);
+            if(Session.Instance.UserID < 1)
+            {
+                return RedirectToAction("Index","Home");
+            }
+            else
+            {
+                return View(nameof(Menu));
+            }
+        }
 
-            return View(nameof(Menu));
+        [HttpPost]
+        public JsonResult ValidLogin(string email, string senha)
+        {
+            string erro = "";
+            Models.Pessoa.PessoaData.ClienteData data = new Models.Pessoa.PessoaData.ClienteData();
+            data.GetCliente(email, senha);
+            if (Session.Instance.UserID >= 1)
+            {
+                return Json("'Success':'true'");
+            }
+            else
+            {
+                erro = "Login inválido";
+                return Json(String.Format("'Success':'false','Error':'{0}'", erro));
+            }
         }
 
         public IActionResult Cadastrar(Models.Pessoa.LoginRegistro collection)
