@@ -4,43 +4,6 @@
 // Write your JavaScript code.
 
 
-$(function (form) {
-
-    $("#btn-registro").on('click', function () {
-        var email = document.getElementById("emailCliente").value;
-        var senha = document.getElementById("senhaCliente").value;
-        if (email == "" || senha == "") {
-        }
-        else {
-            //document.getElementById("emailCliente").value = "";
-            //document.getElementById("nomeCliente").value = "";
-            //document.getElementById("telefoneCliente").value = "";
-            //document.getElementById("enderecoCliente").value = "";
-            //document.getElementById("senhaCliente").value = "";
-            //document.getElementById("confirmarsenhaCliente").value = "";
-            //$("#btn-registro").attr("data-dismiss", "modal");
-        }
-    });
-});
-
-
-$(function (form) {
-
-    $("#btn-registro-restaurante").on('click', function () {
-        var email = document.getElementById("emailRestaurante").value;
-        var senha = document.getElementById("senhaRestaurante").value;
-        if (email == "" || senha == "") {
-        }
-        else {
-            //document.getElementById("emailRestaurante").value = "";
-            //document.getElementById("nomeRestaurante").value = "";
-            //document.getElementById("telefoneRestaurante").value = "";
-            //document.getElementById("enderecoRestaurante").value = "";
-            //document.getElementById("cnpjRestaurante").value = "";
-            //$("#btn-registro-restaurante").attr("data-dismiss", "modal");
-        }
-    });
-});
 
 function cancelar() {
 
@@ -73,8 +36,7 @@ function validarLogin() {
     });
     console.log(data);
 
-    email = "";
-    senha = "";
+    email = ""; senha = "";
 };
 
 function registrarCliente() {
@@ -100,9 +62,8 @@ function registrarCliente() {
         else {
             alert(response.erro);
         }
-    });
-
-    $("#btn-registro").attr("data-dismiss", "modal");
+        });
+    nome = ""; email = ""; telefone = ""; senha = ""; cpf = "";
 };
 
 function registrarRestaurante() {
@@ -111,8 +72,9 @@ function registrarRestaurante() {
     var telefone = document.getElementById("telefoneRestaurante").value;
     var senha = document.getElementById("senhaRestaurante").value;
     var cnpj = document.getElementById("cnpjRestaurante").value;
+    var endereco = document.getElementById("enderecoRestaurante").value;
 
-    var valores = { "email": email, "senha": senha, "telefone": telefone, "nome": nome, "cnpj": cnpj, "funcao": "rest" };
+    var valores = { "email": email, "senha": senha, "telefone": telefone, "nome": nome, "cnpj": cnpj, "endereco": endereco ,"funcao": "rest" };
     console.log(valores);
 
     $.ajax({
@@ -128,8 +90,7 @@ function registrarRestaurante() {
         else {
             alert(response.erro);
         }
-    });
-
-    $("#btn-registro").attr("data-dismiss", "modal");
+        });
+    nome = ""; email = ""; telefone = ""; senha = ""; cnpj = "";
 };
 
