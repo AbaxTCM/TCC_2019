@@ -1,10 +1,10 @@
-CREATE DATABASE  IF NOT EXISTS `tcc` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE  IF NOT EXISTS `tcc` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */;
 USE `tcc`;
--- MySQL dump 10.13  Distrib 8.0.16, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.13, for Win64 (x86_64)
 --
 -- Host: localhost    Database: tcc
 -- ------------------------------------------------------
--- Server version	8.0.16
+-- Server version	8.0.13
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -53,7 +53,10 @@ CREATE TABLE `bebidas` (
   `tipo` varchar(45) NOT NULL,
   `imagem` mediumblob,
   `valor` decimal(10,2) NOT NULL,
-  PRIMARY KEY (`id`)
+  `id_rest` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_restaurante_bebidas_idx` (`id_rest`),
+  CONSTRAINT `fk_restaurante_bebidas` FOREIGN KEY (`id_rest`) REFERENCES `restaurante` (`id_rest`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -63,7 +66,7 @@ CREATE TABLE `bebidas` (
 
 LOCK TABLES `bebidas` WRITE;
 /*!40000 ALTER TABLE `bebidas` DISABLE KEYS */;
-INSERT INTO `bebidas` VALUES (4,'sei la ','pose joisgdoijsdgojipsgpoijsdoipjfsdopijs',NULL,157.00),(5,'dollynho','vodka','',500.00),(6,'teste','teste',NULL,123.00);
+INSERT INTO `bebidas` VALUES (4,'sei la ','pose joisgdoijsdgojipsgpoijsdoipjfsdopijs',NULL,157.00,NULL),(5,'dollynho','vodka','',500.00,NULL),(6,'teste','teste',NULL,123.00,NULL);
 /*!40000 ALTER TABLE `bebidas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -117,7 +120,7 @@ CREATE TABLE `cliente` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `cpf_UNIQUE` (`cpf`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -126,9 +129,26 @@ CREATE TABLE `cliente` (
 
 LOCK TABLES `cliente` WRITE;
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
-INSERT INTO `cliente` VALUES (9,'João Pedro','1234567','77778888','joao@abax.com','123','cli'),(10,'Rafael Rios','1234567','123123','rafael@abax.com','123','cli'),(11,'Guilherme Cardozo','1234567','456789','guilherme@abax.com','123','cli'),(12,'Edson','1234567','4141477','edson@abax.com','123','cli'),(13,'Gisele Alves','1234567','78978978','gisele@abax.com','123','cli'),(14,'Lauro Gabriel','1234567','7412589','lauro@abax.com','123','cli'),(15,'teste','1234567','56544777','teste@teste.com','123','cli');
+INSERT INTO `cliente` VALUES (9,'João Pedro','1234567','77778888','joao@abax.com','123','cli'),(10,'Rafael Rios','1234567','123123','rafael@abax.com','123','cli'),(11,'Guilherme Cardozo','1234567','456789','guilherme@abax.com','123','cli'),(12,'Edson','1234567','4141477','edson@abax.com','123','cli'),(13,'Gisele Alves','1234567','78978978','gisele@abax.com','123','cli'),(14,'Lauro Gabriel','1234567','7412589','lauro@abax.com','123','cli'),(15,'teste','1234567','56544777','teste@teste.com','123','cli'),(19,'gui','1234567','1555548','gui@abax.com','123456','cli'),(22,'a','222','12','aaaaaaa','222','cli'),(23,'gu23i','122343567','155251548','gui@aba32x.com','12513456','cli');
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `cliente_AFTER_INSERT` AFTER INSERT ON `cliente` FOR EACH ROW BEGIN
+insert into login (nome,fone,email,senha,funcao) select nome,fone,email,senha,funcao from cliente order by id desc limit 1;
+END */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 
 --
 -- Table structure for table `cozinha`
@@ -227,11 +247,12 @@ CREATE TABLE `funcionario` (
   `email` varchar(70) NOT NULL,
   `senha` varchar(16) NOT NULL,
   `funcao` varchar(45) NOT NULL,
-  `id_rest` int(11) NOT NULL,
+  `id_rest` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`),
-  KEY `fk_id_rest_idx` (`id_rest`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `fk_rest_idx` (`id_rest`),
+  CONSTRAINT `fk_restaurante_funcionario` FOREIGN KEY (`id_rest`) REFERENCES `restaurante` (`id_rest`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -240,9 +261,26 @@ CREATE TABLE `funcionario` (
 
 LOCK TABLES `funcionario` WRITE;
 /*!40000 ALTER TABLE `funcionario` DISABLE KEYS */;
-INSERT INTO `funcionario` VALUES (1,'Rafael','Desenvolvedor','11985854747','rafael.rios@abax.com','123','',0);
+INSERT INTO `funcionario` VALUES (1,'Rafael','Desenvolvedor','11985854747','rafael.rios@abax.com','123','',NULL),(3,'aaa',NULL,'12345','gui@ofjhasj.com','123485','func',NULL),(5,'aaa',NULL,'12345','gui@ofhasj.com','123485','func',NULL),(6,'aaa',NULL,'12345','gui@ofasj.com','123485','func',NULL);
 /*!40000 ALTER TABLE `funcionario` ENABLE KEYS */;
 UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8mb4 */ ;
+/*!50003 SET character_set_results = utf8mb4 */ ;
+/*!50003 SET collation_connection  = utf8mb4_0900_ai_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `funcionario_AFTER_INSERT` AFTER INSERT ON `funcionario` FOR EACH ROW BEGIN
+insert into login (nome,fone,email,senha,funcao) select nome,fone,email,senha,funcao from funcionario order by id desc limit 1;
+END */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 
 --
 -- Table structure for table `login`
@@ -260,7 +298,7 @@ CREATE TABLE `login` (
   `funcao` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -269,7 +307,7 @@ CREATE TABLE `login` (
 
 LOCK TABLES `login` WRITE;
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES (1,'Guilherme','33333333','1111111111','fodase@gmail.com',NULL),(9,'guilhe222rme','214214','gu1i','12345678',NULL),(11,'guilhe222rme','214214','gui2','1234335678',NULL),(12,'guilhe222rme','214214','gui3','1234335678',NULL),(14,'guilhe22rme','214214','guizin','1234335678',NULL),(15,'guilhere','111','aaa','123456',NULL),(16,'Rafael Rios',NULL,'rafael@abax.com','123',NULL),(18,'Antonio',NULL,'antonio@teste.com','123',NULL),(19,'Oi',NULL,'Oi@oi.com','123',NULL),(20,'asdf','789741','asdf@asdf.com','789',NULL),(21,'Gisele','1234567','gisele@abax.com','123',NULL);
+INSERT INTO `login` VALUES (1,'Guilherme','33333333','1111111111','fodase@gmail.com',NULL),(3,'aaa','12345','gui@ofjhasj.com','123485','func'),(5,'aaa','12345','gui@ofhasj.com','123485','func'),(9,'guilhe222rme','214214','gu1i','12345678',NULL),(11,'guilhe222rme','214214','gui2','1234335678',NULL),(12,'guilhe222rme','214214','gui3','1234335678',NULL),(14,'guilhe22rme','214214','guizin','1234335678',NULL),(15,'guilhere','111','aaa','123456',NULL),(16,'Rafael Rios',NULL,'rafael@abax.com','123',NULL),(18,'Antonio',NULL,'antonio@teste.com','123',NULL),(19,'Oi',NULL,'Oi@oi.com','123',NULL),(20,'asdf','789741','asdf@asdf.com','789',NULL),(21,'Gisele','1234567','gisele@abax.com','123',NULL),(22,'a','222','aaaaaaa','222','cli'),(23,'gu23i','122343567','gui@aba32x.com','12513456','cli'),(24,'aaa','12345','gui@ofasj.com','123485','func');
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -371,8 +409,11 @@ CREATE TABLE `porcao` (
   `descricao` varchar(200) DEFAULT NULL,
   `imagem` mediumblob,
   `valor` decimal(10,5) NOT NULL,
+  `id_rest` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `id_porcao_UNIQUE` (`id`)
+  UNIQUE KEY `id_porcao_UNIQUE` (`id`),
+  KEY `fk_restaurante_porcao_idx` (`id_rest`),
+  CONSTRAINT `fk_restaurante_porcao` FOREIGN KEY (`id_rest`) REFERENCES `restaurante` (`id_rest`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -398,7 +439,10 @@ CREATE TABLE `prato` (
   `imagem` mediumblob,
   `valor` decimal(10,2) DEFAULT NULL,
   `dia_semana` varchar(45) NOT NULL,
-  PRIMARY KEY (`id_prato`)
+  `id_rest` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id_prato`),
+  KEY `fk_prato_restaurante_idx` (`id_rest`),
+  CONSTRAINT `fk_prato_restaurante` FOREIGN KEY (`id_rest`) REFERENCES `restaurante` (`id_rest`)
 ) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -408,7 +452,7 @@ CREATE TABLE `prato` (
 
 LOCK TABLES `prato` WRITE;
 /*!40000 ALTER TABLE `prato` DISABLE KEYS */;
-INSERT INTO `prato` VALUES (17,'testestesteste',NULL,500.00,'quarta-feira'),(18,'teste',NULL,123.00,'domingo');
+INSERT INTO `prato` VALUES (17,'testestesteste',NULL,500.00,'quarta-feira',NULL),(18,'teste',NULL,123.00,'domingo',NULL);
 /*!40000 ALTER TABLE `prato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -453,8 +497,11 @@ CREATE TABLE `sobremesa` (
   `nome` varchar(80) NOT NULL,
   `imagem` mediumblob,
   `valor` decimal(10,2) NOT NULL,
+  `id_rest` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `id_sobremesa_UNIQUE` (`id`)
+  UNIQUE KEY `id_sobremesa_UNIQUE` (`id`),
+  KEY `fk_sobremesa_restaurante_idx` (`id_rest`),
+  CONSTRAINT `fk_sobremesa_restaurante` FOREIGN KEY (`id_rest`) REFERENCES `restaurante` (`id_rest`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -464,7 +511,7 @@ CREATE TABLE `sobremesa` (
 
 LOCK TABLES `sobremesa` WRITE;
 /*!40000 ALTER TABLE `sobremesa` DISABLE KEYS */;
-INSERT INTO `sobremesa` VALUES (2,'asfsafs','',3.00);
+INSERT INTO `sobremesa` VALUES (2,'asfsafs','',3.00,NULL);
 /*!40000 ALTER TABLE `sobremesa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1076,4 +1123,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-03 21:33:33
+-- Dump completed on 2019-06-03 21:57:50
