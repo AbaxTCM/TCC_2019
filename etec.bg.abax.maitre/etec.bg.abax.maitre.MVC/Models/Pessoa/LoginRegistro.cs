@@ -14,6 +14,11 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa
         public string cargo { get; set; }
         [DisplayName("Senha")]
         public string senha { get; set; }
+        [DisplayName("Telefone")]
         public string telefone { get; set; }
+        [DisplayName("Endereço")]
+        public string endereco { get; set; }
+        [DisplayName("CNPJ")]
+        public string cnpj { get; set; }
     }
 }

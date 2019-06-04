@@ -20,6 +20,11 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         {
             return View();
         }
+
+        public IActionResult BemVindo()
+        {
+            return View();
+        }
         
         public IActionResult Cardapio()
         {
@@ -96,7 +101,70 @@ namespace etec.bg.abax.maitre.MVC.Controllers
 
             data.PostCliente(cliente);
 
-            return View(nameof(Index));
+            return View(nameof(BemVindo));
+        }
+
+        public JsonResult Cadastros(string email, string senha, string telefone, string nome, string cpf, string funcao, string endereco, string cnpj)
+        {
+            object retorno = null;
+            bool sucesso;
+            string erro = "Houve algum erro no cadastro",mensagem = "Cadastrado com sucesso";
+            if (funcao == "cli")
+            {
+                try
+                {
+                    Models.Pessoa.Cliente cliente = new Models.Pessoa.Cliente();
+                    Models.Pessoa.PessoaData.ClienteData data = new Models.Pessoa.PessoaData.ClienteData();
+                    cliente.nome = nome;
+                    cliente.eMail = email;
+                    cliente.cpf = cpf;
+                    cliente.fone = telefone;
+                    cliente.senha = senha;
+                    cliente.funcao = funcao;
+                    data.PostCliente(cliente);
+                    sucesso = true;
+                    return Json(retorno = new { sucesso, mensagem });
+                }
+                catch { erro += " do cliente"; return Json(retorno = new { sucesso = false, erro }); }
+            }
+            else if (funcao == "rest")
+            {
+                try
+                {
+                    Models.Estabelecimento.Restaurante restaurante = new Models.Estabelecimento.Restaurante();
+                    restaurante.nome = nome;
+                    restaurante.eMail = email;
+                    restaurante.cnpj = cnpj;
+                    restaurante.fone = telefone;
+                    restaurante.endereco = endereco;
+                    restaurante.funcao = funcao;
+                    restaurante.senha = senha;
+                    sucesso = true;
+                    return Json(retorno = new { sucesso, mensagem });
+                }
+                catch { erro += " do restaurante"; return Json(retorno = new { sucesso = false, erro }); }
+            }
+            else if (funcao == "func")
+            {
+                try
+                {
+                    Models.Pessoa.Funcionario funcionario = new Models.Pessoa.Funcionario();
+                    Models.Pessoa.PessoaData.FuncionarioData data = new Models.Pessoa.PessoaData.FuncionarioData();
+                    funcionario.nome = nome;
+                    funcionario.eMail = email;
+                    funcionario.fone = telefone;
+                    funcionario.funcao = funcao;
+                    funcionario.senha = senha;
+                    data.PostFuncionario(funcionario);
+                    sucesso = true;
+                    return Json(retorno = new { sucesso, mensagem });
+                }
+                catch { erro += " do funcionário"; return Json(retorno = new { sucesso = false, erro }); }
+            }
+            else
+            {
+                return Json(retorno = new { sucesso = false, erro });
+            }
         }
 
         public IActionResult Sair()

@@ -14,5 +14,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Estabelecimento
         public string endereco { get; set; }
         [DisplayName("CNPJ")]
         public string cnpj { get; set; }
+        [DisplayName("Senha")]
+        public string senha { get; set; }
     }
 }
