@@ -3,8 +3,6 @@
 
 // Write your JavaScript code.
 
-
-
 function cancelar() {
 
     document.getElementById("email").value = "";
@@ -40,29 +38,35 @@ function validarLogin() {
 };
 
 function registrarCliente() {
+
     var email = document.getElementById("emailCliente").value;
     var nome = document.getElementById("nomeCliente").value;
     var telefone = document.getElementById("telefoneCliente").value;
     var senha = document.getElementById("senhaCliente").value;
     var cpf = document.getElementById("cpfCliente").value;
 
-    var valores = { "email": email, "senha": senha, "telefone": telefone, "nome": nome, "cpf": cpf , "funcao": "cli"};
+    var valores = { "email": email, "senha": senha, "telefone": telefone, "nome": nome, "cpf": cpf, "funcao": "cli" };
+    if (nome == "" || email == "" || telefone == "" || senha == "" || cpf == "") {
+    }
+    else {
+        $.ajax({
+            type: "POST",
+            url: "../Home/Cadastros",
+            data: valores
+        }).then(function (response) {
+
+            if (response.sucesso == true) {
+                alert(response.mensagem);
+                window.location.href = 'Home/BemVindo';
+            }
+            else {
+                alert(response.erro);
+            }
+            $('#registrarUsuario').modal('toggle');
+        });
+    }
     console.log(valores);
 
-    $.ajax({
-        type: "POST",
-        url: "../Home/Cadastros",
-        data: valores
-    }).then(function (response) {
-
-        if (response.sucesso == true) {
-            alert(response.mensagem);
-            window.location.href = 'Home/BemVindo';
-        }
-        else {
-            alert(response.erro);
-        }
-        });
     nome = ""; email = ""; telefone = ""; senha = ""; cpf = "";
 };
 
@@ -74,23 +78,29 @@ function registrarRestaurante() {
     var cnpj = document.getElementById("cnpjRestaurante").value;
     var endereco = document.getElementById("enderecoRestaurante").value;
 
-    var valores = { "email": email, "senha": senha, "telefone": telefone, "nome": nome, "cnpj": cnpj, "endereco": endereco ,"funcao": "rest" };
+    var valores = { "email": email, "senha": senha, "telefone": telefone, "nome": nome, "cnpj": cnpj, "endereco": endereco, "funcao": "rest" };
+    if (nome == "" || email == "" || telefone == "" || senha == "" || cnpj == "" || endereco == "") {
+
+    }
+    else {
+        $.ajax({
+            type: "POST",
+            url: "../Home/Cadastros",
+            data: valores
+        }).then(function (response) {
+
+            if (response.sucesso == true) {
+                alert(response.mensagem);
+                window.location.href = 'Home/BemVindo';
+            }
+            else {
+                alert(response.erro);
+            }
+            $('#loginUsuario').modal('toggle');
+        });
+    }
     console.log(valores);
 
-    $.ajax({
-        type: "POST",
-        url: "../Home/Cadastros",
-        data: valores
-    }).then(function (response) {
-
-        if (response.sucesso == true) {
-            alert(response.mensagem);
-            window.location.href = 'Home/BemVindo';
-        }
-        else {
-            alert(response.erro);
-        }
-        });
     nome = ""; email = ""; telefone = ""; senha = ""; cnpj = "";
 };
 

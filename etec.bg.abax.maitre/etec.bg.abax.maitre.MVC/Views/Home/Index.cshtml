@@ -260,44 +260,67 @@
                 <div class="modal-body">
                     <div class="tab-content">
                         <div id="cliente" class="tab-pane active">
-                            <h3>Cadastro de Cliente</h3>
-
-                                <p>Nome</p>
-                                <input  type="text" name="nome" id="nomeCliente" required />
-                                <p>E-mail</p>
-                                <input  type="email" name="email" id="emailCliente" required />
-                                <p>CPF</p>
-                                <input  type="text" name="cpf" id="cpfCliente" required />
-                                <p>Telefone</p>
-                                <input  type="text" name="telefone" id="telefoneCliente" required />
-                                <p>Senha</p>
-                                <input  type="password" name="senha" id="senhaCliente" required /><br />
-                                <p>Confirmar a senha</p>
-                                <input type="password" name="confirmarsenhaCliente" id="confirmarsenhaCliente" required /><br />
-                                <div class="modal-footer">
-                                    <input type="submit" id="btn-registro-restaurante" class="btn btn-primary" value="Registrar" onclick="registrarCliente()" data-dismiss="modal"/>
-                                    <button type="button" id="btn-cancelar" onclick="cancelar()" data-dismiss="modal" class="btn btn-danger">Cancelar</button>
-                                </div>
+                            <h3>Cadastro de Cliente</h3><br />
+                            <div class="form-group">
+                                <label>Nome</label>
+                                <input type="text" name="nome" id="nomeCliente" placeholder="Nome " class="form-control" autofocus required />
+                            </div>
+                            <div class="form-group">
+                                <label> E-mail</label>
+                                <input type="email" name="email" id="emailCliente" placeholder="E-mail " class="form-control" required />
+                            </div>
+                            <div class="form-group">
+                                <label> CPF </label>
+                                <input type="text" name="cpf" id="cpfCliente" placeholder="000.000.000-00 " class="form-control" required />
+                            </div>
+                            <div class="form-group">
+                                <label> Telefone</label>
+                                <input type="text" name="telefone" id="telefoneCliente" placeholder="(00) 0000-0000" class="form-control" required />
+                            </div>
+                            <div class="form-group">
+                                <label> Senha </label>
+                                <input type="password" name="senha" id="senhaCliente" placeholder="Senha " class="form-control" required />
+                            </div>
+                            <div class="form-group">
+                                <label> Confirmar senha </label>
+                                <input type="password" name="confirmarsenhaCliente" id="confirmarsenhaCliente" placeholder="Confirmar senha " class="form-control" required /><br />
+                            </div>
+                            <div class="modal-footer">
+                                <input type="submit" id="btn-registro-restaurante" class="btn btn-primary" value="Registrar" onclick="registrarCliente()" />
+                                <button type="button" id="btn-cancelar" onclick="cancelar()" data-dismiss="modal" class="btn btn-danger">Cancelar</button>
+                            </div>
                         </div>
                         <div id="restaurante" class="tab-pane">
-                            <h3>Cadastro de Restaurante</h3>
+                            <h3>Cadastro de Restaurante</h3><br />
 
-                                <p>Nome</p>
-                                <input type="text" name="nome" id="nomeRestaurante" required />
-                                <p>E-mail</p>
-                                <input type="email" name="email" id="emailRestaurante" required />
-                                <p>Senha</p>
-                                <input type="password" name="senha" id="senhaRestaurante" required />
-                                <p>Endereço</p>
-                                <input type="text" name="endereco" id="enderecoRestaurante" required />
-                                <p>Telefone</p>
-                                <input type="text" name="telefone" id="telefoneRestaurante" required />
-                                <p>CNPJ</p>
-                                <input type="text" name="cnpj" id="cnpjRestaurante" required />
-                                <div class="modal-footer">
-                                    <input type="submit" id="btn-registro" class="btn btn-primary" value="Registrar" onclick="registrarRestaurante()" data-dismiss="modal"/>
-                                    <button type="button" id="btn-cancelar" onclick="cancelar()" data-dismiss="modal" class="btn btn-danger">Cancelar</button>
-                                </div>
+                            <div class="form-group">
+                                <label>  Nome </label>
+                                <input type="text" name="nome" id="nomeRestaurante" placeholder="Nome " class="form-control" autofocus required />
+                            </div>
+                            <div class="form-group">
+                                <label> E-mail</label>
+                                <input type="email" name="email" id="emailRestaurante" placeholder="E-mail " class="form-control" required />
+                            </div>
+                            <div class="form-group">
+                                <label> Senha</label>
+                                <input type="password" name="senha" id="senhaRestaurante" placeholder="Senha " class="form-control" required />
+                            </div>
+                            <div class="form-group">
+                                <label>  Endereço</label>
+                                <input type="text" name="endereco" id="enderecoRestaurante" placeholder="Endereço " class="form-control" required />
+                            </div>
+                            <div class="form-group">
+                                <label>Telefone</label>
+                                <input type="text" name="telefone" id="telefoneRestaurante" placeholder="(00) 0000-0000" class="form-control" required />
+                            </div>
+                            <div class="form-group">
+                                <label> CNPJ</label>
+                                <input type="text" name="cnpj" id="cnpjRestaurante" placeholder="000.000.000-00 " class="form-control" required />
+                            </div>
+                            <div class="modal-footer">
+                                <input type="submit" id="btn-registro" class="btn btn-primary" value="Registrar" onclick="registrarRestaurante()" />
+                                <button type="button" id="btn-cancelar" onclick="cancelar()" data-dismiss="modal" class="btn btn-danger">Cancelar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -315,17 +338,21 @@
                     <h4 class="modal-title">Login</h4>
                 </div>
                 <div class="modal-body">
-                    <p>E-mail</p>
-                    <input type="email" name="email" id="email" required />
-                    <p>Senha</p>
-                    <input type="password" name="senha" id="senha" required />
-                    <h6><a asp-action="Senha">Esqueci a senha</a></h6>
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="E-mail " class="form-control" required />
+                       </div>
+                        <div class="form-group">
+                        <label>Senha</label>
+                        <input type="password" name="senha" placeholder="Senha " class="form-control" id="senha" required />
+                        </div>
+                            <h6><a asp-action="Senha">Esqueci a senha</a></h6>
 
-                    <div class="modal-footer">
-                        <input type="button" id="btn-login" class="btn btn-primary" onclick="validarLogin()" value="Logar" />
-                        <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="cancelar()">Cancelar</button>
+                        <div class="modal-footer">
+                            <input type="button" id="btn-login" class="btn btn-primary" onclick="validarLogin()" value="Logar" />
+                            <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="cancelar()">Cancelar</button>
+                        </div>
                     </div>
-                </div>
             </div>
         </div>
     </div>

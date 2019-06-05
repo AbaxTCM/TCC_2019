@@ -132,6 +132,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
                 try
                 {
                     Models.Estabelecimento.Restaurante restaurante = new Models.Estabelecimento.Restaurante();
+                    Models.Estabelecimento.RestauranteData.RestauranteData data = new Models.Estabelecimento.RestauranteData.RestauranteData();
                     restaurante.nome = nome;
                     restaurante.eMail = email;
                     restaurante.cnpj = cnpj;
@@ -139,6 +140,7 @@ namespace etec.bg.abax.maitre.MVC.Controllers
                     restaurante.endereco = endereco;
                     restaurante.funcao = funcao;
                     restaurante.senha = senha;
+                    data.PostRestaurante(restaurante);
                     sucesso = true;
                     return Json(retorno = new { sucesso, mensagem });
                 }

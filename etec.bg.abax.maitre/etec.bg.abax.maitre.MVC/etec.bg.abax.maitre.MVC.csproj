@@ -6,9 +6,13 @@
 
   <ItemGroup>
     <Compile Remove="Models\Data\**" />
+    <Compile Remove="wwwroot\lib\jQuery-Mask-Plugin-master\**" />
     <Content Remove="Models\Data\**" />
+    <Content Remove="wwwroot\lib\jQuery-Mask-Plugin-master\**" />
     <EmbeddedResource Remove="Models\Data\**" />
+    <EmbeddedResource Remove="wwwroot\lib\jQuery-Mask-Plugin-master\**" />
     <None Remove="Models\Data\**" />
+    <None Remove="wwwroot\lib\jQuery-Mask-Plugin-master\**" />
   </ItemGroup>
 
   <ItemGroup>
