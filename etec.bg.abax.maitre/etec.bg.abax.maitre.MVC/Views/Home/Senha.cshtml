@@ -1,7 +1,27 @@
-﻿
-@{
-    ViewData["Title"] = "Senha";
+﻿@{
+    Layout = null;
 }
 
-<h2>Senha</h2>
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 
+
+<div class="container body-content">
+    <hr />
+    <h1>Redefinir senha</h1><br />
+    <div class="form-group">
+        <label>CPF</label>
+        <input type="text" name="cpf" id="cpf" placeholder="CPF " class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label>Senha</label>
+        <input type="password" name="senha" placeholder="Senha " class="form-control" id="senha" required />
+    </div>
+    <div class="form-group">
+        <label>Confirmar Senha</label>
+        <input type="password" name="confsenhacli" placeholder="confirmar senha " class="form-control" id="confsenhacli" required />
+    </div>
+
+
+    <input type="button" id="btn-login" class="btn btn-primary" onclick="" value="Confirmar" />
+    <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="location.href='@Url.Action("Index","Home")'">Cancelar</button>
+</div>
