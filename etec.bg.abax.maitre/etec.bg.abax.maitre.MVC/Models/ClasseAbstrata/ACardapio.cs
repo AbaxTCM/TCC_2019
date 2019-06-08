@@ -11,7 +11,7 @@ namespace etec.bg.abax.maitre.MVC.Models.ClasseAbstrata
         [DisplayName("Nome")]
         public string nome { get; set; }
         [DisplayName("Imagem")]
-        public byte[] imagem { get; set; }
+        public string imagem { get; set; }
         [DisplayName("Valor")]
         public decimal valor { get; set; }
     }

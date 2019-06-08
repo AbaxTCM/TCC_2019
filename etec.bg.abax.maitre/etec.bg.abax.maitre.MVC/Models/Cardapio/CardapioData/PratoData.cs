@@ -28,7 +28,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
                 prato.idPrato = int.Parse(dr["id_prato"].ToString());
                 prato.diaSemana = dr["dia_semana"].ToString();
                 prato.nome = dr["nome"].ToString();
-                //prato.imagem = byte.Parse(dr["imagem"].ToString());
+                prato.imagem = dr["imagem"].ToString();
                 prato.valor = decimal.Parse(dr["valor"].ToString());
 
                 lista.Add(prato);
@@ -53,7 +53,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
                 prato.idPrato = int.Parse(ds.Tables[0].Rows[0]["id_prato"].ToString());
                 prato.nome = ds.Tables[0].Rows[0]["nome"].ToString();
                 prato.diaSemana = ds.Tables[0].Rows[0]["dia_semana"].ToString();
-                //prato.imagem = ds.Tables[0].Rows[0]["imagem"].ToString();
+                prato.imagem = ds.Tables[0].Rows[0]["imagem"].ToString();
                 prato.valor = decimal.Parse(ds.Tables[0].Rows[0]["valor"].ToString());
             }
             return prato;

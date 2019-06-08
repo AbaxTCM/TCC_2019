@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Microsoft.AspNetCore.Hosting.Server;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -28,7 +29,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
                 bebida.idBebida = int.Parse(dr["id"].ToString());
                 bebida.nome = dr["nome"].ToString();
                 bebida.tipo = dr["tipo"].ToString();
-                //bebida.imagem = byte.Parse(dr["imagem"].ToString());
+                bebida.imagem = dr["imagem"].ToString();
                 bebida.valor = decimal.Parse(dr["valor"].ToString());
 
                 lista.Add(bebida);
@@ -53,7 +54,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
                 bebida.idBebida = int.Parse(ds.Tables[0].Rows[0]["id"].ToString());
                 bebida.nome = ds.Tables[0].Rows[0]["nome"].ToString();
                 bebida.tipo = ds.Tables[0].Rows[0]["tipo"].ToString();
-                //cliente.imagem = ds.Tables[0].Rows[0]["imagem"].ToString();
+                bebida.imagem = ds.Tables[0].Rows[0]["imagem"].ToString();
                 bebida.valor = decimal.Parse(ds.Tables[0].Rows[0]["valor"].ToString());
             }
             return bebida;

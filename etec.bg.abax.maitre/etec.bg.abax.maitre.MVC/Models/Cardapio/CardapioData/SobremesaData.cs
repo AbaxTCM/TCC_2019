@@ -27,7 +27,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
                 Sobremesa sobremesa = new Sobremesa();
                 sobremesa.idSobremesa = int.Parse(dr["id"].ToString());
                 sobremesa.nome = dr["nome"].ToString();
-                //bebida.imagem = byte.Parse(dr["imagem"].ToString());
+                sobremesa.imagem = dr["imagem"].ToString();
                 sobremesa.valor = decimal.Parse(dr["valor"].ToString());
 
                 lista.Add(sobremesa);
@@ -51,7 +51,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
             {
                 sobremesa.idSobremesa = int.Parse(ds.Tables[0].Rows[0]["id"].ToString());
                 sobremesa.nome = ds.Tables[0].Rows[0]["nome"].ToString();
-                //cliente.imagem = ds.Tables[0].Rows[0]["imagem"].ToString();
+                sobremesa.imagem = ds.Tables[0].Rows[0]["imagem"].ToString();
                 sobremesa.valor = decimal.Parse(ds.Tables[0].Rows[0]["valor"].ToString());
             }
             return sobremesa;

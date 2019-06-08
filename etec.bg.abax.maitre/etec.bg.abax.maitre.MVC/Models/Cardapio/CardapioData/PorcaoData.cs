@@ -28,7 +28,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
                 porcao.idPorcao = int.Parse(dr["id"].ToString());
                 porcao.nome = dr["nome"].ToString();
                 porcao.descricao = dr["descricao"].ToString();
-                //bebida.imagem = byte.Parse(dr["imagem"].ToString());
+                porcao.imagem = dr["imagem"].ToString();
                 porcao.valor = decimal.Parse(dr["valor"].ToString());
 
                 lista.Add(porcao);
@@ -53,7 +53,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
                 porcao.idPorcao = int.Parse(ds.Tables[0].Rows[0]["id"].ToString());
                 porcao.nome = ds.Tables[0].Rows[0]["nome"].ToString();
                 porcao.descricao = ds.Tables[0].Rows[0]["descricao"].ToString();
-                //porcao.imagem = ds.Tables[0].Rows[0]["imagem"].ToString();
+                porcao.imagem = ds.Tables[0].Rows[0]["imagem"].ToString();
                 porcao.valor = decimal.Parse(ds.Tables[0].Rows[0]["valor"].ToString());
             }
             return porcao;
