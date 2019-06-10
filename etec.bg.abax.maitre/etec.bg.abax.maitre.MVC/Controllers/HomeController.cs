@@ -58,14 +58,19 @@ namespace etec.bg.abax.maitre.MVC.Controllers
             object resposta = null;
             Models.Pessoa.PessoaData.ClienteData data = new Models.Pessoa.PessoaData.ClienteData();
             Models.Pessoa.PessoaData.FuncionarioData funcData = new Models.Pessoa.PessoaData.FuncionarioData();
-            try
-            {
-                data.GetCliente(email, senha);
-            }
-            catch
+            Models.Estabelecimento.RestauranteData.RestauranteData restData = new Models.Estabelecimento.RestauranteData.RestauranteData();
+
+            data.GetCliente(email, senha);
+            if(Session.Instance.UserID == 0)
             {
                 funcData.GetFuncionario(email, senha);
+                if(Session.Instance.UserID == 0)
+                {
+                    restData.GetRestaurante(email, senha);
+                    Session.Instance.Nome = "Admin";
+                }
             }
+
             if (Session.Instance.UserID >= 1)
             {
                 sucesso = true;

@@ -77,14 +77,14 @@ namespace etec.bg.abax.maitre.MVC.Models.Estabelecimento.RestauranteData
             Restaurante restaurante = new Restaurante();
             if (ds.Tables[0].Rows.Count > 0)
             {
-                restaurante.idRestaurante = int.Parse(ds.Tables[0].Rows[0]["id"].ToString());
+                restaurante.idRestaurante = int.Parse(ds.Tables[0].Rows[0]["id_rest"].ToString());
                 restaurante.nome = ds.Tables[0].Rows[0]["nome"].ToString();
                 restaurante.fone = ds.Tables[0].Rows[0]["fone"].ToString();
                 restaurante.eMail = ds.Tables[0].Rows[0]["email"].ToString();
                 restaurante.endereco = ds.Tables[0].Rows[0]["endereco"].ToString();
                 restaurante.cnpj = ds.Tables[0].Rows[0]["cnpj"].ToString();
                 restaurante.senha = ds.Tables[0].Rows[0]["senha"].ToString();
-                restaurante.funcao = ds.Tables[0].Rows[0]["funcao"].ToString();
+                restaurante.funcao = "rest";
 
                 Session.Instance.UserID = restaurante.idRestaurante;
                 Session.Instance.Funcao = restaurante.funcao;
