@@ -26,7 +26,7 @@ function validarLogin() {
     }).then(function (response) {
 
         if (response.sucesso == true) {
-            window.location.href = 'Home/Menu';
+            window.location.href = '../Home/Menu';
         }
         else {
             alert(response.erro);
@@ -43,27 +43,33 @@ function registrarCliente() {
     var nome = document.getElementById("nomeCliente").value;
     var telefone = document.getElementById("telefoneCliente").value;
     var senha = document.getElementById("senhaCliente").value;
+    var confSenha = document.getElementById("confirmarSenhaCliente").value;
     var cpf = document.getElementById("cpfCliente").value;
 
     var valores = { "email": email, "senha": senha, "telefone": telefone, "nome": nome, "cpf": cpf, "funcao": "cli" };
     if (nome == "" || email == "" || telefone == "" || senha == "" || cpf == "") {
     }
     else {
-        $.ajax({
-            type: "POST",
-            url: "../Home/Cadastros",
-            data: valores
-        }).then(function (response) {
+        if (senha != confSenha) {
+            alert("Senhas não se correspondem");
+        }
+        else {
+            $.ajax({
+                type: "POST",
+                url: "../Home/Cadastros",
+                data: valores
+            }).then(function (response) {
 
-            if (response.sucesso == true) {
-                alert(response.mensagem);
-                window.location.href = 'Home/BemVindo';
-            }
-            else {
-                alert(response.erro);
-            }
-            $('#registrarUsuario').modal('toggle');
-        });
+                if (response.sucesso == true) {
+                    alert(response.mensagem);
+                    window.location.href = '../Home/BemVindo';
+                }
+                else {
+                    alert(response.erro);
+                }
+                $('#registrarUsuario').modal('toggle');
+            });
+        }
     }
     console.log(valores);
 
@@ -75,6 +81,7 @@ function registrarRestaurante() {
     var nome = document.getElementById("nomeRestaurante").value;
     var telefone = document.getElementById("telefoneRestaurante").value;
     var senha = document.getElementById("senhaRestaurante").value;
+    var confSenha = document.getElementById("confirmarSenhaRestaurante").value;
     var cnpj = document.getElementById("cnpjRestaurante").value;
     var endereco = document.getElementById("enderecoRestaurante").value;
 
@@ -83,21 +90,26 @@ function registrarRestaurante() {
 
     }
     else {
-        $.ajax({
-            type: "POST",
-            url: "../Home/Cadastros",
-            data: valores
-        }).then(function (response) {
+        if (senha != confSenha) {
+            alert("Senhas não correspondem");
+        }
+        else {
+            $.ajax({
+                type: "POST",
+                url: "../Home/Cadastros",
+                data: valores
+            }).then(function (response) {
 
-            if (response.sucesso == true) {
-                alert(response.mensagem);
-                window.location.href = 'Home/BemVindo';
-            }
-            else {
-                alert(response.erro);
-            }
-            $('#loginUsuario').modal('toggle');
-        });
+                if (response.sucesso == true) {
+                    alert(response.mensagem);
+                    window.location.href = '../Home/BemVindo';
+                }
+                else {
+                    alert(response.erro);
+                }
+                $('#loginUsuario').modal('toggle');
+            });
+        }
     }
     console.log(valores);
 
