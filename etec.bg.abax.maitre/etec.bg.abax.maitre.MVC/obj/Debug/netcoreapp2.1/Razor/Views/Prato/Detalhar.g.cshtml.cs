@@ -63,7 +63,7 @@ using etec.bg.abax.maitre.MVC.Models;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(129, 103, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f85457cafed3491b921674fd52622081", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ab76060cc26749878b0d1b53153ea8ef", async() => {
                 BeginContext(135, 90, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>Detalhar</title>\r\n");
                 EndContext();
@@ -83,7 +83,7 @@ using etec.bg.abax.maitre.MVC.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(234, 1287, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7856662cb5c84bd2abca59426fc68cfa", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e170b06223a946f7a34892b69770628f", async() => {
                 BeginContext(240, 101, true);
                 WriteLiteral("\r\n\r\n<div>\r\n    <h4>Prato</h4>\r\n    <hr />\r\n    <dl class=\"dl-horizontal\">\r\n        <dt>\r\n            ");
                 EndContext();

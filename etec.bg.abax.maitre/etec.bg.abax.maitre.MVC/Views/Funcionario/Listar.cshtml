@@ -33,6 +33,9 @@
             <th>
                 @Html.DisplayNameFor(model => model.eMail)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.funcao)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -53,6 +56,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.eMail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.funcao)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Editar", new { id = item.idFunc }) |

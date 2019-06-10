@@ -46,21 +46,6 @@ namespace etec.bg.abax.maitre.MVC.Controllers
             return View();
         }
 
-        public IActionResult Validar(Models.Pessoa.LoginRegistro collection)
-        {
-            string email = collection.eMail, senha = collection.senha;
-            Models.Pessoa.PessoaData.ClienteData data = new Models.Pessoa.PessoaData.ClienteData();
-            data.GetCliente(email, senha);
-            if(Session.Instance.UserID < 1)
-            {
-                return RedirectToAction("Index","Home");
-            }
-            else
-            {
-                return View(nameof(Menu));
-            }
-        }
-
         [HttpPost]
         public JsonResult ValidLogin(string email, string senha)
         {
@@ -72,7 +57,15 @@ namespace etec.bg.abax.maitre.MVC.Controllers
             bool sucesso;
             object resposta = null;
             Models.Pessoa.PessoaData.ClienteData data = new Models.Pessoa.PessoaData.ClienteData();
-            data.GetCliente(email, senha);
+            Models.Pessoa.PessoaData.FuncionarioData funcData = new Models.Pessoa.PessoaData.FuncionarioData();
+            try
+            {
+                data.GetCliente(email, senha);
+            }
+            catch
+            {
+                funcData.GetFuncionario(email, senha);
+            }
             if (Session.Instance.UserID >= 1)
             {
                 sucesso = true;
@@ -86,22 +79,6 @@ namespace etec.bg.abax.maitre.MVC.Controllers
                 resposta = new { sucesso, erro };
                 return Json(resposta);
             }
-        }
-
-        public IActionResult Cadastrar(Models.Pessoa.LoginRegistro collection)
-        {
-            Models.Pessoa.Cliente cliente = new Models.Pessoa.Cliente();
-            Models.Pessoa.PessoaData.ClienteData data = new Models.Pessoa.PessoaData.ClienteData();
-            cliente.nome = collection.nome;
-            cliente.eMail = collection.eMail;
-            cliente.cpf = collection.cpf;
-            cliente.fone = collection.telefone;
-            cliente.senha = collection.senha;
-            cliente.funcao = "cli";
-
-            data.PostCliente(cliente);
-
-            return View(nameof(BemVindo));
         }
 
         public JsonResult Cadastros(string email, string senha, string telefone, string nome, string cpf, string funcao, string endereco, string cnpj)

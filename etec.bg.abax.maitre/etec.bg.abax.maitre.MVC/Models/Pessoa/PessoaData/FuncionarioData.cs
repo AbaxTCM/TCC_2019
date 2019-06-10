@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using static etec.bg.abax.maitre.MVC.Program;
 
 namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
 {
@@ -30,6 +31,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
                 funcionario.cargo = dr["cargo"].ToString();
                 funcionario.fone = dr["fone"].ToString();
                 funcionario.eMail = dr["email"].ToString();
+                funcionario.funcao = dr["funcao"].ToString();
 
                 lista.Add(funcionario);
             }
@@ -56,6 +58,37 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
                 funcionario.fone = ds.Tables[0].Rows[0]["fone"].ToString();
                 funcionario.eMail = ds.Tables[0].Rows[0]["email"].ToString();
                 funcionario.senha = ds.Tables[0].Rows[0]["senha"].ToString();
+                funcionario.funcao = ds.Tables[0].Rows[0]["funcao"].ToString();
+            }
+            return funcionario;
+        }
+
+        public Funcionario GetFuncionario(string email, string senha)
+        {
+            conn.Conectar();
+
+            MySqlDataAdapter da = new MySqlDataAdapter("select * from funcionario where email = @email and senha = @senha", conn.RetornarConexao());
+            //da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.AddWithValue("@email", email);
+            da.SelectCommand.Parameters.AddWithValue("@senha", senha);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            conn.Desconectar();
+
+            Funcionario funcionario = new Funcionario();
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                funcionario.idFunc = int.Parse(ds.Tables[0].Rows[0]["id"].ToString());
+                funcionario.nome = ds.Tables[0].Rows[0]["nome"].ToString();
+                funcionario.cargo = ds.Tables[0].Rows[0]["cargo"].ToString();
+                funcionario.fone = ds.Tables[0].Rows[0]["fone"].ToString();
+                funcionario.eMail = ds.Tables[0].Rows[0]["email"].ToString();
+                funcionario.senha = ds.Tables[0].Rows[0]["senha"].ToString();
+                funcionario.funcao = ds.Tables[0].Rows[0]["funcao"].ToString();
+
+                Session.Instance.UserID = funcionario.idFunc;
+                Session.Instance.Funcao = funcionario.funcao;
+                Session.Instance.Nome = funcionario.nome.Split(" ").FirstOrDefault();
             }
             return funcionario;
         }
@@ -70,6 +103,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
             cmd.Parameters.AddWithValue("@p_fone", funcionario.fone);
             cmd.Parameters.AddWithValue("@p_email", funcionario.eMail);
             cmd.Parameters.AddWithValue("@p_senha", funcionario.senha);
+            cmd.Parameters.AddWithValue("@p_funcao", funcionario.funcao);
             cmd.ExecuteNonQuery();
             conn.Desconectar();
         }
@@ -95,6 +129,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
             cmd.Parameters.AddWithValue("@p_email", funcionario.eMail);
             cmd.Parameters.AddWithValue("@p_id", funcionario.idFunc);
             cmd.Parameters.AddWithValue("@p_senha", funcionario.senha);
+            cmd.Parameters.AddWithValue("@p_funcao", funcionario.funcao);
             cmd.ExecuteNonQuery();
             conn.Desconectar();
         }

@@ -20,10 +20,10 @@
         <form asp-action="Editar">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <!--<div class="form-group">
-                <label asp-for="idFunc" class="control-label"></label>
-                <input asp-for="idFunc" class="form-control" />
-                <span asp-validation-for="idFunc" class="text-danger"></span>
-            </div>-->
+        <label asp-for="idFunc" class="control-label"></label>
+        <input asp-for="idFunc" class="form-control" />
+        <span asp-validation-for="idFunc" class="text-danger"></span>
+    </div>-->
             <div class="form-group">
                 <label asp-for="cargo" class="control-label"></label>
                 <input asp-for="cargo" class="form-control" />
@@ -48,6 +48,15 @@
                 <label asp-for="senha" class="control-label"></label>
                 <input asp-for="senha" type="password" class="form-control" />
                 <span asp-validation-for="senha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="funcao" class="control-label"></label>
+                <select asp-for="funcao" class="form-control">
+                    <option value="adminRest">Administração</option>
+                    <option value="caixaRest">Caixa</option>
+                    <option value="cozinhaRest">Cozinha</option>
+                    <option value="rhRest">RH</option>
+                </select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-default" />
