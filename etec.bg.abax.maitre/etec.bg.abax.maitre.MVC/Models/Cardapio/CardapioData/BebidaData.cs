@@ -16,10 +16,17 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
         public List<Bebida> GetLista()
         {
             conn.Conectar();
-
-            MySqlDataAdapter da = new MySqlDataAdapter("select * from bebidas", conn.RetornarConexao());
             DataSet ds = new DataSet();
-            da.Fill(ds);
+            if (Session.Instance.Funcao == "rest")
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter("select * from bebidas where id_rest = "+ Session.Instance.UserID, conn.RetornarConexao());
+                da.Fill(ds);
+            }
+            else
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter("select * from bebidas", conn.RetornarConexao());
+                da.Fill(ds);
+            }
 
             conn.Desconectar();
 
