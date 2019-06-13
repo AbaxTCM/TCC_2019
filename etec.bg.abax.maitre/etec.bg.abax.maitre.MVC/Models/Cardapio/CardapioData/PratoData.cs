@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using static etec.bg.abax.maitre.MVC.Program;
 
 namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
 {
@@ -69,6 +70,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
             cmd.Parameters.AddWithValue("@p_nome", prato.nome);
             cmd.Parameters.AddWithValue("@p_imagem", prato.imagem);
             cmd.Parameters.AddWithValue("@p_valor", prato.valor);
+            cmd.Parameters.AddWithValue("@p_idRest", Session.Instance.UserID);
             cmd.ExecuteNonQuery();
 
             conn.Desconectar();

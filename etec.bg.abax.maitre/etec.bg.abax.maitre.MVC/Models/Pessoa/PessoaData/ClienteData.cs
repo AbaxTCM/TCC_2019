@@ -91,19 +91,28 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
             return cliente;
         }
 
-        public void PostCliente(Cliente cliente)
+        public string PostCliente(Cliente cliente)
         {
-            conn.Conectar();
-            MySqlCommand cmd = new MySqlCommand("sp_insert_cliente", conn.RetornarConexao());
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@p_nome", cliente.nome);
-            cmd.Parameters.AddWithValue("@p_fone", cliente.fone);
-            cmd.Parameters.AddWithValue("@p_email", cliente.eMail);
-            cmd.Parameters.AddWithValue("@p_cpf", cliente.cpf);
-            cmd.Parameters.AddWithValue("@p_senha", cliente.senha);
-            cmd.Parameters.AddWithValue("@p_funcao", cliente.funcao);
-            cmd.ExecuteNonQuery();
-            conn.Desconectar();
+            try
+            {
+                conn.Conectar();
+                MySqlCommand cmd = new MySqlCommand("sp_insert_cliente", conn.RetornarConexao());
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@p_nome", cliente.nome);
+                cmd.Parameters.AddWithValue("@p_fone", cliente.fone);
+                cmd.Parameters.AddWithValue("@p_email", cliente.eMail);
+                cmd.Parameters.AddWithValue("@p_cpf", cliente.cpf);
+                cmd.Parameters.AddWithValue("@p_senha", cliente.senha);
+                cmd.Parameters.AddWithValue("@p_funcao", cliente.funcao);
+                cmd.ExecuteNonQuery();
+                conn.Desconectar();
+                return null;
+            }
+            catch(Exception e)
+            {
+                conn.Desconectar();
+                return e.Message;
+            }
         }
 
         public void DeleteCliente(Cliente cliente, int id)

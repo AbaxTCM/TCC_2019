@@ -107,7 +107,7 @@ function registrarRestaurante() {
                 else {
                     alert(response.erro);
                 }
-                $('#loginUsuario').modal('toggle');
+                $('#RegistrarUsuario').modal('toggle');
             });
         }
     }

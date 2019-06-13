@@ -19,20 +19,20 @@
     <div class="col-md-4">
         <form asp-action="Cadastrar">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
+            <!--<div class="form-group">
                 <label asp-for="idPorcao" class="control-label"></label>
                 <input asp-for="idPorcao" class="form-control" />
                 <span asp-validation-for="idPorcao" class="text-danger"></span>
+            </div>-->
+            <div class="form-group">
+                <label asp-for="nome" class="control-label"></label>
+                <input asp-for="nome" class="form-control" />
+                <span asp-validation-for="nome" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="descricao" class="control-label"></label>
                 <input asp-for="descricao" class="form-control" />
                 <span asp-validation-for="descricao" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="nome" class="control-label"></label>
-                <input asp-for="nome" class="form-control" />
-                <span asp-validation-for="nome" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="imagem" class="control-label"></label>

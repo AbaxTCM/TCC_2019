@@ -1,0 +1,102 @@
+﻿@model IEnumerable<etec.bg.abax.maitre.MVC.Models.Estabelecimento.Restaurante>
+
+@{
+    ViewData["Title"] = "Listar";
+}
+
+<h2>Listar</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idRestaurante)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.endereco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cnpj)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.senha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.eMail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.funcao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idRestaurante)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.endereco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cnpj)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.senha)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.eMail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.funcao)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
+            <div class="hovereffect">
+                <img class="img-responsive" src="~/images/restaurante.jpg" alt="">
+                <div class="overlay">
+                    <h2>@Html.DisplayFor(modelItem => item.nome)</h2>
+                    <p>
+                        <a asp-action="Pessoa" class="text-decoration-none"><i class="glyphicon glyphicon-user"></i></a><br />
+                        <i>@Html.DisplayFor(modelItem => item.endereco)</i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<tbody>
+    <table class="table">
+        
+    </table>
+</tbody>
