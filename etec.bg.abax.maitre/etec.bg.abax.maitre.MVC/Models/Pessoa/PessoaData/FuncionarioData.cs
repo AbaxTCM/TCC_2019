@@ -16,7 +16,8 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
         {
             conn.Conectar();
 
-            MySqlDataAdapter da = new MySqlDataAdapter("select * from funcionario",conn.RetornarConexao());
+            MySqlDataAdapter da = new MySqlDataAdapter("select * from funcionario where id_rest = @p_idRest",conn.RetornarConexao());
+            da.SelectCommand.Parameters.AddWithValue("@p_idRest", Session.Instance.RestID);
             DataSet ds = new DataSet();
             da.Fill(ds);
 
@@ -104,6 +105,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
             cmd.Parameters.AddWithValue("@p_email", funcionario.eMail);
             cmd.Parameters.AddWithValue("@p_senha", funcionario.senha);
             cmd.Parameters.AddWithValue("@p_funcao", funcionario.funcao);
+            cmd.Parameters.AddWithValue("@p_idRest", Session.Instance.RestID);
             cmd.ExecuteNonQuery();
             conn.Desconectar();
         }

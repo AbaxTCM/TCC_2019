@@ -3,58 +3,68 @@
 }
 
 <h2>Cardápio</h2>
+@if (etec.bg.abax.maitre.MVC.Program.Session.Instance.UserID < 1 && etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == null)
+{
+    <h1 class="text-danger">Por favor efetue o Login para poder acessar esta página</h1>
 
+}
 <div class="row">
-
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
-        <div class="hovereffect">
-            <img class="img-responsive" src="~/images/bebidas.png" alt="">
-            <div class="overlay">
-                <h2>Bebidas</h2>
-                <p>
-                    <a asp-controller="Bebida" asp-action="Listar" class="text-decoration-none"><i class="glyphicon glyphicon-play"></i></a><br />
-                    <i>Lista de Bebidas</i>
-                </p>
+    @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "rest" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Administração" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Cozinha" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Caixa" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "cli" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Administrador")
+    {
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
+            <div class="hovereffect">
+                <img class="img-responsive" src="~/images/bebidas.png" alt="">
+                <div class="overlay">
+                    <h2>Bebidas</h2>
+                    <p>
+                        <a asp-controller="Bebida" asp-action="Listar" class="text-decoration-none"><i class="glyphicon glyphicon-play"></i></a><br />
+                        <i>Lista de Bebidas</i>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
-        <div class="hovereffect">
-            <img class="img-responsive" src="~/images/porcao.png" alt="">
-            <div class="overlay">
-                <h2>Porções</h2>
-                <p>
-                    <a asp-controller="Porcao" asp-action="Listar" class="text-decoration-none"><i class="glyphicon glyphicon-play"></i></a><br />
-                    <i>Lista de Porções</i>
-                </p>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
+            <div class="hovereffect">
+                <img class="img-responsive" src="~/images/porcao.png" alt="">
+                <div class="overlay">
+                    <h2>Porções</h2>
+                    <p>
+                        <a asp-controller="Porcao" asp-action="Listar" class="text-decoration-none"><i class="glyphicon glyphicon-play"></i></a><br />
+                        <i>Lista de Porções</i>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
-        <div class="hovereffect">
-            <img class="img-responsive" src="~/images/prato.png" alt="">
-            <div class="overlay">
-                <h2>Pratos</h2>
-                <p>
-                    <a asp-controller="Prato" asp-action="Listar" class="text-decoration-none"><i class="glyphicon glyphicon-play"></i></a><br />
-                    <i>Lista de Pratos</i>
-                </p>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
+            <div class="hovereffect">
+                <img class="img-responsive" src="~/images/prato.png" alt="">
+                <div class="overlay">
+                    <h2>Pratos</h2>
+                    <p>
+                        <a asp-controller="Prato" asp-action="Listar" class="text-decoration-none"><i class="glyphicon glyphicon-play"></i></a><br />
+                        <i>Lista de Pratos</i>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
-        <div class="hovereffect">
-            <img class="img-responsive" src="~/images/sobremesa.png" alt="">
-            <div class="overlay">
-                <h2>Sobremesas</h2>
-                <p>
-                    <a asp-controller="Sobremesa" asp-action="Listar" class="text-decoration-none"><i class="glyphicon glyphicon-play"></i></a><br />
-                    <i>Lista de Sobremesas</i>
-                </p>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
+            <div class="hovereffect">
+                <img class="img-responsive" src="~/images/sobremesa.png" alt="">
+                <div class="overlay">
+                    <h2>Sobremesas</h2>
+                    <p>
+                        <a asp-controller="Sobremesa" asp-action="Listar" class="text-decoration-none"><i class="glyphicon glyphicon-play"></i></a><br />
+                        <i>Lista de Sobremesas</i>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
+    }
+    else
+    {
+        <h1 class="text-danger">Você não tem acesso a esta area</h1>
+    }
 </div>

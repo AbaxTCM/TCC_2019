@@ -87,6 +87,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Estabelecimento.RestauranteData
                 restaurante.funcao = "rest";
 
                 Session.Instance.UserID = restaurante.idRestaurante;
+                Session.Instance.RestID = restaurante.idRestaurante;
                 Session.Instance.Funcao = restaurante.funcao;
                 Session.Instance.Nome = restaurante.nome.Split(" ").FirstOrDefault();
             }

@@ -13,7 +13,7 @@ else
 
     <div class="row">
 
-        @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "rest" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Administração" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "RH")
+        @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "rest" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Administração" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "RH" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Administrador")
         {
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
                 <div class="hovereffect">
@@ -29,7 +29,7 @@ else
             </div>
         }
 
-        @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "rest" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Administração" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Cozinha" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Caixa" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "cli")
+        @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "rest" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Administração" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Cozinha" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Caixa" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "cli" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Administrador")
         {
 
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
@@ -46,7 +46,7 @@ else
             </div>
         }
 
-        @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "rest" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Administração" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "cli" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Caixa" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Cozinha")
+        @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao != "RH")
         {
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
                 <div class="hovereffect">

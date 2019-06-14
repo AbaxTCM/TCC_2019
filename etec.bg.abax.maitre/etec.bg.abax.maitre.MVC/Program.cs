@@ -48,6 +48,7 @@ namespace etec.bg.abax.maitre.MVC
 
             }
             public int UserID { get; set; }
+            public int RestID { get; set; }
             public string Funcao { get; set; }
             public string Nome { get; set; }
 

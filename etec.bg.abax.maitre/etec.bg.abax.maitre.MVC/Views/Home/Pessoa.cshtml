@@ -4,30 +4,50 @@
 
 <h2>Pessoa</h2>
 
-<div class="row">
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
-        <div class="hovereffect">
-            <img class="img-responsive" src="~/images/pessoas.png" alt="">
-            <div class="overlay">
-                <h2>Funcionários</h2>
-                <p>
-                    <a asp-controller="Funcionario" asp-action="Listar" class="text-decoration-none"><i class="glyphicon glyphicon-play"></i></a><br />
-                    <i>Lista de Funcionários</i>
-                </p>
-            </div>
-        </div>
-    </div>
+@if (etec.bg.abax.maitre.MVC.Program.Session.Instance.UserID < 1 && etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == null)
+{
+    <h1 class="text-danger">Por favor efetue o Login para poder acessar esta página</h1>
 
-    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
-        <div class="hovereffect">
-            <img class="img-responsive" src="~/images/pessoas.png" alt="">
-            <div class="overlay">
-                <h2>Clientes</h2>
-                <p>
-                    <a asp-controller="Cliente" asp-action="Listar" class="text-decoration-none"><i class="glyphicon glyphicon-play"></i></a><br />
-                    <i>Lista de Clientes</i>
-                </p>
+}
+else
+{
+    <div class="row">
+        @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "rest" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Administração" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "RH" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Administrador")
+        {
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="~/images/pessoas.png" alt="">
+                    <div class="overlay">
+                        <h2>Funcionários</h2>
+                        <p>
+                            <a asp-controller="Funcionario" asp-action="Listar" class="text-decoration-none"><i class="glyphicon glyphicon-play"></i></a><br />
+                            <i>Lista de Funcionários</i>
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
+        }
+        else
+        {
+            @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Administrador")
+            {
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
+                    <div class="hovereffect">
+                        <img class="img-responsive" src="~/images/pessoas.png" alt="">
+                        <div class="overlay">
+                            <h2>Clientes</h2>
+                            <p>
+                                <a asp-controller="Cliente" asp-action="Listar" class="text-decoration-none"><i class="glyphicon glyphicon-play"></i></a><br />
+                                <i>Lista de Clientes</i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <h1 class="text-danger">Você não tem acesso a esta area</h1>
+            }
+        }
     </div>
-</div>
+}
