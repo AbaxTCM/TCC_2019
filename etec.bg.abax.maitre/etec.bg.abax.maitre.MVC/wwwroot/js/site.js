@@ -16,6 +16,7 @@ function cancelar() {
 };
 
 function validarLogin() {
+    document.getElementById("loading").style.display = "block";
     var email = document.getElementById("email").value;
     var senha = document.getElementById("senha").value;
     var data = {};
@@ -33,6 +34,7 @@ function validarLogin() {
         }
     });
     console.log(data);
+    document.getElementById("loading").style.display = "none";
 
     email = ""; senha = "";
 };
