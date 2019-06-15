@@ -14,7 +14,7 @@
 <body>
 
 <div>
-    <h4>Porcao</h4>
+    <h3>Porcao</h3>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -50,8 +50,9 @@
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Edit", "Editar", new { id = Model.idPorcao }) |
-    <a asp-action="Listar">Back to List</a>
+    <button class="btn btn-default" title="Voltar" onclick="location.href='@Url.Action("Listar", "Porcao")'"><i class="glyphicon glyphicon-chevron-left"></i></button>
+    <button class="btn btn-default" title="Editar" onclick="location.href='@Url.Action("Editar", "Porcao", new { id = Model.idPorcao })'"><i class="glyphicon glyphicon-pencil"></i></button>
+
 </div>
 </body>
 </html>

@@ -56,8 +56,8 @@
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Edit", "Editar", new { id = Model.idFunc }) |
-    <a asp-action="Listar">Back to List</a>
+    <button class="btn btn-default" title="Voltar" onclick="location.href='@Url.Action("Listar","Funcionario")'"><i class="glyphicon glyphicon-chevron-left"></i></button>
+    <button class="btn btn-default" title="Editar" onclick="location.href='@Url.Action("Editar","Funcionario",new { id = Model.idFunc })'"><i class="glyphicon glyphicon-pencil"></i></button>
 </div>
 </body>
 </html>

@@ -12,9 +12,9 @@
     <title>Listar</title>
 </head>
 <body>
-<p>
-    <a asp-action="Cadastrar">Create New</a>
-</p>
+    <p>
+        <h3 style="display:inline-flex">Cadastrar porção</h3> <button title="" class="btn btn-primary" onclick="location.href='@Url.Action("Cadastrar","porcao")'"><i class="glyphicon glyphicon-plus"></i> </button>
+    </p>
 <table class="table">
     <thead>
         <tr>
@@ -59,8 +59,12 @@
                 @Html.ActionLink("Details", "Detalhar", new { id = item.idPorcao }) |
                 @Html.ActionLink("Delete", "Deletar", new { id = item.idPorcao })
             </td>-->
+            <td>
+                <button title="Detalhar" class="btn btn-primary" onclick="location.href='@Url.Action("Detalhar","Porcao",new { id = item.idPorcao })'"><i class="glyphicon glyphicon-search"></i></button>
+                <button title="Editar" class="btn btn-default" onclick="location.href='@Url.Action("Editar","Porcao",new { id = item.idPorcao })'"><i class="glyphicon glyphicon-pencil"></i></button>
+                <button title="Deletar" class="btn btn-danger" onclick="location.href='@Url.Action("Deletar","Porcao",new { id = item.idPorcao })'"><i class="glyphicon glyphicon-remove"></i></button>
+            </td>
         </tr>
-        <div>      <button class="btn btn-default" onclick="location.href='@Url.Action("Listar","Porcao")'"><i class="glyphicon glyphicon-chevron-left"></i></button></div>
 }               
     </tbody>
 </table>
