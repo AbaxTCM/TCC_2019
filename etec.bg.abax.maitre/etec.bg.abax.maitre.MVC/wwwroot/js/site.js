@@ -15,8 +15,16 @@ function cancelar() {
 
 };
 
-function validarLogin() {
+function showLoading() {
     document.getElementById("loading").style.display = "block";
+}
+
+function hideLoading() {
+    document.getElementById("loading").style.display = "none";
+}
+
+function validarLogin() {
+    showLoading();
     var email = document.getElementById("email").value;
     var senha = document.getElementById("senha").value;
     var data = {};
@@ -32,9 +40,9 @@ function validarLogin() {
         else {
             alert(response.erro);
         }
-    });
+        });
+    hideLoading();
     console.log(data);
-    document.getElementById("loading").style.display = "none";
 
     email = ""; senha = "";
 };
