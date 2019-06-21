@@ -4,8 +4,14 @@
 // Write your JavaScript code.
 
 
+
+
 $(document).ready(function () {
     $("#cpfCliente").mask("000.000.000-00")
+    $("#telefoneCliente").mask("(00)0000-0000")
+    $("#telefoneRestaurante").mask("(00)0000-0000")
+    $("#cnpjRestaurante").mask("00.000.000/0000-00")
+
 })
 
 function cancelar() {
@@ -45,7 +51,7 @@ function validarLogin() {
         else {
             alert(response.erro);
         }
-        });
+    });
     hideLoading();
     console.log(data);
 

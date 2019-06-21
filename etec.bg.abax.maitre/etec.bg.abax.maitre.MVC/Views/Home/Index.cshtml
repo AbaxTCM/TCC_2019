@@ -89,12 +89,12 @@
         <div class="container">
             <h2 class="text-center mt-0">Serviços</h2>
             <hr class="divider my-4">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="mt-5">
                         <i class="fas fa-4x fa-gem text-primary mb-4"></i>
                         <h3 class="h4 mb-2">Pagamento</h3>
-                        <p class="text-muted mb-0">Praticidade no pagamento, defina a melhor forma do pagamento, antecipe ou page no local!</p>
+                        <p class="text-muted mb-0">Praticidade no pagamento, defina a melhor forma do pagamento, antecipe ou pague no local!</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
@@ -116,11 +116,16 @@
                         <i class="fas fa-4x fa-heart text-primary mb-4"></i>
                         <h3 class="h4 mb-2">Restaurante</h3>
                         <p class="text-muted mb-0">Reserve com seu restaurante preferido!</p>
+
                     </div>
+
                 </div>
+                <a class="btn btn-secondary btn-xl js-scroll-trigger" href="#contact">Contato</a>
             </div>
         </div>
     </section>
+
+
     <!-- Portfolio Section -->
     <!--<section id="portfolio">
         <!--<div class="container-fluid p-0">
@@ -214,22 +219,23 @@
         </div>
     </section>-->
     <!-- Contact Section -->
-    <section class="page-section" id="contact">
+
+    <section class="page-section bg-dark " id="contact">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <h2 class="mt-0">Contato</h2>
+                    <h2 class="mt-0 text-white">Contato</h2>
                     <hr class="divider my-4">
-                    <p class="text-muted mb-5">Qualquer duvida ligue para nós ou envie-nos um e-mail e entraremos em contato o mais breve possível!
+                    <p class="text-white mb-5">Qualquer duvida ligue para nós ou envie-nos um e-mail e entraremos em contato o mais breve possível!
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 ml-auto text-center">
-                    <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-                    <div>(011) 2555-0149</div>
+                    <i class="fas fa-phone fa-3x mb-3 text-white"></i>
+                    <div class="text-primary">(011) 2555-0149</div>
                 </div>
                 <div class="col-lg-4 mr-auto text-center">
-                    <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                    <i class="fas fa-envelope fa-3x mb-3 text-white"></i>
                     <!-- Make sure to change the email address in anchor text AND the link below! -->
                     <a class="d-block" href="mailto:abaxtcm@gmail.com">abaxtcm@gmail.com</a>
                 </div>
@@ -263,27 +269,27 @@
                             <h3>Cadastro de Cliente</h3><br />
                             <div class="form-group">
                                 <label>Nome</label>
-                                <input type="text" name="nome" id="nomeCliente" placeholder="Nome " class="form-control" autofocus required />
+                                <input type="text" name="nome" id="nomeCliente" placeholder="Nome " class="form-control" autofocus />
                             </div>
                             <div class="form-group">
                                 <label> E-mail</label>
-                                <input type="email" name="email" id="emailCliente" placeholder="E-mail " class="form-control" required />
+                                <input type="email" name="email" id="emailCliente" placeholder="E-mail " class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label> CPF </label>
-                                <input type="text" name="cpf" id="cpfCliente" placeholder="000.000.000-00 " class="form-control" required />
+                                <input type="text" name="cpf" id="cpfCliente" placeholder="000.000.000-00 " class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label> Telefone</label>
-                                <input type="text" name="telefone" id="telefoneCliente" placeholder="(00) 0000-0000" class="form-control" required />
+                                <input type="text" name="telefone" id="telefoneCliente" placeholder="(00) 0000-0000" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label> Senha </label>
-                                <input type="password" name="senha" id="senhaCliente" placeholder="Senha " class="form-control" required />
+                                <input type="password" name="senha" id="senhaCliente" placeholder="Senha " class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label> Confirmar senha </label>
-                                <input type="password" name="confirmarsenhaCliente" id="confirmarsenhaCliente" placeholder="Confirmar senha " class="form-control" required /><br />
+                                <input type="password" name="confirmarsenhaCliente" id="confirmarsenhaCliente" placeholder="Confirmar senha " class="form-control" /><br />
                             </div>
                             <div class="modal-footer">
                                 <input type="submit" id="btn-registro-restaurante" class="btn btn-primary" value="Registrar" onclick="registrarCliente()" />
@@ -295,31 +301,31 @@
 
                             <div class="form-group">
                                 <label>  Nome </label>
-                                <input type="text" name="nome" id="nomeRestaurante" placeholder="Nome " class="form-control" autofocus required />
+                                <input type="text" name="nome" id="nomeRestaurante" placeholder="Nome " class="form-control" autofocus />
                             </div>
                             <div class="form-group">
                                 <label> E-mail</label>
-                                <input type="email" name="email" id="emailRestaurante" placeholder="E-mail " class="form-control" required />
+                                <input type="email" name="email" id="emailRestaurante" placeholder="E-mail " class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label> Senha</label>
-                                <input type="password" name="senha" id="senhaRestaurante" placeholder="Senha " class="form-control" required />
+                                <input type="password" name="senha" id="senhaRestaurante" placeholder="Senha " class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label> Confirmar senha </label>
-                                <input type="password" name="confirmarsenhaCliente" id="confirmarsenhaCliente" placeholder="Confirmar senha " class="form-control" required />
+                                <input type="password" name="confirmarsenhaCliente" id="confirmarsenhaCliente" placeholder="Confirmar senha " class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label>  Endereço</label>
-                                <input type="text" name="endereco" id="enderecoRestaurante" placeholder="Endereço " class="form-control" required />
+                                <input type="text" name="endereco" id="enderecoRestaurante" placeholder="Endereço " class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label>Telefone</label>
-                                <input type="text" name="telefone" id="telefoneRestaurante" placeholder="(00) 0000-0000" class="form-control" required />
+                                <input type="text" name="telefone" id="telefoneRestaurante" placeholder="(00) 0000-0000" class="form-control" />
                             </div>
                             <div class="form-group">
                                 <label> CNPJ</label>
-                                <input type="text" name="cnpj" id="cnpjRestaurante" placeholder="00.000.000/000-00 " class="form-control" required />
+                                <input type="text" name="cnpj" id="cnpjRestaurante" placeholder="00.000.000/000-00 " class="form-control" />
                             </div>
                             <div class="modal-footer">
                                 <input type="submit" id="btn-registro" class="btn btn-primary" value="Registrar" onclick="registrarRestaurante()" />
@@ -345,11 +351,11 @@
                     <svg id="loading" width="100px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="lds-rolling" style="background: none; display:none; position:absolute; margin-left:37%; margin-top:10%"><circle cx="50" cy="50" fill="none" stroke="#f4623a" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138" transform="rotate(305.901 50 50)"><animateTransform attributeName="transform" type="rotate" calcMode="linear" values="0 50 50;360 50 50" keyTimes="0;1" dur="1s" begin="0s" repeatCount="indefinite"></animateTransform></circle></svg>
                     <div class="form-group">
                         <label>E-mail</label>
-                        <input type="email" name="email" id="email" placeholder="E-mail " class="form-control" required />
+                        <input type="email" name="email" id="email" placeholder="E-mail " class="form-control" />
                     </div>
                     <div class="form-group">
                         <label>Senha</label>
-                        <input type="password" name="senha" placeholder="Senha " class="form-control" id="senha" required />
+                        <input type="password" name="senha" placeholder="Senha " class="form-control" id="senha" />
                     </div>
                     <h6><a asp-action="Senha">Esqueci a senha</a></h6>
 
@@ -371,6 +377,5 @@
     <!-- Custom scripts for this template -->
     <script src="~/js/creative.min.js"></script>
     <script src="~/js/site.js"></script>
-    <script src="~/js/jquery.mask.js"></script>
 </body>
 </html>
