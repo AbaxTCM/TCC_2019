@@ -12722,23 +12722,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gialm\\.nuget\\packages\\": {},
+    "C:\\Users\\Rafael.Rios\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gialm\\Desktop\\Nova pasta (2)\\TCC_2019\\etec.bg.abax.maitre\\etec.bg.abax.maitre.MVC\\etec.bg.abax.maitre.MVC.csproj",
+      "projectUniqueName": "C:\\Users\\Rafael.Rios\\Videos\\TCC_2019\\etec.bg.abax.maitre\\etec.bg.abax.maitre.MVC\\etec.bg.abax.maitre.MVC.csproj",
       "projectName": "etec.bg.abax.maitre.MVC",
-      "projectPath": "C:\\Users\\gialm\\Desktop\\Nova pasta (2)\\TCC_2019\\etec.bg.abax.maitre\\etec.bg.abax.maitre.MVC\\etec.bg.abax.maitre.MVC.csproj",
-      "packagesPath": "C:\\Users\\gialm\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gialm\\Desktop\\Nova pasta (2)\\TCC_2019\\etec.bg.abax.maitre\\etec.bg.abax.maitre.MVC\\obj\\",
+      "projectPath": "C:\\Users\\Rafael.Rios\\Videos\\TCC_2019\\etec.bg.abax.maitre\\etec.bg.abax.maitre.MVC\\etec.bg.abax.maitre.MVC.csproj",
+      "packagesPath": "C:\\Users\\Rafael.Rios\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rafael.Rios\\Videos\\TCC_2019\\etec.bg.abax.maitre\\etec.bg.abax.maitre.MVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\gialm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rafael.Rios\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

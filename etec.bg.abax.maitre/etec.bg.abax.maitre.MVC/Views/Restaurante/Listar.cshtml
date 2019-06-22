@@ -81,17 +81,19 @@
 <div class="row">
     @foreach (var item in Model)
     {
-        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
-            <div class="hovereffect">
-                <img class="img-responsive" src="~/images/restaurante.jpg" alt="">
-                <div class="overlay">
-                    <h2>@Html.DisplayFor(modelItem => item.nome)</h2>
-                    <p>
-                        <a asp-action="Pessoa" class="text-decoration-none"><i class="glyphicon glyphicon-user"></i></a><br />
-                        <i>@Html.DisplayFor(modelItem => item.endereco)</i>
-                    </p>
+        <a asp-controller="Restaurante" asp-action="Listar">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="~/images/restaurante.jpg" alt="">
+                    <div class="overlay">
+                        <h2>@Html.DisplayFor(modelItem => item.nome)</h2>
+                        <p>
+                            <a asp-action="Listar" class="text-decoration-none"><i class="glyphicon glyphicon-user"></i></a><br />
+                            <i>@Html.DisplayFor(modelItem => item.endereco)</i>
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </a>
     }
 </div>

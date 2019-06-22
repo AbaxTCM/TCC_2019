@@ -11,7 +11,7 @@
             <div class="hovereffect">
                 <img class="img-responsive" src="~/images/reserva.png" alt="">
                 <div class="overlay">
-                    <h2>Lista</h2>
+                    <h2>Minhas Reservas</h2>
                     <p>
                         <a asp-controller="Reserva" asp-action="Listar" class="text-decoration-none"><i class="glyphicon glyphicon-play"></i></a><br />
                         <i>Lista de Reservas</i>
@@ -21,14 +21,14 @@
         </div>
     </a>
 
-    <a asp-controller="Reserva" asp-action="Cadastrar">
+    <a asp-controller="Restaurante" asp-action="Listar">
         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" style="padding-top:15px">
             <div class="hovereffect">
                 <img class="img-responsive" src="~/images/reserva.png" alt="">
                 <div class="overlay">
-                    <h2>Cadastro</h2>
+                    <h2>Fazer uma Reserva</h2>
                     <p>
-                        <a asp-controller="Reserva" asp-action="Cadastrar" class="text-decoration-none"><i class="glyphicon glyphicon-play"></i></a><br />
+                        <a asp-controller="Restaurante" asp-action="Listar" class="text-decoration-none"><i class="glyphicon glyphicon-play"></i></a><br />
                         <i>Cadastrar uma Reserva</i>
                     </p>
                 </div>

@@ -17,6 +17,9 @@ namespace etec.bg.abax.maitre.MVC.Models.Estabelecimento
         [Required(ErrorMessage = "Preencha o campo CNPJ")]
         [DisplayName("CNPJ")]
         public string cnpj { get; set; }
+        [Required]
+        [DisplayName("Imagem")]
+        public string imagem { get; set; }
         [Required(ErrorMessage = "Preencha o campo senha")]
         [DisplayName("Senha")]
         public string senha { get; set; }
