@@ -7,11 +7,10 @@
 
 
 $(document).ready(function () {
-    $("#cpfCliente").mask("000.000.000-00")
-    $("#telefoneCliente").mask("(00)0000-0000")
-    $("#telefoneRestaurante").mask("(00)0000-0000")
-    $("#cnpjRestaurante").mask("00.000.000/0000-00")
-
+    $("#cpfCliente").mask("000.000.000-00");
+    $("#telefoneCliente").mask("(00)0000-0000");
+    $("#telefoneRestaurante").mask("(00)0000-0000");
+    $("#cnpjRestaurante").mask("00.000.000/0000-00");
 })
 
 function cancelar() {
@@ -36,7 +35,7 @@ function hideLoading() {
 
 function validarLogin() {
     showLoading();
-    var email = document.getElementById("email").value;
+    var email = document.getElementById("email").value; 
     var senha = document.getElementById("senha").value;
     var data = {};
     $.ajax({
@@ -95,6 +94,7 @@ function registrarCliente() {
     console.log(valores);
 
     nome = ""; email = ""; telefone = ""; senha = ""; cpf = "";
+
 };
 
 function registrarRestaurante() {
