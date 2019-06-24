@@ -15,10 +15,17 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
         public List<Sobremesa> GetLista()
         {
             conn.Conectar();
-
-            MySqlDataAdapter da = new MySqlDataAdapter("select * from sobremesa", conn.RetornarConexao());
             DataSet ds = new DataSet();
-            da.Fill(ds);
+            if (Session.Instance.Funcao != "Administrador")
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter("select * from sobremesa where id_rest = " + Session.Instance.RestID, conn.RetornarConexao());
+                da.Fill(ds);
+            }
+            else
+            {
+                MySqlDataAdapter da = new MySqlDataAdapter("select * from sobremesa", conn.RetornarConexao());
+                da.Fill(ds);
+            }
 
             conn.Desconectar();
 

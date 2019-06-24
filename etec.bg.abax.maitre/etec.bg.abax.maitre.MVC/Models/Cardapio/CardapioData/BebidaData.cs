@@ -17,9 +17,9 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
         {
             conn.Conectar();
             DataSet ds = new DataSet();
-            if (Session.Instance.Funcao == "rest")
+            if (Session.Instance.Funcao != "Administrador")
             {
-                MySqlDataAdapter da = new MySqlDataAdapter("select * from bebidas where id_rest = "+ Session.Instance.UserID, conn.RetornarConexao());
+                MySqlDataAdapter da = new MySqlDataAdapter("select * from bebidas where id_rest = "+ Session.Instance.RestID, conn.RetornarConexao());
                 da.Fill(ds);
             }
             else

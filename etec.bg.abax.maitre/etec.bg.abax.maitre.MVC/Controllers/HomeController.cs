@@ -26,8 +26,12 @@ namespace etec.bg.abax.maitre.MVC.Controllers
             return View();
         }
         
-        public IActionResult Cardapio()
+        public ActionResult Cardapio(int id)
         {
+            if (id != 0)
+            {
+                Session.Instance.RestID = id;
+            }
             return View();
         }
 
