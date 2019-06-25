@@ -1603,4 +1603,8 @@
     <None Include="wwwroot\lib\magnific-popup\jquery.magnific-popup.min.js" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\uploadImages\" />
+  </ItemGroup>
+
 </Project>

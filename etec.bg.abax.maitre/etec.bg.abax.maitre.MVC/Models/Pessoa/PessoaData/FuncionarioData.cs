@@ -129,9 +129,9 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
             cmd.Parameters.AddWithValue("@p_cargo", funcionario.cargo);
             cmd.Parameters.AddWithValue("@p_fone", funcionario.fone);
             cmd.Parameters.AddWithValue("@p_email", funcionario.eMail);
-            cmd.Parameters.AddWithValue("@p_id", funcionario.idFunc);
             cmd.Parameters.AddWithValue("@p_senha", funcionario.senha);
             cmd.Parameters.AddWithValue("@p_funcao", funcionario.funcao);
+            cmd.Parameters.AddWithValue("@p_id", id);
             cmd.ExecuteNonQuery();
             conn.Desconectar();
         }

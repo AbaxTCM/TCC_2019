@@ -25,28 +25,28 @@
             @Html.DisplayFor(model => model.idPorcao)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.descricao)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.descricao)
-        </dd>
-        <dt>
             @Html.DisplayNameFor(model => model.nome)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.nome)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.imagem)
+            @Html.DisplayNameFor(model => model.descricao)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.imagem)
+            @Html.DisplayFor(model => model.descricao)
         </dd>
         <dt>
             @Html.DisplayNameFor(model => model.valor)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.valor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.imagem)
+        </dt>
+        <dd>
+            <img src="~/uploadImages/@Html.DisplayFor(model => model.imagem)" width="300" height="300" />
         </dd>
     </dl>
     

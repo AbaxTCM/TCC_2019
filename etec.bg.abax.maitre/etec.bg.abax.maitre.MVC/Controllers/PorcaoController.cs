@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,6 +11,11 @@ namespace etec.bg.abax.maitre.MVC.Controllers
 {
     public class PorcaoController : Controller
     {
+        private readonly IHostingEnvironment he;
+        public PorcaoController(IHostingEnvironment e)
+        {
+            he = e;
+        }
         Models.Cardapio.CardapioData.PorcaoData data = new Models.Cardapio.CardapioData.PorcaoData();
         // GET: Porcao
         public ActionResult Index()
@@ -36,10 +43,16 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         // POST: Porcao/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Cadastrar(Models.Cardapio.Porcao collection)
+        public ActionResult Cadastrar(Models.Cardapio.Porcao collection, IFormFile pic)
         {
             try
             {
+                if (pic != null)
+                {
+                    collection.imagem = pic.FileName;
+                    var fileName = Path.Combine(he.WebRootPath + "\\uploadImages", Path.GetFileName(pic.FileName));
+                    pic.CopyTo(new FileStream(fileName, FileMode.Create));
+                }
                 data.PostPorcao(collection);
 
                 return RedirectToAction(nameof(Listar));
@@ -59,10 +72,16 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         // POST: Porcao/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Editar(int id, Models.Cardapio.Porcao collection)
+        public ActionResult Editar(int id, Models.Cardapio.Porcao collection, IFormFile pic)
         {
             try
             {
+                if (pic != null)
+                {
+                    collection.imagem = pic.FileName;
+                    var fileName = Path.Combine(he.WebRootPath + "\\uploadImages", Path.GetFileName(pic.FileName));
+                    pic.CopyTo(new FileStream(fileName, FileMode.Create));
+                }
                 data.EditPorcao(collection, id);
 
                 return RedirectToAction(nameof(Listar));

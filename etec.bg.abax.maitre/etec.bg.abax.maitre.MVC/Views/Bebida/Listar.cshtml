@@ -26,16 +26,13 @@
         <thead>
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.idBebida)
+                    @Html.DisplayNameFor(model => model.imagem)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.tipo)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.nome)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.imagem)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.valor)
@@ -48,16 +45,13 @@
             {
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.idBebida)
+                        <img src="~/uploadImages/@item.imagem" width="50" height="50"/>
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.tipo)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.nome)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.imagem)
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.valor)

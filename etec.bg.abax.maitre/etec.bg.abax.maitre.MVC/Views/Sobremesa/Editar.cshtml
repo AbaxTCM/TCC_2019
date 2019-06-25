@@ -17,27 +17,30 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Editar">
+        <form asp-action="Editar" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="idSobremesa" class="control-label"></label>
-                <input asp-for="idSobremesa" class="form-control" />
-                <span asp-validation-for="idSobremesa" class="text-danger"></span>
-            </div>
+            <!--<div class="form-group">
+        <label asp-for="idSobremesa" class="control-label"></label>
+        <input asp-for="idSobremesa" class="form-control" />
+        <span asp-validation-for="idSobremesa" class="text-danger"></span>
+    </div>-->
             <div class="form-group">
                 <label asp-for="nome" class="control-label"></label>
                 <input asp-for="nome" class="form-control" />
                 <span asp-validation-for="nome" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="imagem" class="control-label"></label>
-                <input asp-for="imagem" class="form-control" />
-                <span asp-validation-for="imagem" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="valor" class="control-label"></label>
                 <input asp-for="valor" class="form-control" />
                 <span asp-validation-for="valor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="imagem" class="control-label"></label>
+                <br />
+                <input asp-for="imagem" type="text" style="visibility:hidden" />
+                <img src="~/uploadImages/@Model.imagem" width="300" height="300" />
+                <input type="file" name="pic" class="form-control" />
+                <span asp-validation-for="imagem" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Salvar" class="btn btn-primary" />

@@ -37,16 +37,16 @@
                 @Html.DisplayFor(model => model.nome)
             </dd>
             <dt>
-                @Html.DisplayNameFor(model => model.imagem)
-            </dt>
-            <dd>
-                @Html.DisplayFor(model => model.imagem)
-            </dd>
-            <dt>
                 @Html.DisplayNameFor(model => model.valor)
             </dt>
             <dd>
                 @Html.DisplayFor(model => model.valor)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.imagem)
+            </dt>
+            <dd>
+                <img src="~/uploadImages/@Html.DisplayFor(model => model.imagem)" width="300" height="300" />
             </dd>
         </dl>
     </div>
