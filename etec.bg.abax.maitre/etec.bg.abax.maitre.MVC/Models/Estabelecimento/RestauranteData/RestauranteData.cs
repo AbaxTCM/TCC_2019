@@ -32,6 +32,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Estabelecimento.RestauranteData
                 restaurante.eMail = dr["email"].ToString();
                 restaurante.endereco = dr["endereco"].ToString();
                 restaurante.cnpj = dr["cnpj"].ToString();
+                restaurante.imagem = dr["imagem"].ToString();
 
                 lista.Add(restaurante);
             }
@@ -44,7 +45,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Estabelecimento.RestauranteData
 
             MySqlDataAdapter da = new MySqlDataAdapter("sp_select_restaurante", conn.RetornarConexao());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
-            da.SelectCommand.Parameters.AddWithValue("@p_id", id);
+            da.SelectCommand.Parameters.AddWithValue("@p_id_rest", id);
             DataSet ds = new DataSet();
             da.Fill(ds);
             conn.Desconectar();
@@ -58,6 +59,8 @@ namespace etec.bg.abax.maitre.MVC.Models.Estabelecimento.RestauranteData
                 restaurante.eMail = ds.Tables[0].Rows[0]["email"].ToString();
                 restaurante.endereco = ds.Tables[0].Rows[0]["endereco"].ToString();
                 restaurante.cnpj = ds.Tables[0].Rows[0]["cnpj"].ToString();
+                restaurante.imagem = ds.Tables[0].Rows[0]["imagem"].ToString();
+                restaurante.funcao = ds.Tables[0].Rows[0]["funcao"].ToString();
             }
             return restaurante;
         }
@@ -84,7 +87,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Estabelecimento.RestauranteData
                 restaurante.endereco = ds.Tables[0].Rows[0]["endereco"].ToString();
                 restaurante.cnpj = ds.Tables[0].Rows[0]["cnpj"].ToString();
                 restaurante.senha = ds.Tables[0].Rows[0]["senha"].ToString();
-                restaurante.funcao = "rest";
+                restaurante.funcao = ds.Tables[0].Rows[0]["funcao"].ToString();
 
                 Session.Instance.UserID = restaurante.idRestaurante;
                 Session.Instance.RestID = restaurante.idRestaurante;
@@ -99,6 +102,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Estabelecimento.RestauranteData
             conn.Conectar();
             MySqlCommand cmd = new MySqlCommand("sp_insert_restaurante", conn.RetornarConexao());
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@p_imagem", "restaurante.jpg");
             cmd.Parameters.AddWithValue("@p_nome", restaurante.nome);
             cmd.Parameters.AddWithValue("@p_fone", restaurante.fone);
             cmd.Parameters.AddWithValue("@p_email", restaurante.eMail);
@@ -130,8 +134,9 @@ namespace etec.bg.abax.maitre.MVC.Models.Estabelecimento.RestauranteData
             cmd.Parameters.AddWithValue("@p_email", restaurante.eMail);
             cmd.Parameters.AddWithValue("@p_endereco", restaurante.endereco);
             cmd.Parameters.AddWithValue("@p_cnpj", restaurante.cnpj);
-            cmd.Parameters.AddWithValue("@p_id", id);
+            cmd.Parameters.AddWithValue("@p_id_rest", id);
             cmd.Parameters.AddWithValue("@p_senha", restaurante.senha);
+            cmd.Parameters.AddWithValue("@p_imagem", restaurante.imagem);
             cmd.ExecuteNonQuery();
             conn.Desconectar();
         }

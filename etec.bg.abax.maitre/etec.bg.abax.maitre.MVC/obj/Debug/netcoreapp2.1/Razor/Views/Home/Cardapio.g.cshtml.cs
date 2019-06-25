@@ -99,12 +99,12 @@ using etec.bg.abax.maitre.MVC.Models;
             WriteLiteral("        ");
             EndContext();
             BeginContext(791, 702, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0baa2d83e86a4bba952b7f6b44f9dce3", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e9f662343a1849109429183dfc5551a6", async() => {
                 BeginContext(838, 154, true);
                 WriteLiteral("\r\n            <div class=\"col-lg-3 col-md-4 col-sm-6 col-xs-12\" style=\"padding-top:15px\">\r\n                <div class=\"hovereffect\">\r\n                    ");
                 EndContext();
                 BeginContext(992, 62, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "16310b5cb2f74e3ea87ee434d9cc8a81", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "6f52ff6324824491a8a2b3a366f4550f", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -124,7 +124,7 @@ using etec.bg.abax.maitre.MVC.Models;
                 WriteLiteral("\r\n                    <div class=\"overlay\">\r\n                        <h2>Bebidas</h2>\r\n                        <p>\r\n                            ");
                 EndContext();
                 BeginContext(1198, 120, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d65358c628ca4421b36df46c0046afde", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9997cca1415e45b9af8dfea309b30b67", async() => {
                     BeginContext(1274, 40, true);
                     WriteLiteral("<i class=\"glyphicon glyphicon-play\"></i>");
                     EndContext();
@@ -171,12 +171,12 @@ using etec.bg.abax.maitre.MVC.Models;
             WriteLiteral("        ");
             EndContext();
             BeginContext(1505, 701, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7a48ed89540c4c319aac757723db3018", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "306de6f3cff04685980363866e9793b1", async() => {
                 BeginContext(1552, 154, true);
                 WriteLiteral("\r\n            <div class=\"col-lg-3 col-md-4 col-sm-6 col-xs-12\" style=\"padding-top:15px\">\r\n                <div class=\"hovereffect\">\r\n                    ");
                 EndContext();
                 BeginContext(1706, 61, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "37aaf1f8fcb543c9b1c6f778cb2e9be4", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "a9ed2301aa6848048b785d93a71cba89", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -196,7 +196,7 @@ using etec.bg.abax.maitre.MVC.Models;
                 WriteLiteral("\r\n                    <div class=\"overlay\">\r\n                        <h2>Porções</h2>\r\n                        <p>\r\n                            ");
                 EndContext();
                 BeginContext(1911, 120, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3399ff1e7df2473d962596334b574835", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "2a814dfa28a047258112a54479aecd3c", async() => {
                     BeginContext(1987, 40, true);
                     WriteLiteral("<i class=\"glyphicon glyphicon-play\"></i>");
                     EndContext();
@@ -243,12 +243,12 @@ using etec.bg.abax.maitre.MVC.Models;
             WriteLiteral("        ");
             EndContext();
             BeginContext(2218, 696, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "75e5a51ecee645d296ac1ce466ee80b7", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "360c05847fab43c1a16390b72ea3c40f", async() => {
                 BeginContext(2264, 154, true);
                 WriteLiteral("\r\n            <div class=\"col-lg-3 col-md-4 col-sm-6 col-xs-12\" style=\"padding-top:15px\">\r\n                <div class=\"hovereffect\">\r\n                    ");
                 EndContext();
                 BeginContext(2418, 60, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "08fbf63b52ce4a04901ca8df70bb76b8", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "11ff995ccb274868b4597c4ecf3ab4c7", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -268,7 +268,7 @@ using etec.bg.abax.maitre.MVC.Models;
                 WriteLiteral("\r\n                    <div class=\"overlay\">\r\n                        <h2>Pratos</h2>\r\n                        <p>\r\n                            ");
                 EndContext();
                 BeginContext(2621, 119, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1d97ff44201749bf891d5cf4365e7212", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "03583169b6ff4bdbb9fea089768cb09e", async() => {
                     BeginContext(2696, 40, true);
                     WriteLiteral("<i class=\"glyphicon glyphicon-play\"></i>");
                     EndContext();
@@ -315,12 +315,12 @@ using etec.bg.abax.maitre.MVC.Models;
             WriteLiteral("        ");
             EndContext();
             BeginContext(2926, 716, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9431965c84c94d47a06a55e5a5da81db", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c176a1be84c14ebd9a5b4e0a204736ab", async() => {
                 BeginContext(2976, 154, true);
                 WriteLiteral("\r\n            <div class=\"col-lg-3 col-md-4 col-sm-6 col-xs-12\" style=\"padding-top:15px\">\r\n                <div class=\"hovereffect\">\r\n                    ");
                 EndContext();
                 BeginContext(3130, 64, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "5241a38e13f543c4a40dba2fd74cbed8", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "1daccf77ca5b4b3cb8669b1bd8faf7c8", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -340,7 +340,7 @@ using etec.bg.abax.maitre.MVC.Models;
                 WriteLiteral("\r\n                    <div class=\"overlay\">\r\n                        <h2>Sobremesas</h2>\r\n                        <p>\r\n                            ");
                 EndContext();
                 BeginContext(3341, 123, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3f3ef9594ba4437a8c64d33ee86a3f67", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "73e8a3381a97467ca454b2b4fc1abeb6", async() => {
                     BeginContext(3420, 40, true);
                     WriteLiteral("<i class=\"glyphicon glyphicon-play\"></i>");
                     EndContext();

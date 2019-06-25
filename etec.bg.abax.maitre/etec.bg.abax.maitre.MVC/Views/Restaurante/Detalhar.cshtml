@@ -1,0 +1,66 @@
+﻿@model etec.bg.abax.maitre.MVC.Models.Estabelecimento.Restaurante
+
+@{
+    ViewData["Title"] = "Detalhar";
+}
+
+<h2>Detalhar</h2>
+
+<div>
+    <h4>Restaurante</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idRestaurante)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.idRestaurante)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.endereco)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.endereco)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.cnpj)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.cnpj)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.eMail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.eMail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.funcao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.funcao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.imagem)
+        </dt>
+        <dd>
+            <img src="~/uploadImages/@Html.DisplayFor(model => model.imagem)" width="300" height="300" />
+        </dd>
+    </dl>
+</div>
+<div>
+    <button class="btn btn-default" title="Voltar" onclick="location.href='@Url.Action("Menu", "Home")'"><i class="glyphicon glyphicon-chevron-left"></i></button>
+    <button class="btn btn-default" title="Editar" onclick="location.href='@Url.Action("Editar", "Restaurante", new { id = Model.idRestaurante })'"><i class="glyphicon glyphicon-pencil"></i></button>
+</div>

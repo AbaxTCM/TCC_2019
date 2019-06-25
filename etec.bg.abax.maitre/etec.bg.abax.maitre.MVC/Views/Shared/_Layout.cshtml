@@ -30,12 +30,72 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "rest" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Administração" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "RH" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Administrador")
+                    {
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Área Pessoal
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Administrador")
+                                {
+                                    <li><a onclick="location.href='@Url.Action("Listar", "Cliente")'" style="cursor:pointer">Clientes</a></li>
+                                }
+                                <li><a onclick="location.href='@Url.Action("Listar", "Funcionario")'" style="cursor:pointer">Funcionários</a></li>
+                            </ul>
+                        </li>
+                    }
+                    @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "rest" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Administração" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Cozinha" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Caixa" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Administrador")
+                    {
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Cardápio
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="location.href='@Url.Action("Listar", "Bebida")'" style="cursor:pointer">Bebidas</a></li>
+                                <li><a onclick="location.href='@Url.Action("Listar", "Porcao")'" style="cursor:pointer">Porções</a></li>
+                                <li><a onclick="location.href='@Url.Action("Listar", "Prato")'" style="cursor:pointer">Pratos</a></li>
+                                <li><a onclick="location.href='@Url.Action("Listar", "Sobremesa")'" style="cursor:pointer">Sobremesas</a></li>
+                            </ul>
+                        </li>
+                    }
+                    @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "cli")
+                    {
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Reserva
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="location.href='@Url.Action("Listar", "Reserva")'" style="cursor:pointer">Minhas Reservas</a></li>
+                                <li><a onclick="location.href='@Url.Action("Listar", "Restaurante")'" style="cursor:pointer">Fazer uma Reserva</a></li>
+                            </ul>
+                        </li>
+                    }
+                    @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao != "cli" && etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao != "RH")
+                    {
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Reserva
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a onclick="location.href='@Url.Action("Listar", "ReservaRest")'" style="cursor:pointer">Reservas</a></li>
+                            </ul>
+                        </li>
+                    }
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
                     @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.UserID > 0 && etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao != null)
                     {
-                    <li><a asp-area="" asp-controller="Home" asp-action="Sair">Sair</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Menu">Bem-Vindo <b>@etec.bg.abax.maitre.MVC.Program.Session.Instance.Nome</b></a></li>
+                        @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "rest" || etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "Administração")
+                        {
+                            <li><a asp-area="" asp-controller="Restaurante" asp-action="Detalhar"><i class="glyphicon glyphicon-pencil"></i> Editar Restaurante</a></li>
+                        }
+                        <li><a asp-area="" asp-controller="Home" asp-action="Menu"><i class="glyphicon glyphicon-user"></i> Bem-Vindo <b>@etec.bg.abax.maitre.MVC.Program.Session.Instance.Nome</b></a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Sair"><i class="glyphicon glyphicon-log-out"></i> Sair</a></li>
                     }
                 </ul>
             </div>

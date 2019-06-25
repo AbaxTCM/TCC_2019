@@ -1,14 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using static etec.bg.abax.maitre.MVC.Program;
 
 namespace etec.bg.abax.maitre.MVC.Controllers
 {
     public class RestauranteController : Controller
     {
+        private readonly IHostingEnvironment he;
+        public RestauranteController(IHostingEnvironment e)
+        {
+            he = e;
+        }
+        Models.Estabelecimento.RestauranteData.RestauranteData data = new Models.Estabelecimento.RestauranteData.RestauranteData();
         // GET: Restaurante
         public ActionResult Index()
         {
@@ -22,9 +31,10 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         }
 
         // GET: Restaurante/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Detalhar(int id)
         {
-            return View();
+            id = int.Parse(Session.Instance.RestID.ToString());
+            return View(data.GetRestaurante(id));
         }
 
         // GET: Restaurante/Create
@@ -51,21 +61,30 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         }
 
         // GET: Restaurante/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Editar(int id)
         {
-            return View();
+            return View(data.GetRestaurante(id));
         }
 
         // POST: Restaurante/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Editar(int id, Models.Estabelecimento.Restaurante collection, IFormFile pic)
         {
             try
             {
-                // TODO: Add update logic here
+                if (pic != null)
+                {
+                    collection.imagem = pic.FileName;
+                    var fileName = Path.Combine(he.WebRootPath + "\\uploadImages", Path.GetFileName(pic.FileName));
+                    using(FileStream fs = new FileStream(fileName, FileMode.Create))
+                    {
+                        pic.CopyTo(fs);
+                    }
+                }
+                data.EditRestaurante(collection, id);
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Menu","Home");
             }
             catch
             {

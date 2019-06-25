@@ -86,9 +86,11 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
                 funcionario.eMail = ds.Tables[0].Rows[0]["email"].ToString();
                 funcionario.senha = ds.Tables[0].Rows[0]["senha"].ToString();
                 funcionario.funcao = ds.Tables[0].Rows[0]["funcao"].ToString();
+                funcionario.idRest = int.Parse(ds.Tables[0].Rows[0]["id_rest"].ToString());
 
                 Session.Instance.UserID = funcionario.idFunc;
                 Session.Instance.Funcao = funcionario.funcao;
+                Session.Instance.RestID = funcionario.idRest;
                 Session.Instance.Nome = funcionario.nome.Split(" ").FirstOrDefault();
             }
             return funcionario;

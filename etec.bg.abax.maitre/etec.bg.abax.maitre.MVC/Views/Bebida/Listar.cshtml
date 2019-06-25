@@ -16,9 +16,12 @@
     <p>
         <a asp-action="Cadastrar">Create New</a>
     </p>-->
-    <p>
-        <h3 style="display:inline-flex">Bebidas</h3> <button title="" class="btn btn-primary" onclick="location.href='@Url.Action("Cadastrar","Bebida")'"><i class="glyphicon glyphicon-plus"></i> </button>
-    </p>
+    @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao != "cli")
+    {
+        <p>
+            <h3 style="display:inline-flex">Bebidas</h3> <button title="" class="btn btn-primary" onclick="location.href='@Url.Action("Cadastrar", "Bebida")'"><i class="glyphicon glyphicon-plus"></i> </button>
+        </p>
+    }
     <br />
     <br />
 
@@ -45,7 +48,7 @@
             {
                 <tr>
                     <td>
-                        <img src="~/uploadImages/@item.imagem" width="50" height="50"/>
+                        <img src="~/uploadImages/@item.imagem" width="50" height="50" />
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.tipo)

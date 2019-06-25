@@ -90,13 +90,14 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
 
         public void EditSobremesa(Sobremesa sobremesa, int id)
         {
+            decimal valor = sobremesa.valor;
             conn.Conectar();
             MySqlCommand cmd = new MySqlCommand("sp_update_sobremesa", conn.RetornarConexao());
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@p_nome", sobremesa.nome);
             cmd.Parameters.AddWithValue("@p_imagem", sobremesa.imagem);
-            cmd.Parameters.AddWithValue("@p_valor", sobremesa.valor);
-            cmd.Parameters.AddWithValue("@p_id", sobremesa.idSobremesa);
+            cmd.Parameters.AddWithValue("@p_valor", valor);
+            cmd.Parameters.AddWithValue("@p_id", id);
             cmd.ExecuteNonQuery();
             conn.Desconectar();
         }

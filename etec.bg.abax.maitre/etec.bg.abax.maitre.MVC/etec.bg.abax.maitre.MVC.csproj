@@ -16,6 +16,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\uploadImages\0imagemteste.jpg" />
+    <Content Remove="wwwroot\uploadImages\imagemteste.jpg" />
+    <Content Remove="wwwroot\uploadImages\login1.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
@@ -1601,10 +1607,6 @@
     <None Include="wwwroot\lib\jquery-easing\jquery.easing.min.js" />
     <None Include="wwwroot\lib\magnific-popup\jquery.magnific-popup.js" />
     <None Include="wwwroot\lib\magnific-popup\jquery.magnific-popup.min.js" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\uploadImages\" />
   </ItemGroup>
 
 </Project>

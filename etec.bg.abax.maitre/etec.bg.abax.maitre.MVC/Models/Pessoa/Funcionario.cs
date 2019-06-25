@@ -17,5 +17,6 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa
         [DisplayName("Senha")]
         [Required(ErrorMessage = "Preencha o campo senha")]
         public string senha { get; set; }
+        public int idRest { get; set; }
     }
 }

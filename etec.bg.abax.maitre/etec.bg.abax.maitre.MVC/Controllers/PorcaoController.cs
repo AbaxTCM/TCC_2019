@@ -51,7 +51,10 @@ namespace etec.bg.abax.maitre.MVC.Controllers
                 {
                     collection.imagem = pic.FileName;
                     var fileName = Path.Combine(he.WebRootPath + "\\uploadImages", Path.GetFileName(pic.FileName));
-                    pic.CopyTo(new FileStream(fileName, FileMode.Create));
+                    using (FileStream fs = new FileStream(fileName, FileMode.Create))
+                    {
+                        pic.CopyTo(fs);
+                    }
                 }
                 data.PostPorcao(collection);
 
@@ -80,7 +83,10 @@ namespace etec.bg.abax.maitre.MVC.Controllers
                 {
                     collection.imagem = pic.FileName;
                     var fileName = Path.Combine(he.WebRootPath + "\\uploadImages", Path.GetFileName(pic.FileName));
-                    pic.CopyTo(new FileStream(fileName, FileMode.Create));
+                    using (FileStream fs = new FileStream(fileName, FileMode.Create))
+                    {
+                        pic.CopyTo(fs);
+                    }
                 }
                 data.EditPorcao(collection, id);
 

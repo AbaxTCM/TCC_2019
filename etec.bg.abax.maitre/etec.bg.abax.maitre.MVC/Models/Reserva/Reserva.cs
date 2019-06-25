@@ -11,11 +11,11 @@ namespace etec.bg.abax.maitre.MVC.Models.Reserva
         [DisplayName("Número da Reserva")]
         public int idReserva { get; set; }
         [DisplayName("Número da Mesa")]
-        public Mesa mesa { get; set; }
+        public string mesa { get; set; }
         [DisplayName("Finalidade")]
-        public Finalidade finalidade { get; set; }
+        public string finalidade { get; set; }
         [DisplayName("Dia e Hora")]
-        public Agenda agenda { get; set; }
+        public DateTime agenda { get; set; }
         [DisplayName("Desejo atendimento imediato!")]
         public bool atendimento { get; set; }
     }
