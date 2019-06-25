@@ -33,6 +33,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Estabelecimento.RestauranteData
                 restaurante.endereco = dr["endereco"].ToString();
                 restaurante.cnpj = dr["cnpj"].ToString();
                 restaurante.imagem = dr["imagem"].ToString();
+                restaurante.senha = dr["senha"].ToString();
 
                 lista.Add(restaurante);
             }
