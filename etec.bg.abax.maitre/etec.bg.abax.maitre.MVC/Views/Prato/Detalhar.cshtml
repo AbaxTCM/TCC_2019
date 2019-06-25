@@ -13,45 +13,52 @@
 </head>
 <body>
 
-<div>
-    <h3>Prato</h3>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.idPrato)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.idPrato)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.nome)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.nome)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.valor)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.valor)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.diaSemana)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.diaSemana)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.imagem)
-        </dt>
-        <dd>
-            <img src="~/uploadImages/@Html.DisplayFor(model => model.imagem)" width="300" height="300" />
-        </dd>
-    </dl>
-</div>
-<div>
-    <button class="btn btn-default" onclick="location.href='@Url.Action("Listar","Prato")'"><i class="glyphicon glyphicon-chevron-left"></i></button>
-    <button class="btn btn-default" onclick="location.href='@Url.Action("Editar","Prato",new { id = Model.idPrato })'"><i class="glyphicon glyphicon-pencil"></i></button>
-</div>
+    <div>
+        <h3>Prato</h3>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.idPrato)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.idPrato)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.nome)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.nome)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.valor)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.valor)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.diaSemana)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.diaSemana)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.imagem)
+            </dt>
+            <dd>
+                <img src="~/uploadImages/@Html.DisplayFor(model => model.imagem)" width="300" height="300" />
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <button class="btn btn-default" onclick="location.href='@Url.Action("Listar","Prato")'"><i class="glyphicon glyphicon-chevron-left"></i></button>
+        @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao != "cli")
+        {
+            <button class="btn btn-default" onclick="location.href='@Url.Action("Editar", "Prato", new { id = Model.idPrato })'"><i class="glyphicon glyphicon-pencil"></i></button>
+        }
+        @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "cli")
+        {
+            <button class="btn btn-primary" title="Adicionar"><i class="glyphicon glyphicon-shopping-cart"></i></button>
+        }
+    </div>
 </body>
 </html>

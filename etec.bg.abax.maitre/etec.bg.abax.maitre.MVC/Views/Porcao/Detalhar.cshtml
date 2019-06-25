@@ -13,46 +13,52 @@
 </head>
 <body>
 
-<div>
-    <h3>Porcao</h3>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.idPorcao)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.idPorcao)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.descricao)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.descricao)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.nome)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.nome)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.valor)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.valor)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.imagem)
-        </dt>
-        <dd>
-            <img src="~/uploadImages/@Html.DisplayFor(model => model.imagem)" width="300" height="300" />
-        </dd>
-    </dl>
-</div>
-<div>
-    <button class="btn btn-default" title="Voltar" onclick="location.href='@Url.Action("Listar", "Porcao")'"><i class="glyphicon glyphicon-chevron-left"></i></button>
-    <button class="btn btn-default" title="Editar" onclick="location.href='@Url.Action("Editar", "Porcao", new { id = Model.idPorcao })'"><i class="glyphicon glyphicon-pencil"></i></button>
-
-</div>
+    <div>
+        <h3>Porcao</h3>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.idPorcao)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.idPorcao)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.descricao)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.descricao)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.nome)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.nome)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.valor)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.valor)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.imagem)
+            </dt>
+            <dd>
+                <img src="~/uploadImages/@Html.DisplayFor(model => model.imagem)" width="300" height="300" />
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <button class="btn btn-default" title="Voltar" onclick="location.href='@Url.Action("Listar", "Porcao")'"><i class="glyphicon glyphicon-chevron-left"></i></button>
+        @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao != "cli")
+        {
+            <button class="btn btn-default" title="Editar" onclick="location.href='@Url.Action("Editar", "Porcao", new { id = Model.idPorcao })'"><i class="glyphicon glyphicon-pencil"></i></button>
+        }
+        @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "cli")
+        {
+            <button class="btn btn-primary" title="Adicionar"><i class="glyphicon glyphicon-shopping-cart"></i></button>
+        }
+    </div>
 </body>
 </html>

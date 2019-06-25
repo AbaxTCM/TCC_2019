@@ -15,7 +15,7 @@
 
     <div>
         <h4>Detalhes da bebida</h4>
-        <br/>
+        <br />
         <hr />
         <dl class="dl-horizontal">
             <dt>
@@ -57,7 +57,14 @@
     </div>-->
     <div>
         <button class="btn btn-default" title="Voltar" onclick="location.href='@Url.Action("Listar","Bebida")'"><i class="glyphicon glyphicon-chevron-left"></i></button>
-        <button class="btn btn-default" title="Editar" onclick="location.href='@Url.Action("Editar","Bebida",new { id = Model.idBebida })'"><i class="glyphicon glyphicon-pencil"></i></button>
+        @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao != "cli")
+        {
+            <button class="btn btn-default" title="Editar" onclick="location.href='@Url.Action("Editar", "Bebida", new { id = Model.idBebida })'"><i class="glyphicon glyphicon-pencil"></i></button>
+        }
+        @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao == "cli")
+        {
+            <button class="btn btn-primary" title="Adicionar"><i class="glyphicon glyphicon-shopping-cart"></i></button>
+        }
     </div>
 </body>
 </html>
