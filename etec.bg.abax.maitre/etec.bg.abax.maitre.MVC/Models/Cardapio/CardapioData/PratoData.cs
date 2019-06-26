@@ -77,7 +77,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
             cmd.Parameters.AddWithValue("@p_nome", prato.nome);
             cmd.Parameters.AddWithValue("@p_imagem", prato.imagem);
             cmd.Parameters.AddWithValue("@p_valor", prato.valor);
-            cmd.Parameters.AddWithValue("@p_idRest", Session.Instance.UserID);
+            cmd.Parameters.AddWithValue("@p_idRest", Session.Instance.RestID);
             cmd.ExecuteNonQuery();
 
             conn.Desconectar();

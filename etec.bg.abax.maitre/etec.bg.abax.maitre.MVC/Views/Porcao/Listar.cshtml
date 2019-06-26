@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Listar</title>
+    <title>Porções</title>
 </head>
 <body>
     @if (etec.bg.abax.maitre.MVC.Program.Session.Instance.Funcao != "cli")
@@ -18,6 +18,10 @@
             <h3 style="display:inline-flex">Cadastrar porção</h3> <button title="" class="btn btn-primary" onclick="location.href='@Url.Action("Cadastrar", "porcao")'"><i class="glyphicon glyphicon-plus"></i> </button>
         </p>
     }
+    <h3>Porções</h3>
+    <br />
+    <br />
+
     <table class="table">
         <thead>
             <tr>

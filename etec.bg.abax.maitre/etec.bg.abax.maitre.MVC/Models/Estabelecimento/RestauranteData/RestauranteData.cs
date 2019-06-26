@@ -62,6 +62,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Estabelecimento.RestauranteData
                 restaurante.cnpj = ds.Tables[0].Rows[0]["cnpj"].ToString();
                 restaurante.imagem = ds.Tables[0].Rows[0]["imagem"].ToString();
                 restaurante.funcao = ds.Tables[0].Rows[0]["funcao"].ToString();
+                restaurante.senha = ds.Tables[0].Rows[0]["senha"].ToString();
             }
             return restaurante;
         }

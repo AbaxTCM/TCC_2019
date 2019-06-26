@@ -13,47 +13,47 @@
 </head>
 <body>
 
-<h3>Porcao</h3>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Cadastrar" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <!--<div class="form-group">
-                <label asp-for="idPorcao" class="control-label"></label>
-                <input asp-for="idPorcao" class="form-control" />
-                <span asp-validation-for="idPorcao" class="text-danger"></span>
-            </div>-->
-            <div class="form-group">
-                <label asp-for="nome" class="control-label"></label>
-                <input asp-for="nome" autocomplete="off" class="form-control" />
-                <span asp-validation-for="nome" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="descricao" class="control-label"></label>
-                <input asp-for="descricao" autocomplete="off" class="form-control" />
-                <span asp-validation-for="descricao" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="imagem" class="control-label"></label>
-                <input type="file" name="pic" class="form-control" />
-                <span asp-validation-for="imagem" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="valor" class="control-label"></label>
-                <input asp-for="valor" autocomplete="off" class="form-control" />
-                <span asp-validation-for="valor" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </form>
+    <h3>Porção</h3>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Cadastrar" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <!--<div class="form-group">
+                    <label asp-for="idPorcao" class="control-label"></label>
+                    <input asp-for="idPorcao" class="form-control" />
+                    <span asp-validation-for="idPorcao" class="text-danger"></span>
+                </div>-->
+                <div class="form-group">
+                    <label asp-for="nome" class="control-label"></label>
+                    <input asp-for="nome" autocomplete="off" class="form-control" />
+                    <span asp-validation-for="nome" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="descricao" class="control-label"></label>
+                    <input asp-for="descricao" autocomplete="off" class="form-control" />
+                    <span asp-validation-for="descricao" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="imagem" class="control-label"></label>
+                    <input type="file" name="pic" class="form-control" />
+                    <span asp-validation-for="imagem" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="valor" class="control-label"></label>
+                    <input asp-for="valor" autocomplete="off" class="form-control" />
+                    <span asp-validation-for="valor" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input class="btn btn-primary" type="submit" value="Cadastrar" />
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-action="Listar">Back to List</a>
-</div>
+    <div>
+        <button class="btn btn-default" title="Voltar" onclick="location.href='@Url.Action("Listar","Porcao")'"><i class="glyphicon glyphicon-chevron-left"></i></button>
+    </div>
 
 </body>
 </html>

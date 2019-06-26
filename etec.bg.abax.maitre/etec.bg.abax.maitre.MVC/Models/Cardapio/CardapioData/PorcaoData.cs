@@ -76,7 +76,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
             cmd.Parameters.AddWithValue("@p_descricao", porcao.descricao);
             cmd.Parameters.AddWithValue("@p_imagem", porcao.imagem);
             cmd.Parameters.AddWithValue("@p_valor", porcao.valor);
-            cmd.Parameters.AddWithValue("@p_idRest", Session.Instance.UserID);
+            cmd.Parameters.AddWithValue("@p_idRest", Session.Instance.RestID);
             cmd.ExecuteNonQuery();
             conn.Desconectar();
         }
@@ -100,7 +100,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Cardapio.CardapioData
             cmd.Parameters.AddWithValue("@p_descricao", porcao.descricao);
             cmd.Parameters.AddWithValue("@p_imagem", porcao.imagem);
             cmd.Parameters.AddWithValue("@p_valor", porcao.valor);
-            cmd.Parameters.AddWithValue("@p_id", porcao.idPorcao);
+            cmd.Parameters.AddWithValue("@p_id", id);
             cmd.ExecuteNonQuery();
             conn.Desconectar();
         }
