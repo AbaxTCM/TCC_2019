@@ -16,7 +16,7 @@ namespace etec.bg.abax.maitre.MVC.Models.Pessoa.PessoaData
         {
             conn.Conectar();
 
-            MySqlDataAdapter da = new MySqlDataAdapter("select * from cliente", conn.RetornarConexao());
+            MySqlDataAdapter da = new MySqlDataAdapter("select * from cliente where funcao = 'cli'", conn.RetornarConexao());
             DataSet ds = new DataSet();
             da.Fill(ds);
 

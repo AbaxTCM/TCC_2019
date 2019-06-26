@@ -16,14 +16,16 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         }
 
         // GET: Reserva/Details/5
-        public ActionResult Detalhar(int id)
+        public ActionResult Detalhar()
         {
-            return View();
+            Models.Reserva.ReservaData.ReservaData data = new Models.Reserva.ReservaData.ReservaData();
+            return View(data.GetReserva());
         }
 
         public ActionResult Listar()
         {
-            return View();
+            Models.Reserva.ReservaData.ReservaData data = new Models.Reserva.ReservaData.ReservaData();
+            return View(data.GetLista());
         }
 
         // GET: Reserva/Create

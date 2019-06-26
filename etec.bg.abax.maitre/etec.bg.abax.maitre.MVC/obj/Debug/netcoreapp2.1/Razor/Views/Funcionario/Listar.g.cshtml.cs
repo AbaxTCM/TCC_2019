@@ -63,7 +63,7 @@ using etec.bg.abax.maitre.MVC.Models;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(143, 100, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0b4275faba894fa5aebeea8b87d56fc4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "7d37ac6f2e274793b38bea67c04c153f", async() => {
                 BeginContext(149, 87, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>Lista</title>\r\n");
                 EndContext();
@@ -83,7 +83,7 @@ using etec.bg.abax.maitre.MVC.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(245, 2272, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f1c62bb5d7db427ea512e978b2feb767", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8ebe10015bc74624b01145b6f9a5b108", async() => {
                 BeginContext(251, 118, true);
                 WriteLiteral("\r\n    <p>\r\n        <h3 style=\"display:inline-flex\">Cadastrar Funcionário</h3> <button title=\"\" class=\"btn btn-primary\"");
                 EndContext();

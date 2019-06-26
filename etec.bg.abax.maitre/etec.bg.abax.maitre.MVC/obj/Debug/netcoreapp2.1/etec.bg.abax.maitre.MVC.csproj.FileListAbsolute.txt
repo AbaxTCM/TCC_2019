@@ -895,3 +895,5 @@ C:\Users\gialm\Desktop\Nova pasta (2)\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.
 C:\Users\Rafael.Rios\Videos\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Restaurante\Editar.g.cshtml.cs
 C:\Users\Rafael.Rios\Videos\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Restaurante\Detalhar.g.cshtml.cs
 C:\Users\Rafael.Rios\Videos\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\Home\ReservaRest.g.cshtml.cs
+C:\Users\Rafael.Rios\Videos\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\ReservaRest\Listar.g.cshtml.cs
+C:\Users\Rafael.Rios\Videos\TCC_2019\etec.bg.abax.maitre\etec.bg.abax.maitre.MVC\obj\Debug\netcoreapp2.1\Razor\Views\ReservaRest\Detalhar.g.cshtml.cs

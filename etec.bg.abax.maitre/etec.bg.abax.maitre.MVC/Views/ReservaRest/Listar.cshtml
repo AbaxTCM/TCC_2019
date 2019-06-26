@@ -1,0 +1,72 @@
+﻿@model IEnumerable<etec.bg.abax.maitre.MVC.Models.Reserva.Reserva>
+
+@{
+    ViewData["Title"] = "Listar";
+}
+
+<h2>Reservas</h2>
+
+<p>
+    <!--<a asp-action="Create">Create New</a>-->
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.idReserva)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.nomeCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mesa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.finalidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.agenda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.atendimento)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.idReserva)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nomeCliente)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.mesa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.finalidade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.agenda)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.atendimento)
+                </td>
+                <!--
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>-->
+                <td>
+                    <button title="Detalhar" class="btn btn-primary" onclick="location.href='@Url.Action("Detalhar","ReservaRest")'"><i class="glyphicon glyphicon-search"></i></button>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -73,7 +73,7 @@ using etec.bg.abax.maitre.MVC.Models;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(130, 102, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9407a50c3fec413eace6e10c00a93507", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d308bc0f1d0a4baca87a06b69cfca75d", async() => {
                 BeginContext(136, 89, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>Deletar</title>\r\n");
                 EndContext();
@@ -93,7 +93,7 @@ using etec.bg.abax.maitre.MVC.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(234, 1517, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "68008047f89d4cd6bff68238b72e090c", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c793959bc6394616aafd91ebedcb28d9", async() => {
                 BeginContext(240, 142, true);
                 WriteLiteral("\r\n\r\n<h3>Deletar bebida</h3><br />\r\n<div>\r\n\r\n    <!--<h4>Bebida</h4>-->\r\n    <hr />\r\n    <dl class=\"dl-horizontal\">\r\n        <dt>\r\n            ");
                 EndContext();
@@ -188,7 +188,7 @@ using etec.bg.abax.maitre.MVC.Models;
                 WriteLiteral("\r\n        </dt>\r\n        <dd>\r\n            ");
                 EndContext();
                 BeginContext(1134, 93, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "05586cf83b0b4fcf88220ac65d38c676", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "dc3b3be7a17d4b82a1b0f27090ded8f5", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -215,12 +215,12 @@ AddHtmlAttributeValue("", 1159, Html.DisplayFor(model => model.imagem), 1159, 39
                 WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n\r\n    <!--<form asp-action=\"Deletar\">\r\n        <input type=\"submit\" value=\"Delete\" class=\"btn btn-default\" /> |\r\n        <a asp-action=\"Listar\">Back to List</a>\r\n    </form>-->\r\n\r\n    ");
                 EndContext();
                 BeginContext(1439, 295, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9ce5de8717234f0f9c3c885a58e21b1d", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "513c5f0325b140dd8becfb756edaed9d", async() => {
                     BeginContext(1466, 10, true);
                     WriteLiteral("\r\n        ");
                     EndContext();
                     BeginContext(1476, 124, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "caaecbf5ef9f468f9fae1f6427b2dfa8", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "eb376002d7654b4f816a517cee88de86", async() => {
                         BeginContext(1543, 48, true);
                         WriteLiteral("<i class=\"glyphicon glyphicon-chevron-left\"></i>");
                         EndContext();

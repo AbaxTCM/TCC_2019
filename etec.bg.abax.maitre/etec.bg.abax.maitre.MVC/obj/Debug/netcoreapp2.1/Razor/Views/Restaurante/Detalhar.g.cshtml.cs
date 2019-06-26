@@ -214,7 +214,7 @@ using etec.bg.abax.maitre.MVC.Models;
             WriteLiteral("\r\n        </dt>\r\n        <dd>\r\n            ");
             EndContext();
             BeginContext(1505, 93, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "a97dc40c0ca8445d81f2eaa5af1e8ffd", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "be59bae2960844d59c6a206fac0ea2d5", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

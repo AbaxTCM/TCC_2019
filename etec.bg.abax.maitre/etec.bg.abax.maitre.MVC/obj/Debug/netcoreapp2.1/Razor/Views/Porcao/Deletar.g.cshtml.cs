@@ -73,7 +73,7 @@ using etec.bg.abax.maitre.MVC.Models;
             WriteLiteral("\r\n<!DOCTYPE html>\r\n\r\n<html>\r\n");
             EndContext();
             BeginContext(129, 102, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0afbda1ee9cb433f80d68644ae214bf5", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "301ccfba0cac4e2ca4b7324fb3a9856c", async() => {
                 BeginContext(135, 89, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    <title>Deletar</title>\r\n");
                 EndContext();
@@ -93,7 +93,7 @@ using etec.bg.abax.maitre.MVC.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(233, 1316, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "761f10bfc4d94f989a1ba35972b5f8ff", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "11ffe6024a9a4e05ae2ec5a11a11ef48", async() => {
                 BeginContext(239, 104, true);
                 WriteLiteral("\r\n\r\n\r\n<div>\r\n    <h3>Porção</h3>\r\n    <hr />\r\n    <dl class=\"dl-horizontal\">\r\n        <dt>\r\n            ");
                 EndContext();
@@ -188,7 +188,7 @@ using etec.bg.abax.maitre.MVC.Models;
                 WriteLiteral("\r\n        </dt>\r\n        <dd>\r\n            ");
                 EndContext();
                 BeginContext(1105, 93, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "d2ed74d0acce4a46944bf1e9034d41fd", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8bddbf5ebe8d49eb8304efcfb78fe93f", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -215,12 +215,12 @@ AddHtmlAttributeValue("", 1130, Html.DisplayFor(model => model.imagem), 1130, 39
                 WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n    \r\n    ");
                 EndContext();
                 BeginContext(1236, 296, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "10474d00bbc44398a27f6201dbe33200", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "030a200462d547d7b9c7fae73ddbbaea", async() => {
                     BeginContext(1263, 10, true);
                     WriteLiteral("\r\n        ");
                     EndContext();
                     BeginContext(1273, 124, false);
-                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "907b41ec3a984033b445bb22827a0aba", async() => {
+                    __tagHelperExecutionContext = __tagHelperScopeManager.Begin("button", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "80ae6626f42e4599bcd1e3bcf61def51", async() => {
                         BeginContext(1340, 48, true);
                         WriteLiteral("<i class=\"glyphicon glyphicon-chevron-left\"></i>");
                         EndContext();

@@ -10,6 +10,10 @@ namespace etec.bg.abax.maitre.MVC.Models.Reserva
     {
         [DisplayName("Número da Reserva")]
         public int idReserva { get; set; }
+        [DisplayName("ID Cliente")]
+        public int idRestaurante { get; set; }
+        [DisplayName("ID Restaurante")]
+        public int idCliente { get; set; }
         [DisplayName("Número da Mesa")]
         public string mesa { get; set; }
         [DisplayName("Finalidade")]
@@ -17,6 +21,12 @@ namespace etec.bg.abax.maitre.MVC.Models.Reserva
         [DisplayName("Dia e Hora")]
         public DateTime agenda { get; set; }
         [DisplayName("Desejo atendimento imediato!")]
-        public bool atendimento { get; set; }
+        public string atendimento { get; set; }
+        [DisplayName("Itens")]
+        public string itens { get; set; }
+        [DisplayName("Nome Cliente")]
+        public string nomeCliente { get; set; }
+        [DisplayName("Nome Restaurante")]
+        public string nomeRestaurante { get; set; }
     }
 }

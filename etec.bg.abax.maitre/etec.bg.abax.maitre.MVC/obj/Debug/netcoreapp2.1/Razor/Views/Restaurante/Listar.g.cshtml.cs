@@ -292,7 +292,7 @@ WriteAttributeValue("", 2564, Url.Action("Cardapio","Home", new { id = item.idRe
             WriteLiteral(">\r\n            <div class=\"col-lg-3 col-md-4 col-sm-6 col-xs-12\" style=\"padding-top:15px\">\r\n                <div class=\"hovereffect\">\r\n                    ");
             EndContext();
             BeginContext(2784, 70, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "3f59dce740f345179f7c02de564d735a", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "aa770817c4ff40ea934c6be47d205bf0", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

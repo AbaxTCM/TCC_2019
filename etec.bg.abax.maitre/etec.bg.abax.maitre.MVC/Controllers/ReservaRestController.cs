@@ -22,9 +22,10 @@ namespace etec.bg.abax.maitre.MVC.Controllers
         }
 
         // GET: ReservaRest/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Detalhar()
         {
-            return View();
+            Models.Reserva.ReservaData.ReservaRestData data = new Models.Reserva.ReservaData.ReservaRestData();
+            return View(data.GetReserva());
         }
 
         // GET: ReservaRest/Create

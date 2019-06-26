@@ -18,44 +18,46 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.idReserva)
+            @Html.DisplayNameFor(model => model.nomeRestaurante)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.idReserva)
+            @Html.DisplayFor(model => model.nomeRestaurante)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.mesa)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.mesa)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.finalidade)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.finalidade)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.agenda)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.agenda)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.atendimento)
         </dt>
         <dd>
             @Html.DisplayFor(model => model.atendimento)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.itens)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.itens)
+        </dd>
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Edit", "Editar", new {  id = Model.idReserva }) |
-    <a asp-action="Index">Back to List</a>
+    <!--@Html.ActionLink("Edit", "Editar", new { id = Model.idReserva }) |-->
+    <button class="btn btn-default" title="Voltar" onclick="location.href='@Url.Action("Listar","Reserva")'"><i class="glyphicon glyphicon-chevron-left"></i></button>
 </div>
 </body>
 </html>

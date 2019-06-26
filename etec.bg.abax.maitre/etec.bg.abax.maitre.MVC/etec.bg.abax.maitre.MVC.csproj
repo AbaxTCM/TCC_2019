@@ -6,12 +6,16 @@
 
   <ItemGroup>
     <Compile Remove="Models\Data\**" />
+    <Compile Remove="Views\NewFolder\**" />
     <Compile Remove="wwwroot\lib\jQuery-Mask-Plugin-master\**" />
     <Content Remove="Models\Data\**" />
+    <Content Remove="Views\NewFolder\**" />
     <Content Remove="wwwroot\lib\jQuery-Mask-Plugin-master\**" />
     <EmbeddedResource Remove="Models\Data\**" />
+    <EmbeddedResource Remove="Views\NewFolder\**" />
     <EmbeddedResource Remove="wwwroot\lib\jQuery-Mask-Plugin-master\**" />
     <None Remove="Models\Data\**" />
+    <None Remove="Views\NewFolder\**" />
     <None Remove="wwwroot\lib\jQuery-Mask-Plugin-master\**" />
   </ItemGroup>
 
